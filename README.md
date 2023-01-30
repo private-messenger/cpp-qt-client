@@ -1,2 +1,2 @@
 # cpp-qt-client
-Cliemt application based on C++/Qt6 Framework
+Client application based on C++/Qt6 Framework
