@@ -11,12 +11,460 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Система персонализированых индивидуальных ключей (СПИК)</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
-  <widget class="QMenuBar" name="menubar"/>
+  <property name="windowIcon">
+   <iconset resource="source.qrc">
+    <normaloff>:/mainapp/sources/appico.ico</normaloff>:/mainapp/sources/appico.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>791</width>
+      <height>551</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="profileTab">
+     <attribute name="icon">
+      <iconset resource="source.qrc">
+       <normaloff>:/mainapp/sources/profile.ico</normaloff>:/mainapp/sources/profile.ico</iconset>
+     </attribute>
+     <attribute name="title">
+      <string>Профиль</string>
+     </attribute>
+     <widget class="QLineEdit" name="idField">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>371</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>-bjJ5KYD6X0fo55ko=xBcF-eq/58NoV7qwbvs9VzrGdcvWZ/63yQ6g/s1rtY2dB!WCdPbwYWLPAnKsd7A5dRorUew4jT4Ar88Iu1d1!jk6xG2txDd3GsnxTh0JmoZ0x-f=Dxj34mBUYyTaI9!?q=klW6SLd=SSACl2M=rv7FE7VjIVZBZ3s5SrPMIBDx7aWb1l1UyjdpESHpOY-O6ZH5uu-wsMbXF3jem8NZInp6ex6LvgqSGZ5wXV=LIS!EJdr3</string>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+      <property name="placeholderText">
+       <string>Ошибка ID</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_id">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>9</y>
+        <width>371</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ваш ID</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_login">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>281</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ваш Логин</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="loginField">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>80</y>
+        <width>281</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>Ваш логин</string>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="contactList">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>180</y>
+        <width>371</width>
+        <height>301</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>username111</string>
+       </property>
+       <property name="icon">
+        <iconset resource="source.qrc">
+         <normaloff>:/mainapp/sources/contacts.ico</normaloff>:/mainapp/sources/contacts.ico</iconset>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>paswedfaxsz123</string>
+       </property>
+       <property name="icon">
+        <iconset resource="source.qrc">
+         <normaloff>:/mainapp/sources/contacts.ico</normaloff>:/mainapp/sources/contacts.ico</iconset>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>qwerety123</string>
+       </property>
+       <property name="icon">
+        <iconset resource="source.qrc">
+         <normaloff>:/mainapp/sources/contacts.ico</normaloff>:/mainapp/sources/contacts.ico</iconset>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_contacts">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>150</y>
+        <width>371</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Контакты&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_keys">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>80</y>
+        <width>361</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Ключи&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="keysList">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>110</y>
+        <width>361</width>
+        <height>391</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Публичный ключ аккаунта</string>
+       </property>
+       <property name="icon">
+        <iconset resource="source.qrc">
+         <normaloff>:/mainapp/sources/keys.ico</normaloff>:/mainapp/sources/keys.ico</iconset>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Приватный ключ аккаунта</string>
+       </property>
+       <property name="icon">
+        <iconset resource="source.qrc">
+         <normaloff>:/mainapp/sources/keys.ico</normaloff>:/mainapp/sources/keys.ico</iconset>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Ключ чата (123)</string>
+       </property>
+       <property name="icon">
+        <iconset resource="source.qrc">
+         <normaloff>:/mainapp/sources/keys.ico</normaloff>:/mainapp/sources/keys.ico</iconset>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Ключ чата (Название чата)</string>
+       </property>
+       <property name="icon">
+        <iconset resource="source.qrc">
+         <normaloff>:/mainapp/sources/keys.ico</normaloff>:/mainapp/sources/keys.ico</iconset>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="setLogin">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>80</y>
+        <width>80</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="text">
+       <string>Изменить</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="updatePas">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>110</y>
+        <width>371</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="text">
+       <string>Обновить пароль</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="addContact">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>490</y>
+        <width>80</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="text">
+       <string>Добавить</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="removeContact">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>490</y>
+        <width>80</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="text">
+       <string>Удалить</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="i2pAddressField">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>31</y>
+        <width>371</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>http://asdasjkshdfkjsdhfjsdhkfkjs.i2p</string>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+      <property name="placeholderText">
+       <string>Ошибка ID</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_i2padr">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>10</y>
+        <width>371</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ваш i2p-адрес</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="messagesTab">
+     <attribute name="icon">
+      <iconset resource="source.qrc">
+       <normaloff>:/mainapp/sources/messages.ico</normaloff>:/mainapp/sources/messages.ico</iconset>
+     </attribute>
+     <attribute name="title">
+      <string>Сообщения</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="storageTab">
+     <attribute name="icon">
+      <iconset resource="source.qrc">
+       <normaloff>:/mainapp/sources/storage.ico</normaloff>:/mainapp/sources/storage.ico</iconset>
+     </attribute>
+     <attribute name="title">
+      <string>Хранилище</string>
+     </attribute>
+     <widget class="QLabel" name="inDevTxt">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>791</width>
+        <height>521</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:36pt; font-weight:700; color:#8a8a8a;&quot;&gt;В разработке&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Программа</string>
+    </property>
+    <widget class="QMenu" name="menuSettings">
+     <property name="title">
+      <string>Настройки</string>
+     </property>
+     <addaction name="separator"/>
+     <addaction name="generalSettingsAction"/>
+     <addaction name="settingsI2pAction"/>
+     <addaction name="settingsFreenetAction"/>
+    </widget>
+    <widget class="QMenu" name="logoutMenu">
+     <property name="title">
+      <string>Выйти из учётной записи</string>
+     </property>
+     <addaction name="logoutNow"/>
+     <addaction name="logoutLater"/>
+    </widget>
+    <addaction name="menuSettings"/>
+    <addaction name="logoutMenu"/>
+    <addaction name="separator"/>
+    <addaction name="creditsAction"/>
+   </widget>
+   <widget class="QMenu" name="menuLanguage">
+    <property name="tearOffEnabled">
+     <bool>false</bool>
+    </property>
+    <property name="title">
+     <string>Язык (Language)</string>
+    </property>
+    <property name="separatorsCollapsible">
+     <bool>false</bool>
+    </property>
+    <property name="toolTipsVisible">
+     <bool>false</bool>
+    </property>
+    <addaction name="ruLocaleAction"/>
+    <addaction name="enLocaleAction"/>
+    <addaction name="uaLocaleAction"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menuLanguage"/>
+  </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="generalSettingsAction">
+   <property name="icon">
+    <iconset resource="source.qrc">
+     <normaloff>:/mainapp/sources/profile.ico</normaloff>:/mainapp/sources/profile.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Общие настройки</string>
+   </property>
+  </action>
+  <action name="settingsI2pAction">
+   <property name="icon">
+    <iconset resource="source.qrc">
+     <normaloff>:/mainapp/sources/i2p.png</normaloff>:/mainapp/sources/i2p.png</iconset>
+   </property>
+   <property name="text">
+    <string>Настройки i2p</string>
+   </property>
+  </action>
+  <action name="settingsFreenetAction">
+   <property name="icon">
+    <iconset resource="source.qrc">
+     <normaloff>:/mainapp/sources/freenet.png</normaloff>:/mainapp/sources/freenet.png</iconset>
+   </property>
+   <property name="text">
+    <string>Настройки freenet</string>
+   </property>
+  </action>
+  <action name="logoutNow">
+   <property name="text">
+    <string>Сейчас</string>
+   </property>
+  </action>
+  <action name="logoutLater">
+   <property name="text">
+    <string>Задать время автовыхода</string>
+   </property>
+  </action>
+  <action name="ruLocaleAction">
+   <property name="icon">
+    <iconset resource="source.qrc">
+     <normaloff>:/locales/langs/rus.png</normaloff>:/locales/langs/rus.png</iconset>
+   </property>
+   <property name="text">
+    <string>Русский (Russian)</string>
+   </property>
+  </action>
+  <action name="enLocaleAction">
+   <property name="icon">
+    <iconset resource="source.qrc">
+     <normaloff>:/locales/langs/eng.jpg</normaloff>:/locales/langs/eng.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>English (English)</string>
+   </property>
+  </action>
+  <action name="uaLocaleAction">
+   <property name="icon">
+    <iconset resource="source.qrc">
+     <normaloff>:/locales/langs/ua.jpg</normaloff>:/locales/langs/ua.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>(β) Український (Ukrainian)</string>
+   </property>
+  </action>
+  <action name="creditsAction">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Об авторе</string>
+   </property>
+  </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="source.qrc"/>
+ </resources>
  <connections/>
 </ui>

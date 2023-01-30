@@ -20,6 +20,10 @@ set(PROJECT_SOURCES
         mainwindow.ui
         # LogIn form files
         log_in_form.h log_in_form.cpp log_in_form.ui
+        # Credits form files
+        credits.h credits.cpp credits.ui
+        # Src files
+        source.qrc
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

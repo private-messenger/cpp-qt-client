@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Credits</class>
+ <widget class="QWidget" name="Credits">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>295</width>
+    <height>295</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Об авторе</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="source.qrc">
+    <normaloff>:/mainapp/sources/appico.ico</normaloff>:/mainapp/sources/appico.ico</iconset>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>295</width>
+     <height>295</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;:/mainapp/sources/FullGreaM_avatar.png&quot; width=&quot;200&quot; height=&quot;200&quot;/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Разработчик: Приходько 'FullGreaM' Никита&lt;br/&gt;GitHub: https://github.com/Nikiroy78&lt;br/&gt;(c) FullGreaM 2023, лицензия MIT&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="source.qrc"/>
+ </resources>
+ <connections/>
+</ui>
