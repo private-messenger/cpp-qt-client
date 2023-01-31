@@ -22,6 +22,7 @@
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
+#include <QtWidgets/QTextBrowser>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -56,6 +57,12 @@ public:
     QLineEdit *i2pAddressField;
     QLabel *label_i2padr;
     QWidget *messagesTab;
+    QLabel *label_messages;
+    QListWidget *messagesField;
+    QLabel *label_dialog;
+    QTextBrowser *dialogField;
+    QLineEdit *messageArea;
+    QPushButton *sendButton;
     QWidget *storageTab;
     QLabel *inDevTxt;
     QMenuBar *menubar;
@@ -158,6 +165,8 @@ public:
         __qlistwidgetitem5->setIcon(icon8);
         QListWidgetItem *__qlistwidgetitem6 = new QListWidgetItem(keysList);
         __qlistwidgetitem6->setIcon(icon8);
+        QListWidgetItem *__qlistwidgetitem7 = new QListWidgetItem(keysList);
+        __qlistwidgetitem7->setIcon(icon8);
         keysList->setObjectName("keysList");
         keysList->setGeometry(QRect(410, 110, 361, 391));
         setLogin = new QPushButton(profileTab);
@@ -186,17 +195,45 @@ public:
         tabWidget->addTab(profileTab, icon1, QString());
         messagesTab = new QWidget();
         messagesTab->setObjectName("messagesTab");
+        label_messages = new QLabel(messagesTab);
+        label_messages->setObjectName("label_messages");
+        label_messages->setGeometry(QRect(0, 0, 300, 30));
+        messagesField = new QListWidget(messagesTab);
         QIcon icon9;
-        icon9.addFile(QString::fromUtf8(":/mainapp/sources/messages.ico"), QSize(), QIcon::Normal, QIcon::Off);
-        tabWidget->addTab(messagesTab, icon9, QString());
+        icon9.addFile(QString::fromUtf8(":/mainapp/sources/chat.ico"), QSize(), QIcon::Normal, QIcon::Off);
+        QListWidgetItem *__qlistwidgetitem8 = new QListWidgetItem(messagesField);
+        __qlistwidgetitem8->setIcon(icon9);
+        QListWidgetItem *__qlistwidgetitem9 = new QListWidgetItem(messagesField);
+        __qlistwidgetitem9->setIcon(icon9);
+        QIcon icon10;
+        icon10.addFile(QString::fromUtf8(":/mainapp/sources/dialog.ico"), QSize(), QIcon::Normal, QIcon::Off);
+        QListWidgetItem *__qlistwidgetitem10 = new QListWidgetItem(messagesField);
+        __qlistwidgetitem10->setIcon(icon10);
+        messagesField->setObjectName("messagesField");
+        messagesField->setGeometry(QRect(0, 30, 300, 491));
+        label_dialog = new QLabel(messagesTab);
+        label_dialog->setObjectName("label_dialog");
+        label_dialog->setGeometry(QRect(310, 0, 471, 30));
+        dialogField = new QTextBrowser(messagesTab);
+        dialogField->setObjectName("dialogField");
+        dialogField->setGeometry(QRect(310, 30, 471, 461));
+        messageArea = new QLineEdit(messagesTab);
+        messageArea->setObjectName("messageArea");
+        messageArea->setGeometry(QRect(310, 490, 391, 24));
+        sendButton = new QPushButton(messagesTab);
+        sendButton->setObjectName("sendButton");
+        sendButton->setGeometry(QRect(700, 490, 80, 24));
+        QIcon icon11;
+        icon11.addFile(QString::fromUtf8(":/mainapp/sources/messages.ico"), QSize(), QIcon::Normal, QIcon::Off);
+        tabWidget->addTab(messagesTab, icon11, QString());
         storageTab = new QWidget();
         storageTab->setObjectName("storageTab");
         inDevTxt = new QLabel(storageTab);
         inDevTxt->setObjectName("inDevTxt");
         inDevTxt->setGeometry(QRect(0, 0, 791, 521));
-        QIcon icon10;
-        icon10.addFile(QString::fromUtf8(":/mainapp/sources/storage.ico"), QSize(), QIcon::Normal, QIcon::Off);
-        tabWidget->addTab(storageTab, icon10, QString());
+        QIcon icon12;
+        icon12.addFile(QString::fromUtf8(":/mainapp/sources/storage.ico"), QSize(), QIcon::Normal, QIcon::Off);
+        tabWidget->addTab(storageTab, icon12, QString());
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
@@ -235,7 +272,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -282,6 +319,8 @@ public:
         ___qlistwidgetitem5->setText(QCoreApplication::translate("MainWindow", "\320\232\320\273\321\216\321\207 \321\207\320\260\321\202\320\260 (123)", nullptr));
         QListWidgetItem *___qlistwidgetitem6 = keysList->item(3);
         ___qlistwidgetitem6->setText(QCoreApplication::translate("MainWindow", "\320\232\320\273\321\216\321\207 \321\207\320\260\321\202\320\260 (\320\235\320\260\320\267\320\262\320\260\320\275\320\270\320\265 \321\207\320\260\321\202\320\260)", nullptr));
+        QListWidgetItem *___qlistwidgetitem7 = keysList->item(4);
+        ___qlistwidgetitem7->setText(QCoreApplication::translate("MainWindow", "\320\232\320\273\321\216\321\207 \320\264\320\270\320\260\320\273\320\276\320\263\320\260 (username111)", nullptr));
         keysList->setSortingEnabled(__sortingEnabled1);
 
         setLogin->setText(QCoreApplication::translate("MainWindow", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", nullptr));
@@ -292,6 +331,32 @@ public:
         i2pAddressField->setPlaceholderText(QCoreApplication::translate("MainWindow", "\320\236\321\210\320\270\320\261\320\272\320\260 ID", nullptr));
         label_i2padr->setText(QCoreApplication::translate("MainWindow", "\320\222\320\260\321\210 i2p-\320\260\320\264\321\200\320\265\321\201", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(profileTab), QCoreApplication::translate("MainWindow", "\320\237\321\200\320\276\321\204\320\270\320\273\321\214", nullptr));
+        label_messages->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p align=\"center\">\320\241\320\276\320\276\320\261\321\211\320\265\320\275\320\270\321\217</p></body></html>", nullptr));
+
+        const bool __sortingEnabled2 = messagesField->isSortingEnabled();
+        messagesField->setSortingEnabled(false);
+        QListWidgetItem *___qlistwidgetitem8 = messagesField->item(0);
+        ___qlistwidgetitem8->setText(QCoreApplication::translate("MainWindow", "123", nullptr));
+        QListWidgetItem *___qlistwidgetitem9 = messagesField->item(1);
+        ___qlistwidgetitem9->setText(QCoreApplication::translate("MainWindow", "\320\235\320\260\320\267\320\262\320\260\320\275\320\270\320\265 \321\207\320\260\321\202\320\260", nullptr));
+        QListWidgetItem *___qlistwidgetitem10 = messagesField->item(2);
+        ___qlistwidgetitem10->setText(QCoreApplication::translate("MainWindow", "username111", nullptr));
+        messagesField->setSortingEnabled(__sortingEnabled2);
+
+        label_dialog->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p align=\"center\">\320\224\320\270\320\260\320\273\320\276\320\263</p></body></html>", nullptr));
+        dialogField->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt; color:#8a8a8a;\">\320\223\320\265\320\275\320\265\321\200\320\260\321\206\320\270\321\217 \320\270 \320\277\320\265\321\200\320\265\320\264\320\260\321\207\320\260 \320\272\320\273\321\216\321\207\320\265\320\271 \320\277\321\200\320\276\321\210\320\273\320\260 \321\203\321\201\320\277\320\265\321\210\320\275\320\276, \320\277\321\200\320\270\321\217\321\202"
+                        "\320\275\320\276\320\263\320\276 \320\276\320\261\321\211\320\265\320\275\320\270\321\217!</span></p>\n"
+"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:7pt; color:#8a8a8a;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:700; color:#aa007f;\">[username111]</span>: \320\237\321\200\320\270\320\262\320\265\321\202</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:700; color:#55007f;\">[\320\222\321\213]</span>: \320\224\320\260\321\200\320\276\320\262</p></body></html>", nullptr));
+        sendButton->setText(QCoreApplication::translate("MainWindow", "\320\236\321\202\320\277\321\200\320\260\320\262\320\270\321\202\321\214", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(messagesTab), QCoreApplication::translate("MainWindow", "\320\241\320\276\320\276\320\261\321\211\320\265\320\275\320\270\321\217", nullptr));
         inDevTxt->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:36pt; font-weight:700; color:#8a8a8a;\">\320\222 \321\200\320\260\320\267\321\200\320\260\320\261\320\276\321\202\320\272\320\265</span></p></body></html>", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(storageTab), QCoreApplication::translate("MainWindow", "\320\245\321\200\320\260\320\275\320\270\320\273\320\270\321\211\320\265", nullptr));
