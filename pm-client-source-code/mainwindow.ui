@@ -204,6 +204,15 @@
          <normaloff>:/mainapp/sources/keys.ico</normaloff>:/mainapp/sources/keys.ico</iconset>
        </property>
       </item>
+      <item>
+       <property name="text">
+        <string>Ключ диалога (username111)</string>
+       </property>
+       <property name="icon">
+        <iconset resource="source.qrc">
+         <normaloff>:/mainapp/sources/keys.ico</normaloff>:/mainapp/sources/keys.ico</iconset>
+       </property>
+      </item>
      </widget>
      <widget class="QPushButton" name="setLogin">
       <property name="geometry">
@@ -310,6 +319,56 @@
      <attribute name="title">
       <string>Сообщения</string>
      </attribute>
+     <widget class="QLabel" name="label_messages">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>300</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Сообщения&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="messagesField">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>30</y>
+        <width>300</width>
+        <height>491</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>123</string>
+       </property>
+       <property name="icon">
+        <iconset resource="source.qrc">
+         <normaloff>:/mainapp/sources/chat.ico</normaloff>:/mainapp/sources/chat.ico</iconset>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Название чата</string>
+       </property>
+       <property name="icon">
+        <iconset resource="source.qrc">
+         <normaloff>:/mainapp/sources/chat.ico</normaloff>:/mainapp/sources/chat.ico</iconset>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>username111</string>
+       </property>
+       <property name="icon">
+        <iconset resource="source.qrc">
+         <normaloff>:/mainapp/sources/dialog.ico</normaloff>:/mainapp/sources/dialog.ico</iconset>
+       </property>
+      </item>
+     </widget>
     </widget>
     <widget class="QWidget" name="storageTab">
      <attribute name="icon">

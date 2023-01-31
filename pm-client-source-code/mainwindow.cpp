@@ -80,6 +80,8 @@ void MainWindow::autoscale () {
     this->ui->removeContact->setGeometry(100, this->ui->contactList->height() + 189, 80, 24);
 
     // Сообщения
+    this->ui->label_messages->setGeometry(0, 0, getSize(300, winXcnst, winX), 30);
+    this->ui->messagesField->setGeometry(0, 30, this->ui->label_messages->width(), getSize(491, winYcnst, winY));
     // Хранилище
     this->ui->inDevTxt->setGeometry(
         0, 0,

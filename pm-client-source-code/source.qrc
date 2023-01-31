@@ -9,6 +9,8 @@
         <file>sources/i2p.png</file>
         <file>sources/freenet.png</file>
         <file>sources/FullGreaM_avatar.png</file>
+        <file>sources/chat.ico</file>
+        <file>sources/dialog.ico</file>
     </qresource>
     <qresource prefix="/locales">
         <file>langs/rus.png</file>
