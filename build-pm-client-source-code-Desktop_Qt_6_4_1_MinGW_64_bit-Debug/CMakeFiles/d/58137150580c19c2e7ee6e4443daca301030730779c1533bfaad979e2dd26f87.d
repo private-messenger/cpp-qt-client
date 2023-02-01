@@ -502,6 +502,12 @@ pm-client-source-code_autogen/timestamp: \
   W:/projects/repositories/pm-cli-cpp/pm-client-source-code/CMakeLists.txt \
   W:/projects/repositories/pm-cli-cpp/pm-client-source-code/credits.cpp \
   W:/projects/repositories/pm-cli-cpp/pm-client-source-code/credits.h \
+  W:/projects/repositories/pm-cli-cpp/pm-client-source-code/freenet_settings.cpp \
+  W:/projects/repositories/pm-cli-cpp/pm-client-source-code/freenet_settings.h \
+  W:/projects/repositories/pm-cli-cpp/pm-client-source-code/general_settings.cpp \
+  W:/projects/repositories/pm-cli-cpp/pm-client-source-code/general_settings.h \
+  W:/projects/repositories/pm-cli-cpp/pm-client-source-code/i2p_settings.cpp \
+  W:/projects/repositories/pm-cli-cpp/pm-client-source-code/i2p_settings.h \
   W:/projects/repositories/pm-cli-cpp/pm-client-source-code/log_in_form.cpp \
   W:/projects/repositories/pm-cli-cpp/pm-client-source-code/log_in_form.h \
   W:/projects/repositories/pm-cli-cpp/pm-client-source-code/main.cpp \
@@ -509,6 +515,9 @@ pm-client-source-code_autogen/timestamp: \
   W:/projects/repositories/pm-cli-cpp/pm-client-source-code/mainwindow.h \
   W:/projects/repositories/pm-cli-cpp/pm-client-source-code/source.qrc \
   W:/projects/repositories/pm-cli-cpp/pm-client-source-code/credits.ui \
+  W:/projects/repositories/pm-cli-cpp/pm-client-source-code/freenet_settings.ui \
+  W:/projects/repositories/pm-cli-cpp/pm-client-source-code/general_settings.ui \
+  W:/projects/repositories/pm-cli-cpp/pm-client-source-code/i2p_settings.ui \
   W:/projects/repositories/pm-cli-cpp/pm-client-source-code/log_in_form.ui \
   W:/projects/repositories/pm-cli-cpp/pm-client-source-code/mainwindow.ui \
   C:/Qt/Tools/CMake_64/bin/cmake.exe

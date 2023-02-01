@@ -223,6 +223,7 @@ public:
         sendButton = new QPushButton(messagesTab);
         sendButton->setObjectName("sendButton");
         sendButton->setGeometry(QRect(700, 490, 80, 24));
+        sendButton->setCursor(QCursor(Qt::PointingHandCursor));
         QIcon icon11;
         icon11.addFile(QString::fromUtf8(":/mainapp/sources/messages.ico"), QSize(), QIcon::Normal, QIcon::Off);
         tabWidget->addTab(messagesTab, icon11, QString());
@@ -272,7 +273,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);

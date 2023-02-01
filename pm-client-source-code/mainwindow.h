@@ -42,11 +42,13 @@ public:
 
 protected slots:
     void autoscale ();
+    void dynamicAccess ();
 private slots:
     void on_creditsAction_clicked();
 private:
     Ui::MainWindow *ui;
-    QTimer *timer;
+    QTimer *timerScale;
+    QTimer *timerAccess;
     Credits credits;
 };
 #endif // MAINWINDOW_H

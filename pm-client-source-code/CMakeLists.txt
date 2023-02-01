@@ -22,6 +22,12 @@ set(PROJECT_SOURCES
         log_in_form.h log_in_form.cpp log_in_form.ui
         # Credits form files
         credits.h credits.cpp credits.ui
+        # General settings
+        general_settings.h general_settings.cpp general_settings.ui
+        # i2p settings
+        i2p_settings.h i2p_settings.cpp i2p_settings.ui
+        # freenet settings
+        freenet_settings.h freenet_settings.cpp freenet_settings.ui
         # Src files
         source.qrc
 )

@@ -29,10 +29,16 @@ Prikhodko N.S. (FullGreaM) 2023
 
 MainWindow::MainWindow (QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
-    this->timer = new QTimer(this);
-    connect(timer, SIGNAL(timeout()), this, SLOT(autoscale()));
-    timer->start(1);  // И запустим таймер
+    // Автомасштабирование элементов
+    this->timerScale = new QTimer(this);
+    connect(timerScale, SIGNAL(timeout()), this, SLOT(autoscale()));
+    timerScale->start(1);
+    // Запуск таймера по динамическому доступу элементов для пользователя
+    this->timerAccess = new QTimer(this);
+    connect(timerAccess, SIGNAL(timeout()), this, SLOT(dynamicAccess()));
+    timerAccess->start(1);
 
+    // Подключение кнопок
     connect(this->ui->creditsAction, SIGNAL(triggered()), this, SLOT(on_creditsAction_clicked()));
 }
 
@@ -47,6 +53,15 @@ int getSize (float startSize, float startCoordValue, float currentCoordValue) {
 void MainWindow::on_creditsAction_clicked () {
     credits.hide();
     credits.show();
+}
+
+void MainWindow::dynamicAccess() {
+    if (this->ui->contactList->currentRow() == -1 && this->ui->removeContact->isEnabled()) {
+        this->ui->removeContact->setEnabled(false);
+    }
+    else if (this->ui->contactList->currentRow() != -1 && this->ui->removeContact->isEnabled() == false) {
+        this->ui->removeContact->setEnabled(true);
+    }
 }
 
 void MainWindow::autoscale () {
@@ -82,6 +97,10 @@ void MainWindow::autoscale () {
     // Сообщения
     this->ui->label_messages->setGeometry(0, 0, getSize(300, winXcnst, winX), 30);
     this->ui->messagesField->setGeometry(0, 30, this->ui->label_messages->width(), getSize(491, winYcnst, winY));
+    this->ui->dialogField->setGeometry(this->ui->messagesField->width() + 9, 30, getSize(471, winXcnst, winX), this->ui->messagesField->height() - 30);
+    this->ui->label_dialog->setGeometry(this->ui->label_messages->width(), 0, this->ui->dialogField->width(), 30);
+    this->ui->messageArea->setGeometry(this->ui->dialogField->x(), this->ui->label_dialog->height() + this->ui->dialogField->height(), this->ui->dialogField->width() - 80, 24);
+    this->ui->sendButton->setGeometry(this->ui->messageArea->x() + this->ui->messageArea->width(), this->ui->messageArea->y(), 80, 24);
     // Хранилище
     this->ui->inDevTxt->setGeometry(
         0, 0,

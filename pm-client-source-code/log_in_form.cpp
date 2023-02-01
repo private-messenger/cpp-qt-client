@@ -1,5 +1,6 @@
 #include "log_in_form.h"
 #include "ui_log_in_form.h"
+#include "mainwindow.h"
 
 /*
 Уважаемые (и не очень) любители комментариев "на английском языке",
@@ -25,7 +26,7 @@ or Google (or Bing) translator
 Prikhodko N.S. (FullGreaM) 2023
 */
 
-LogInForm::LogInForm(QWidget *parent) :
+LogInForm::LogInForm(QWidget *parent, MainWindow mw) :
     QWidget(parent),
     ui(new Ui::LogInForm)
 {

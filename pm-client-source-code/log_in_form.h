@@ -2,6 +2,7 @@
 #define LOG_IN_FORM_H
 
 #include <QWidget>
+#include "mainwindow.h"
 
 /*
 Уважаемые (и не очень) любители комментариев "на английском языке",
@@ -36,7 +37,7 @@ class LogInForm : public QWidget
     Q_OBJECT
 
 public:
-    explicit LogInForm(QWidget *parent = nullptr);
+    explicit LogInForm(QWidget *parent = nullptr, MainWindow mw = nullptr);
     ~LogInForm();
 private:
     Ui::LogInForm *ui;

@@ -260,6 +260,24 @@
 			null
 		],
 		[
+			"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/freenet_settings.h",
+			"MU",
+			"EWIEGA46WW/moc_freenet_settings.cpp",
+			null
+		],
+		[
+			"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/general_settings.h",
+			"MU",
+			"EWIEGA46WW/moc_general_settings.cpp",
+			null
+		],
+		[
+			"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/i2p_settings.h",
+			"MU",
+			"EWIEGA46WW/moc_i2p_settings.cpp",
+			null
+		],
+		[
 			"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/log_in_form.h",
 			"MU",
 			"EWIEGA46WW/moc_log_in_form.cpp",
@@ -343,6 +361,21 @@
 	[
 		[
 			"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/credits.cpp",
+			"MU",
+			null
+		],
+		[
+			"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/freenet_settings.cpp",
+			"MU",
+			null
+		],
+		[
+			"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/general_settings.cpp",
+			"MU",
+			null
+		],
+		[
+			"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/i2p_settings.cpp",
 			"MU",
 			null
 		],

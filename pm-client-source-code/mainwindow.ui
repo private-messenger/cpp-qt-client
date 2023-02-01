@@ -424,6 +424,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <height>24</height>
        </rect>
       </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
       <property name="text">
        <string>Отправить</string>
       </property>
