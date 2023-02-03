@@ -30,6 +30,7 @@ public:
     QLabel *label_password;
     QLineEdit *passwordField;
     QPushButton *signInButton;
+    QPushButton *signInFromFileButton;
     QWidget *signUp;
 
     void setupUi(QWidget *LogInForm)
@@ -61,6 +62,9 @@ public:
         signInButton = new QPushButton(signIn);
         signInButton->setObjectName("signInButton");
         signInButton->setGeometry(QRect(160, 130, 80, 24));
+        signInFromFileButton = new QPushButton(signIn);
+        signInFromFileButton->setObjectName("signInFromFileButton");
+        signInFromFileButton->setGeometry(QRect(150, 170, 101, 24));
         tabWidget->addTab(signIn, QString());
         signUp = new QWidget();
         signUp->setObjectName("signUp");
@@ -80,6 +84,7 @@ public:
         label_login->setText(QCoreApplication::translate("LogInForm", "<html><head/><body><p align=\"center\">\320\233\320\276\320\263\320\270\320\275</p></body></html>", nullptr));
         label_password->setText(QCoreApplication::translate("LogInForm", "<html><head/><body><p align=\"center\">\320\237\320\260\321\200\320\276\320\273\321\214</p></body></html>", nullptr));
         signInButton->setText(QCoreApplication::translate("LogInForm", "\320\222\320\276\320\271\321\202\320\270", nullptr));
+        signInFromFileButton->setText(QCoreApplication::translate("LogInForm", "\320\222\320\276\320\271\321\202\320\270 \321\201 \321\204\320\260\320\271\320\273\320\260", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(signIn), QCoreApplication::translate("LogInForm", "\320\222\321\205\320\276\320\264", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(signUp), QCoreApplication::translate("LogInForm", "\320\227\320\260\321\200\320\265\320\263\320\270\321\201\321\202\321\200\320\270\321\200\320\276\320\262\320\260\321\202\321\214\321\201\321\217", nullptr));
     } // retranslateUi

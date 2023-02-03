@@ -507,8 +507,15 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <addaction name="enLocaleAction"/>
     <addaction name="uaLocaleAction"/>
    </widget>
+   <widget class="QMenu" name="menuAccount">
+    <property name="title">
+     <string>Аккаунт</string>
+    </property>
+    <addaction name="saveAccAction"/>
+   </widget>
    <addaction name="menu"/>
    <addaction name="menuLanguage"/>
+   <addaction name="menuAccount"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="generalSettingsAction">
@@ -581,6 +588,11 @@ li.checked::marker { content: &quot;\2612&quot;; }
    </property>
    <property name="text">
     <string>Об авторе</string>
+   </property>
+  </action>
+  <action name="saveAccAction">
+   <property name="text">
+    <string>Сохранить</string>
    </property>
   </action>
  </widget>

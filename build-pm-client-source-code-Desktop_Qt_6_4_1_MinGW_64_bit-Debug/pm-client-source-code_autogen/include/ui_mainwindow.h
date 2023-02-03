@@ -39,6 +39,7 @@ public:
     QAction *enLocaleAction;
     QAction *uaLocaleAction;
     QAction *creditsAction;
+    QAction *saveAccAction;
     QWidget *centralwidget;
     QTabWidget *tabWidget;
     QWidget *profileTab;
@@ -70,6 +71,7 @@ public:
     QMenu *menuSettings;
     QMenu *logoutMenu;
     QMenu *menuLanguage;
+    QMenu *menuAccount;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -117,6 +119,8 @@ public:
         creditsAction = new QAction(MainWindow);
         creditsAction->setObjectName("creditsAction");
         creditsAction->setCheckable(false);
+        saveAccAction = new QAction(MainWindow);
+        saveAccAction->setObjectName("saveAccAction");
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         tabWidget = new QTabWidget(centralwidget);
@@ -250,6 +254,8 @@ public:
         menuLanguage->setTearOffEnabled(false);
         menuLanguage->setSeparatorsCollapsible(false);
         menuLanguage->setToolTipsVisible(false);
+        menuAccount = new QMenu(menubar);
+        menuAccount->setObjectName("menuAccount");
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
@@ -257,6 +263,7 @@ public:
 
         menubar->addAction(menu->menuAction());
         menubar->addAction(menuLanguage->menuAction());
+        menubar->addAction(menuAccount->menuAction());
         menu->addAction(menuSettings->menuAction());
         menu->addAction(logoutMenu->menuAction());
         menu->addSeparator();
@@ -270,6 +277,7 @@ public:
         menuLanguage->addAction(ruLocaleAction);
         menuLanguage->addAction(enLocaleAction);
         menuLanguage->addAction(uaLocaleAction);
+        menuAccount->addAction(saveAccAction);
 
         retranslateUi(MainWindow);
 
@@ -291,6 +299,7 @@ public:
         enLocaleAction->setText(QCoreApplication::translate("MainWindow", "English (English)", nullptr));
         uaLocaleAction->setText(QCoreApplication::translate("MainWindow", "(\316\262) \320\243\320\272\321\200\320\260\321\227\320\275\321\201\321\214\320\272\320\270\320\271 (Ukrainian)", nullptr));
         creditsAction->setText(QCoreApplication::translate("MainWindow", "\320\236\320\261 \320\260\320\262\321\202\320\276\321\200\320\265", nullptr));
+        saveAccAction->setText(QCoreApplication::translate("MainWindow", "\320\241\320\276\321\205\321\200\320\260\320\275\320\270\321\202\321\214", nullptr));
         idField->setText(QCoreApplication::translate("MainWindow", "-bjJ5KYD6X0fo55ko=xBcF-eq/58NoV7qwbvs9VzrGdcvWZ/63yQ6g/s1rtY2dB!WCdPbwYWLPAnKsd7A5dRorUew4jT4Ar88Iu1d1!jk6xG2txDd3GsnxTh0JmoZ0x-f=Dxj34mBUYyTaI9!?q=klW6SLd=SSACl2M=rv7FE7VjIVZBZ3s5SrPMIBDx7aWb1l1UyjdpESHpOY-O6ZH5uu-wsMbXF3jem8NZInp6ex6LvgqSGZ5wXV=LIS!EJdr3", nullptr));
         idField->setPlaceholderText(QCoreApplication::translate("MainWindow", "\320\236\321\210\320\270\320\261\320\272\320\260 ID", nullptr));
         label_id->setText(QCoreApplication::translate("MainWindow", "\320\222\320\260\321\210 ID", nullptr));
@@ -365,6 +374,7 @@ public:
         menuSettings->setTitle(QCoreApplication::translate("MainWindow", "\320\235\320\260\321\201\321\202\321\200\320\276\320\271\320\272\320\270", nullptr));
         logoutMenu->setTitle(QCoreApplication::translate("MainWindow", "\320\222\321\213\320\271\321\202\320\270 \320\270\320\267 \321\203\321\207\321\221\321\202\320\275\320\276\320\271 \320\267\320\260\320\277\320\270\321\201\320\270", nullptr));
         menuLanguage->setTitle(QCoreApplication::translate("MainWindow", "\320\257\320\267\321\213\320\272 (Language)", nullptr));
+        menuAccount->setTitle(QCoreApplication::translate("MainWindow", "\320\220\320\272\320\272\320\260\321\203\320\275\321\202", nullptr));
     } // retranslateUi
 
 };

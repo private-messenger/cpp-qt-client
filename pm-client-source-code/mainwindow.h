@@ -1,8 +1,10 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include "credits.h"
 #include <QMainWindow>
+#include "credits.h"
+#include "log_in_form.h"
+#include "databaseAI.h"
 
 /*
 Уважаемые (и не очень) любители комментариев "на английском языке",
@@ -39,7 +41,8 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-
+    void showLogIn ();
+    bool needAuth = false;
 protected slots:
     void autoscale ();
     void dynamicAccess ();
@@ -50,5 +53,7 @@ private:
     QTimer *timerScale;
     QTimer *timerAccess;
     Credits credits;
+    LogInForm logInForm;
+    DatabaseAppInterface database;
 };
 #endif // MAINWINDOW_H

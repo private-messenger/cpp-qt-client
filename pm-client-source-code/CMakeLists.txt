@@ -28,6 +28,10 @@ set(PROJECT_SOURCES
         i2p_settings.h i2p_settings.cpp i2p_settings.ui
         # freenet settings
         freenet_settings.h freenet_settings.cpp freenet_settings.ui
+        # Database application interface
+        databaseAI.h databaseAI.cpp
+        # Locales
+        locales.h locales.cpp
         # Src files
         source.qrc
 )
@@ -72,3 +76,7 @@ install(TARGETS pm-client-source-code
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(pm-client-source-code)
 endif()
+
+target_include_directories(${CMAKE_PROJECT_NAME} PUBLIC
+sqlite3/
+)

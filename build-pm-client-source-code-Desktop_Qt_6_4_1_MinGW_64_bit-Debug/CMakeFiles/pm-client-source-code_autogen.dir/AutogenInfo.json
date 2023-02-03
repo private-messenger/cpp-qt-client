@@ -260,6 +260,12 @@
 			null
 		],
 		[
+			"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/databaseAI.h",
+			"MU",
+			"EWIEGA46WW/moc_databaseAI.cpp",
+			null
+		],
+		[
 			"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/freenet_settings.h",
 			"MU",
 			"EWIEGA46WW/moc_freenet_settings.cpp",
@@ -275,6 +281,12 @@
 			"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/i2p_settings.h",
 			"MU",
 			"EWIEGA46WW/moc_i2p_settings.cpp",
+			null
+		],
+		[
+			"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/locales.h",
+			"MU",
+			"EWIEGA46WW/moc_locales.cpp",
 			null
 		],
 		[
@@ -316,6 +328,7 @@
 	],
 	"MOC_INCLUDES" : 
 	[
+		"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3",
 		"C:/Qt/6.4.1/mingw_64/include/QtCore",
 		"C:/Qt/6.4.1/mingw_64/include",
 		"C:/Qt/6.4.1/mingw_64/mkspecs/win32-g++",
@@ -365,6 +378,11 @@
 			null
 		],
 		[
+			"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/databaseAI.cpp",
+			"MU",
+			null
+		],
+		[
 			"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/freenet_settings.cpp",
 			"MU",
 			null
@@ -376,6 +394,11 @@
 		],
 		[
 			"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/i2p_settings.cpp",
+			"MU",
+			null
+		],
+		[
+			"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/locales.cpp",
 			"MU",
 			null
 		],

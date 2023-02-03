@@ -332,4 +332,7 @@ W:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h \
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wctype.h \
-  W:/projects/repositories/pm-cli-cpp/pm-client-source-code/credits.h
+  W:/projects/repositories/pm-cli-cpp/pm-client-source-code/credits.h \
+  W:/projects/repositories/pm-cli-cpp/pm-client-source-code/databaseAI.h \
+  W:/projects/repositories/pm-cli-cpp/pm-client-source-code/log_in_form.h \
+  W:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3/sqlite3.h

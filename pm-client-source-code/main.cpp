@@ -1,5 +1,4 @@
 #include "mainwindow.h"
-#include "log_in_form.h"
 #include <QApplication>
 
 /*
@@ -28,13 +27,13 @@ Prikhodko N.S. (FullGreaM) 2023
 
 int main (int argc, char *argv[]) {
     QApplication a(argc, argv);
-    LogInForm logInForm;
     MainWindow w;
     bool isAuthed = false;
     w.show();
     if (!isAuthed) {
         w.setDisabled(true);
-        logInForm.show();
+        w.showLogIn();
+        // logInForm.show();
     }
     return a.exec();
 }

@@ -1,5 +1,7 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
+#include "databaseAI.h"
+#include "locales.h"
 #include <QTimer>
 #include <iostream>
 
@@ -29,6 +31,7 @@ Prikhodko N.S. (FullGreaM) 2023
 
 MainWindow::MainWindow (QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
+    //this->database = new DatabaseAppInterface();
     // Автомасштабирование элементов
     this->timerScale = new QTimer(this);
     connect(timerScale, SIGNAL(timeout()), this, SLOT(autoscale()));
@@ -55,12 +58,28 @@ void MainWindow::on_creditsAction_clicked () {
     credits.show();
 }
 
+void MainWindow::showLogIn () {
+    logInForm.show();
+    this->needAuth = true;
+}
+
 void MainWindow::dynamicAccess() {
     if (this->ui->contactList->currentRow() == -1 && this->ui->removeContact->isEnabled()) {
         this->ui->removeContact->setEnabled(false);
     }
     else if (this->ui->contactList->currentRow() != -1 && this->ui->removeContact->isEnabled() == false) {
         this->ui->removeContact->setEnabled(true);
+    }
+    // Блокирование окна основной программы (PS: В будущих апдейтах убрать, делаю только для того, чтобы удовлетворить требования крусового проекта)
+    if ((credits.isHidden() && logInForm.isHidden()) && !this->isEnabled()) {
+        this->setEnabled(true);
+    }
+    else if ((!credits.isHidden() || !logInForm.isHidden()) && this->isEnabled()) {
+        this->setEnabled(false);
+    }
+    // Автовыход при закрытии окна авторизации
+    if (this->needAuth && logInForm.isHidden()) {
+        this->hide();
     }
 }
 
