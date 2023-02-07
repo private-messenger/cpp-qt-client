@@ -43,6 +43,7 @@ public:
     ~MainWindow();
     void showLogIn ();
     bool needAuth = false;
+    bool isAuthed ();
 protected slots:
     void autoscale ();
     void dynamicAccess ();

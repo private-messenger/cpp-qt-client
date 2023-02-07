@@ -25,6 +25,8 @@ or Google (or Bing) translator
 Prikhodko N.S. (FullGreaM) 2023
 */
 
+#include <iostream>
+
 DatabaseAppInterface::DatabaseAppInterface() {
     if (sqlite3_open("appdata", &database)) {
         this->raisedError = true;

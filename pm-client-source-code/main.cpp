@@ -28,7 +28,7 @@ Prikhodko N.S. (FullGreaM) 2023
 int main (int argc, char *argv[]) {
     QApplication a(argc, argv);
     MainWindow w;
-    bool isAuthed = false;
+    bool isAuthed = w.isAuthed();
     w.show();
     if (!isAuthed) {
         w.setDisabled(true);

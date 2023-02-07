@@ -36,6 +36,26 @@ set(PROJECT_SOURCES
         source.qrc
 )
 
+# Check platforms
+if (CMAKE_HOST_WIN32)
+    # 32-разрядные поддерживаться не будут!
+    set(WINDOWS64 1)
+    #if (CMAKE_CL_64)
+    #    set(WINDOWS64 1)
+    #else ()
+    #    set(WINDOWS32 1)
+    #endif()
+elseif(CMAKE_HOST_APPLE)
+    set(MACOS 1)
+elseif(CMAKE_HOST_UNIX)
+    set(LINUX 1)
+endif()
+
+# Load platform version file
+#if (WINDOWS64)
+#    set(PROJECT_SOURCES ${PROJECT_SOURCES} databaseAI_win64.h databaseAI_win64.cpp)
+#endif()
+
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(pm-client-source-code
         MANUAL_FINALIZATION
@@ -77,6 +97,12 @@ if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(pm-client-source-code)
 endif()
 
-target_include_directories(${CMAKE_PROJECT_NAME} PUBLIC
-sqlite3/
-)
+if (WINDOWS64)
+    target_include_directories(${CMAKE_PROJECT_NAME} PUBLIC
+        sqlite3/
+        sqlite3-lib/win64
+    )
+    target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC
+        sqlite3.a
+    )
+endif()

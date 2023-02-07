@@ -4,6 +4,7 @@
 #include "locales.h"
 #include <QTimer>
 #include <iostream>
+#include <QMessageBox>
 
 /*
 Уважаемые (и не очень) любители комментариев "на английском языке",
@@ -32,6 +33,15 @@ Prikhodko N.S. (FullGreaM) 2023
 MainWindow::MainWindow (QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
     //this->database = new DatabaseAppInterface();
+    if (this->database.raisedError) {
+        /*int error = QMessageBox::Critical(
+            this, "sql.errorTitle", this->database.dbError, QMessageBox::Ok
+        );*/
+        QMessageBox dbError;
+        dbError.setText(this->database.dbError);
+        dbError.exec();
+    }
+
     // Автомасштабирование элементов
     this->timerScale = new QTimer(this);
     connect(timerScale, SIGNAL(timeout()), this, SLOT(autoscale()));
@@ -56,6 +66,10 @@ int getSize (float startSize, float startCoordValue, float currentCoordValue) {
 void MainWindow::on_creditsAction_clicked () {
     credits.hide();
     credits.show();
+}
+
+bool MainWindow::isAuthed () {
+    return true;
 }
 
 void MainWindow::showLogIn () {
