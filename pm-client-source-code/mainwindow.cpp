@@ -34,25 +34,69 @@ MainWindow::MainWindow (QWidget *parent) : QMainWindow(parent), ui(new Ui::MainW
     ui->setupUi(this);
     //this->database = new DatabaseAppInterface();
     if (this->database.raisedError) {
-        /*int error = QMessageBox::Critical(
-            this, "sql.errorTitle", this->database.dbError, QMessageBox::Ok
-        );*/
-        QMessageBox dbError;
-        dbError.setText(this->database.dbError);
-        dbError.exec();
+        QMessageBox messageBox;
+        Locales* loc = new Locales(this->locale);
+        messageBox.critical(0, QString::fromStdString(loc->getLocaleVar("fio.errorTitle")), QString::fromStdString(loc->getLocaleVar(this->database.dbError)));
+
+        // Закрытие окна
+        this->error = true;
     }
+    else {
+        // Автомасштабирование элементов
+        this->timerScale = new QTimer(this);
+        connect(timerScale, SIGNAL(timeout()), this, SLOT(autoscale()));
+        timerScale->start(1);
+        // Запуск таймера по динамическому доступу элементов для пользователя
+        this->timerAccess = new QTimer(this);
+        connect(timerAccess, SIGNAL(timeout()), this, SLOT(dynamicAccess()));
+        timerAccess->start(1);
 
-    // Автомасштабирование элементов
-    this->timerScale = new QTimer(this);
-    connect(timerScale, SIGNAL(timeout()), this, SLOT(autoscale()));
-    timerScale->start(1);
-    // Запуск таймера по динамическому доступу элементов для пользователя
-    this->timerAccess = new QTimer(this);
-    connect(timerAccess, SIGNAL(timeout()), this, SLOT(dynamicAccess()));
-    timerAccess->start(1);
+        // Подключение кнопок
+        connect(this->ui->creditsAction, SIGNAL(triggered()), this, SLOT(on_creditsAction_clicked()));
+    }
+}
 
-    // Подключение кнопок
-    connect(this->ui->creditsAction, SIGNAL(triggered()), this, SLOT(on_creditsAction_clicked()));
+void MainWindow::setupLocale (std::string locale) {
+    Locales* loc = new Locales(this->locale);
+    // Устанавливаем значения согласно ключам
+    // Заголовок
+    this->setWindowTitle(QString::fromStdString(loc->getLocaleVar("prog.name")));
+    // Меню
+    // Главные элементы
+    this->ui->menu->setTitle(QString::fromStdString(loc->getLocaleVar("menu.mainw.prog")));
+    this->ui->menuAccount->setTitle(QString::fromStdString(loc->getLocaleVar("menu.mainw.account")));
+    this->ui->menuLanguage->setTitle(QString::fromStdString(loc->getLocaleVar("menu.mainw.language")));
+    // Дочерние элементы (выпадающие списки)
+    this->ui->logoutMenu->setTitle(QString::fromStdString(loc->getLocaleVar("menu.mainw.logout")));
+    this->ui->menuSettings->setTitle(QString::fromStdString(loc->getLocaleVar("menu.mainw.settings")));
+    // Дочерние элементы (кнопки)
+    this->ui->creditsAction->setText(QString::fromStdString(loc->getLocaleVar("menu.mainw.credits")));
+    // Tab-виджеты
+    this->ui->tabWidget->setTabText(0, QString::fromStdString(loc->getLocaleVar("prog.tab.profile")));
+    this->ui->tabWidget->setTabText(1, QString::fromStdString(loc->getLocaleVar("prog.tab.messages")));
+    this->ui->tabWidget->setTabText(2, QString::fromStdString(loc->getLocaleVar("prog.tab.storage")));
+    // Текст-лейбелы
+    this->ui->label_id->setText(QString::fromStdString(loc->getLocaleVar("labels.mainw.id")));
+    this->ui->label_i2padr->setText(QString::fromStdString(loc->getLocaleVar("labels.mainw.i2pAdr")));
+    this->ui->label_login->setText(QString::fromStdString(loc->getLocaleVar("labels.mainw.login")));
+    this->ui->label_keys->setText(QString::fromStdString(loc->getLocaleVar("labels.mainw.keys")));
+    this->ui->label_contacts->setText(QString::fromStdString(loc->getLocaleVar("labels.mainw.contacts")));
+    this->ui->label_messages->setText(QString::fromStdString(loc->getLocaleVar("labels.mainw.messages")));
+    this->ui->label_dialog->setText(QString::fromStdString(loc->getLocaleVar("labels.mainw.dialog")));
+    this->ui->inDevTxt->setText(QString::fromStdString(loc->getLocaleVar("labels.mainw.indev")));
+    // Элементы ввода
+    this->ui->idField->setPlaceholderText(QString::fromStdString(loc->getLocaleVar("input.mainw.id")));
+    this->ui->i2pAddressField->setPlaceholderText(QString::fromStdString(loc->getLocaleVar("input.mainw.i2pAdr")));
+    this->ui->loginField->setPlaceholderText(QString::fromStdString(loc->getLocaleVar("input.mainw.login")));
+    // Кнопки
+    this->ui->setLogin->setText(QString::fromStdString(loc->getLocaleVar("button.mainw.setlogin")));
+    this->ui->updatePas->setText(QString::fromStdString(loc->getLocaleVar("button.mainw.updpassword")));
+    this->ui->addContact->setText(QString::fromStdString(loc->getLocaleVar("button.mainw.addcontact")));
+    this->ui->removeContact->setText(QString::fromStdString(loc->getLocaleVar("button.mainw.rmcontact")));
+    this->ui->sendButton->setText(QString::fromStdString(loc->getLocaleVar("button.mainw.sendmsg")));
+    // Установка локализации в дочерние окна
+    /*logInForm.setupLocale(locale);
+    credits.setupLocale(locale);*/
 }
 
 MainWindow::~MainWindow () {
@@ -94,6 +138,9 @@ void MainWindow::dynamicAccess() {
     // Автовыход при закрытии окна авторизации
     if (this->needAuth && logInForm.isHidden()) {
         this->hide();
+    }
+    else if (this->needAuth && this->isHidden()) {
+        logInForm.hide();
     }
 }
 

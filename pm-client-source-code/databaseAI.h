@@ -34,7 +34,7 @@ public:
     DatabaseAppInterface();
     ~DatabaseAppInterface ();
     bool raisedError = false;
-    char   *dbError  = 0;
+    char *dbError  = 0;
 private:
     sqlite3 *database = 0;
 };

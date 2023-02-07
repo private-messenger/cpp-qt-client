@@ -38,6 +38,7 @@ class LogInForm : public QWidget
 public:
     explicit LogInForm(QWidget *parent = nullptr);
     ~LogInForm();
+    void setupLocale (std::string locale);
 protected slots:
     void autoscale ();
 private:

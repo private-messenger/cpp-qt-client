@@ -300,7 +300,7 @@ public:
         uaLocaleAction->setText(QCoreApplication::translate("MainWindow", "(\316\262) \320\243\320\272\321\200\320\260\321\227\320\275\321\201\321\214\320\272\320\270\320\271 (Ukrainian)", nullptr));
         creditsAction->setText(QCoreApplication::translate("MainWindow", "\320\236\320\261 \320\260\320\262\321\202\320\276\321\200\320\265", nullptr));
         saveAccAction->setText(QCoreApplication::translate("MainWindow", "\320\241\320\276\321\205\321\200\320\260\320\275\320\270\321\202\321\214", nullptr));
-        idField->setText(QCoreApplication::translate("MainWindow", "-bjJ5KYD6X0fo55ko=xBcF-eq/58NoV7qwbvs9VzrGdcvWZ/63yQ6g/s1rtY2dB!WCdPbwYWLPAnKsd7A5dRorUew4jT4Ar88Iu1d1!jk6xG2txDd3GsnxTh0JmoZ0x-f=Dxj34mBUYyTaI9!?q=klW6SLd=SSACl2M=rv7FE7VjIVZBZ3s5SrPMIBDx7aWb1l1UyjdpESHpOY-O6ZH5uu-wsMbXF3jem8NZInp6ex6LvgqSGZ5wXV=LIS!EJdr3", nullptr));
+        idField->setText(QString());
         idField->setPlaceholderText(QCoreApplication::translate("MainWindow", "\320\236\321\210\320\270\320\261\320\272\320\260 ID", nullptr));
         label_id->setText(QCoreApplication::translate("MainWindow", "\320\222\320\260\321\210 ID", nullptr));
         label_login->setText(QCoreApplication::translate("MainWindow", "\320\222\320\260\321\210 \320\233\320\276\320\263\320\270\320\275", nullptr));
@@ -337,7 +337,7 @@ public:
         updatePas->setText(QCoreApplication::translate("MainWindow", "\320\236\320\261\320\275\320\276\320\262\320\270\321\202\321\214 \320\277\320\260\321\200\320\276\320\273\321\214", nullptr));
         addContact->setText(QCoreApplication::translate("MainWindow", "\320\224\320\276\320\261\320\260\320\262\320\270\321\202\321\214", nullptr));
         removeContact->setText(QCoreApplication::translate("MainWindow", "\320\243\320\264\320\260\320\273\320\270\321\202\321\214", nullptr));
-        i2pAddressField->setText(QCoreApplication::translate("MainWindow", "http://asdasjkshdfkjsdhfjsdhkfkjs.i2p", nullptr));
+        i2pAddressField->setText(QString());
         i2pAddressField->setPlaceholderText(QCoreApplication::translate("MainWindow", "\320\236\321\210\320\270\320\261\320\272\320\260 ID", nullptr));
         label_i2padr->setText(QCoreApplication::translate("MainWindow", "\320\222\320\260\321\210 i2p-\320\260\320\264\321\200\320\265\321\201", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(profileTab), QCoreApplication::translate("MainWindow", "\320\237\321\200\320\276\321\204\320\270\320\273\321\214", nullptr));

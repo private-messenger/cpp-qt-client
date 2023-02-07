@@ -38,6 +38,7 @@ class Credits : public QWidget
 public:
     explicit Credits(QWidget *parent = nullptr);
     ~Credits();
+    void setupLocale (std::string locale);
 
 protected slots:
     void autoscale ();

@@ -1,5 +1,6 @@
 #include "databaseAI.h"
 #include "sqlite3.h"
+#include <fstream>
 
 /*
 Уважаемые (и не очень) любители комментариев "на английском языке",
@@ -28,9 +29,17 @@ Prikhodko N.S. (FullGreaM) 2023
 #include <iostream>
 
 DatabaseAppInterface::DatabaseAppInterface() {
-    if (sqlite3_open("appdata", &database)) {
+    std::ifstream file ("appdata");
+    if (!file.is_open()) {
         this->raisedError = true;
         this->dbError = "sql.errCreate";
+    }
+    else {
+        file.close();
+        if (sqlite3_open("appdata", &database)) {
+            this->raisedError = true;
+            this->dbError = "sql.errCreate";
+        }
     }
 }
 

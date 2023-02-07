@@ -44,12 +44,15 @@ public:
     void showLogIn ();
     bool needAuth = false;
     bool isAuthed ();
+    bool error = false;
+    void setupLocale (std::string locale);
 protected slots:
     void autoscale ();
     void dynamicAccess ();
 private slots:
     void on_creditsAction_clicked();
 private:
+    std::string locale = "ru_RU";
     Ui::MainWindow *ui;
     QTimer *timerScale;
     QTimer *timerAccess;

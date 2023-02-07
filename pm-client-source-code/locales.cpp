@@ -25,17 +25,23 @@ or Google (or Bing) translator
 Prikhodko N.S. (FullGreaM) 2023
 */
 
-Locales::Locales() {
-
+Locales::Locales(std::string locale) {
+    this->locale = locale;
 }
 
-Ru_RU::Ru_RU() {
-
-}
-
-std::string Ru_RU::getLocaleVar (std::string key) {
-    if (key == "sql.") {
-
+std::string Locales::getLocaleVar (std::string key) {
+    std::string wordvalue = "<ключ не найден>";
+    // Основной перевод
+    if (key == "prog.name") {
+        //wordvalue = "Система персонализированых индивидуальных ключей (СПИК)";
     }
-    return "<ключ не найден>";
+    // Файловые события (file input-output (fio))
+    if (key == "fio.errorTitle") {
+        wordvalue = "Ошибка открытия файлов";
+    }
+    // SQL
+    else if (key == "sql.errCreate") {
+        wordvalue = "Ошибка использования файла базы данных. Файлы локальной базы данных либо отсутствуют, либо повреждены. Переустановите программу.";
+    }
+    return wordvalue;
 }

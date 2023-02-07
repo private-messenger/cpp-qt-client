@@ -30,13 +30,8 @@ Prikhodko N.S. (FullGreaM) 2023
 class Locales
 {
 public:
-    Locales();
-    std::string getLocaleVar (std::string key);
-};
-
-class Ru_RU : Locales {
-public:
-    Ru_RU();
+    Locales(std::string locale);
+    std::string locale;
     std::string getLocaleVar (std::string key);
 };
 

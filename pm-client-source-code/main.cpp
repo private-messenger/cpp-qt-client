@@ -28,12 +28,19 @@ Prikhodko N.S. (FullGreaM) 2023
 int main (int argc, char *argv[]) {
     QApplication a(argc, argv);
     MainWindow w;
-    bool isAuthed = w.isAuthed();
-    w.show();
-    if (!isAuthed) {
-        w.setDisabled(true);
-        w.showLogIn();
-        // logInForm.show();
+    if (!w.error) {
+        bool isAuthed = w.isAuthed();
+        w.show();
+        std::string activeLocale = "ru_RU";
+        w.setupLocale(activeLocale);
+        if (!isAuthed) {
+            w.setDisabled(true);
+            w.showLogIn();
+            // logInForm.show();
+        }
+        return a.exec();
     }
-    return a.exec();
+    else {
+        return -1;
+    }
 }

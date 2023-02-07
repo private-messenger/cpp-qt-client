@@ -48,7 +48,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>-bjJ5KYD6X0fo55ko=xBcF-eq/58NoV7qwbvs9VzrGdcvWZ/63yQ6g/s1rtY2dB!WCdPbwYWLPAnKsd7A5dRorUew4jT4Ar88Iu1d1!jk6xG2txDd3GsnxTh0JmoZ0x-f=Dxj34mBUYyTaI9!?q=klW6SLd=SSACl2M=rv7FE7VjIVZBZ3s5SrPMIBDx7aWb1l1UyjdpESHpOY-O6ZH5uu-wsMbXF3jem8NZInp6ex6LvgqSGZ5wXV=LIS!EJdr3</string>
+       <string/>
       </property>
       <property name="readOnly">
        <bool>true</bool>
@@ -288,7 +288,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>http://asdasjkshdfkjsdhfjsdhkfkjs.i2p</string>
+       <string/>
       </property>
       <property name="readOnly">
        <bool>true</bool>
