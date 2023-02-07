@@ -43,6 +43,40 @@ DatabaseAppInterface::DatabaseAppInterface() {
     }
 }
 
+bool DatabaseAppInterface::getAuthed () {
+    // return false;
+    std::string sql("SELECT value FROM envs WHERE key='authedAccount';");
+    sqlite3_stmt *stmt;
+    int rc = sqlite3_prepare(database, sql.c_str(), -1, &stmt, NULL);
+    if (rc != SQLITE_OK) {
+        this->raisedError = true;
+        this->dbError = "sql.errCreate";
+    }
+    else {
+        rc = sqlite3_step(stmt);
+        int rowCount = 0;
+        while (rc != SQLITE_DONE && rc != SQLITE_OK) {
+            rowCount++;
+            int colCount = sqlite3_column_count(stmt);
+            if (colCount == 0) {
+                this->raisedError = true;
+                this->dbError = "sql.errCreate";
+                return false;
+            }
+            for (int colIndex = 0; colIndex < colCount; colIndex++) {
+                int type = sqlite3_column_type(stmt, colIndex);
+                const char * columnName = sqlite3_column_name(stmt, colIndex);
+                return type == SQLITE_TEXT;
+            }
+        }
+        if (rc != SQLITE_DONE) {
+            this->raisedError = true;
+            this->dbError = "sql.errCreate";
+        }
+    }
+    return false;
+}
+
 DatabaseAppInterface::~DatabaseAppInterface () {
     sqlite3_close(database);
     delete database;

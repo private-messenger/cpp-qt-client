@@ -30,18 +30,133 @@ Locales::Locales(std::string locale) {
 }
 
 std::string Locales::getLocaleVar (std::string key) {
-    std::string wordvalue = "<ключ не найден>";
+    std::string wordvalue = "Ошибка локализации: ключ не найден. Не используйте бэта-версию переводов, либо обновите или переустановите программу.";
     // Основной перевод
     if (key == "prog.name") {
-        //wordvalue = "Система персонализированых индивидуальных ключей (СПИК)";
+        wordvalue = "Система персонализированых индивидуальных ключей (СПИК)";
     }
     // Файловые события (file input-output (fio))
-    if (key == "fio.errorTitle") {
+    else if (key == "fio.errorTitle") {
         wordvalue = "Ошибка открытия файлов";
     }
     // SQL
     else if (key == "sql.errCreate") {
-        wordvalue = "Ошибка использования файла базы данных. Файлы локальной базы данных либо отсутствуют, либо повреждены. Переустановите программу.";
+        wordvalue = "Ошибка использования файла базы данных. Файлы локальной базы данных либо отсутствует, либо повреждён. Переустановите программу.";
+    }
+    // Переводы UI
+    // Главная панель программы
+    else if (key == "menu.mainw.main") {
+        wordvalue = "Программа";
+    }
+    else if (key == "menu.mainw.account") {
+        wordvalue = "Аккаунт";
+    }
+    else if (key == "menu.mainw.language") {
+        wordvalue = "Язык";
+    }
+    else if (key == "menu.mainw.logout") {
+        wordvalue = "Выйти из учётной записи";
+    }
+    else if (key == "menu.mainw.settings") {
+        wordvalue = "Настройки";
+    }
+    else if (key == "menu.mainw.credits") {
+        wordvalue = "Об авторе";
+    }
+    else if (key == "menu.mainw.logoutlater") {
+        wordvalue = "Задать время автовыхода";
+    }
+    else if (key == "menu.mainw.logoutnow") {
+        wordvalue = "Выйти сейчас";
+    }
+    else if (key == "menu.mainw.settings.general") {
+        wordvalue = "Общие настройки";
+    }
+    else if (key == "menu.mainw.settings.i2p") {
+        wordvalue = "Настройки i2p";
+    }
+    else if (key == "menu.mainw.settings.freenet") {
+        wordvalue = "Настройки freenet";
+    }
+    else if (key == "menu.mainw.save") {
+        wordvalue = "Сохранить";
+    }
+    // Tab-виджеты
+    else if (key == "prog.tab.profile") {
+        wordvalue = "Профиль";
+    }
+    else if (key == "prog.tab.messages") {
+        wordvalue = "Сообщения";
+    }
+    else if (key == "prog.tab.storage") {
+        wordvalue = "Хранилище";
+    }
+    // Текст-лейбелы
+    else if (key == "labels.mainw.id") {
+        wordvalue = "Ваш ID";
+    }
+    else if (key == "labels.mainw.i2pAdr") {
+        wordvalue = "Ваш b32 адрес по i2p";
+    }
+    else if (key == "labels.mainw.login") {
+        wordvalue = "Ваш логин";
+    }
+    else if (key == "labels.mainw.keys") {
+        wordvalue = "Ключи";
+    }
+    else if (key == "labels.mainw.contacts") {
+        wordvalue = "Контакты";
+    }
+    else if (key == "labels.mainw.messages") {
+        wordvalue = "Сообщения";
+    }
+    else if (key == "labels.mainw.dialog") {
+        wordvalue = "Чат";
+    }
+    else if (key == "labels.mainw.indev") {
+        wordvalue = "В разработке";
+    }
+    // Элементы ввода
+    else if (key == "input.mainw.id") {
+        wordvalue = "Здесь мог бы быть ваш идентификатор";
+    }
+    else if (key == "input.mainw.i2pAdr") {
+        wordvalue = "Здесь мог бы быть ваш адрес в сети i2p";
+    }
+    else if (key == "input.mainw.login") {
+        wordvalue = "Здесь мог бы быть ваш логин";
+    }
+    // Кнопки
+    else if (key == "button.mainw.setlogin") {
+        wordvalue = "Изменить";
+    }
+    else if (key == "button.mainw.updpassword") {
+        wordvalue = "Обновить пароль";
+    }
+    else if (key == "button.mainw.addcontact") {
+        wordvalue = "Добавить";
+    }
+    else if (key == "button.mainw.rmcontact") {
+        wordvalue = "Удалить";
+    }
+    else if (key == "button.mainw.sendmsg") {
+        wordvalue = "Отправить";
+    }
+    // Об авторе
+    else if (key == "credits.title") {
+        wordvalue = "Об авторе";
+    }
+    else if (key == "credits.developed_by") {
+        wordvalue = "Разработчик: ";
+    }
+    else if (key == "credits.developer_lname") {
+        wordvalue = "Приходько";
+    }
+    else if (key == "credits.developer_fname") {
+        wordvalue = "Никита";
+    }
+    else if (key == "credits.mit_license") {
+        wordvalue = "Лицензия MIT";
     }
     return wordvalue;
 }

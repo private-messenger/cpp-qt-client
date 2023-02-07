@@ -27,14 +27,14 @@ or Google (or Bing) translator
 Prikhodko N.S. (FullGreaM) 2023
 */
 
-
 class DatabaseAppInterface
 {
 public:
     DatabaseAppInterface();
     ~DatabaseAppInterface ();
     bool raisedError = false;
-    char *dbError  = 0;
+    char *dbError = 0;
+    bool getAuthed ();
 private:
     sqlite3 *database = 0;
 };

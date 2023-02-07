@@ -57,20 +57,30 @@ MainWindow::MainWindow (QWidget *parent) : QMainWindow(parent), ui(new Ui::MainW
 }
 
 void MainWindow::setupLocale (std::string locale) {
-    Locales* loc = new Locales(this->locale);
+    Locales* loc = new Locales(locale);
+    this->locale = locale;
     // Устанавливаем значения согласно ключам
     // Заголовок
     this->setWindowTitle(QString::fromStdString(loc->getLocaleVar("prog.name")));
     // Меню
     // Главные элементы
-    this->ui->menu->setTitle(QString::fromStdString(loc->getLocaleVar("menu.mainw.prog")));
+    this->ui->menu->setTitle(QString::fromStdString(loc->getLocaleVar("menu.mainw.main")));
     this->ui->menuAccount->setTitle(QString::fromStdString(loc->getLocaleVar("menu.mainw.account")));
-    this->ui->menuLanguage->setTitle(QString::fromStdString(loc->getLocaleVar("menu.mainw.language")));
+    this->ui->menuLanguage->setTitle(QString::fromStdString(loc->getLocaleVar("menu.mainw.language") + " (Language)"));
     // Дочерние элементы (выпадающие списки)
     this->ui->logoutMenu->setTitle(QString::fromStdString(loc->getLocaleVar("menu.mainw.logout")));
     this->ui->menuSettings->setTitle(QString::fromStdString(loc->getLocaleVar("menu.mainw.settings")));
     // Дочерние элементы (кнопки)
     this->ui->creditsAction->setText(QString::fromStdString(loc->getLocaleVar("menu.mainw.credits")));
+
+    this->ui->logoutLater->setText(QString::fromStdString(loc->getLocaleVar("menu.mainw.logoutlater")));
+    this->ui->logoutNow->setText(QString::fromStdString(loc->getLocaleVar("menu.mainw.logoutnow")));
+
+    this->ui->generalSettingsAction->setText(QString::fromStdString(loc->getLocaleVar("menu.mainw.settings.general")));
+    this->ui->settingsI2pAction->setText(QString::fromStdString(loc->getLocaleVar("menu.mainw.settings.i2p")));
+    this->ui->settingsFreenetAction->setText(QString::fromStdString(loc->getLocaleVar("menu.mainw.settings.freenet")));
+
+    this->ui->saveAccAction->setText(QString::fromStdString(loc->getLocaleVar("menu.mainw.save")));
     // Tab-виджеты
     this->ui->tabWidget->setTabText(0, QString::fromStdString(loc->getLocaleVar("prog.tab.profile")));
     this->ui->tabWidget->setTabText(1, QString::fromStdString(loc->getLocaleVar("prog.tab.messages")));
@@ -80,10 +90,14 @@ void MainWindow::setupLocale (std::string locale) {
     this->ui->label_i2padr->setText(QString::fromStdString(loc->getLocaleVar("labels.mainw.i2pAdr")));
     this->ui->label_login->setText(QString::fromStdString(loc->getLocaleVar("labels.mainw.login")));
     this->ui->label_keys->setText(QString::fromStdString(loc->getLocaleVar("labels.mainw.keys")));
+    this->ui->label_keys->setText("<html><head/><body><p align=\"center\">" + this->ui->label_keys->text() + "</p></body></html>");
     this->ui->label_contacts->setText(QString::fromStdString(loc->getLocaleVar("labels.mainw.contacts")));
+    this->ui->label_contacts->setText("<html><head/><body><p align=\"center\">" + this->ui->label_contacts->text() + "</p></body></html>");
     this->ui->label_messages->setText(QString::fromStdString(loc->getLocaleVar("labels.mainw.messages")));
+    this->ui->label_messages->setText("<html><head/><body><p align=\"center\">" + this->ui->label_messages->text() + "</p></body></html>");
     this->ui->label_dialog->setText(QString::fromStdString(loc->getLocaleVar("labels.mainw.dialog")));
-    this->ui->inDevTxt->setText(QString::fromStdString(loc->getLocaleVar("labels.mainw.indev")));
+    this->ui->label_dialog->setText("<html><head/><body><p align=\"center\">" + this->ui->label_dialog->text() + "</p></body></html>");
+    this->ui->inDevTxt->setText(QString::fromStdString("<html><head/><body><p align=\"center\"><span style=\" font-size:36pt; font-weight:700; color:#8a8a8a;\">" + loc->getLocaleVar("labels.mainw.indev") + "</span></p></body></html>"));
     // Элементы ввода
     this->ui->idField->setPlaceholderText(QString::fromStdString(loc->getLocaleVar("input.mainw.id")));
     this->ui->i2pAddressField->setPlaceholderText(QString::fromStdString(loc->getLocaleVar("input.mainw.i2pAdr")));
@@ -95,8 +109,8 @@ void MainWindow::setupLocale (std::string locale) {
     this->ui->removeContact->setText(QString::fromStdString(loc->getLocaleVar("button.mainw.rmcontact")));
     this->ui->sendButton->setText(QString::fromStdString(loc->getLocaleVar("button.mainw.sendmsg")));
     // Установка локализации в дочерние окна
-    /*logInForm.setupLocale(locale);
-    credits.setupLocale(locale);*/
+    //logInForm.setupLocale(locale);  // (!) Перевести!!
+    credits.setupLocale(locale);
 }
 
 MainWindow::~MainWindow () {
@@ -113,7 +127,7 @@ void MainWindow::on_creditsAction_clicked () {
 }
 
 bool MainWindow::isAuthed () {
-    return true;
+    return database.getAuthed();
 }
 
 void MainWindow::showLogIn () {
@@ -135,12 +149,28 @@ void MainWindow::dynamicAccess() {
     else if ((!credits.isHidden() || !logInForm.isHidden()) && this->isEnabled()) {
         this->setEnabled(false);
     }
-    // Автовыход при закрытии окна авторизации
+    // Автовыход при закрытии окна авторизации и закртие дочерних окон при выходе из основного
     if (this->needAuth && logInForm.isHidden()) {
         this->hide();
     }
     else if (this->needAuth && this->isHidden()) {
         logInForm.hide();
+    }
+    else if (!credits.isHidden() && this->isHidden()) {
+        credits.hide();
+    }
+    // Динамический поиск ошибок базы данных
+    if (this->database.raisedError) {
+        QMessageBox messageBox;
+        Locales* loc = new Locales(this->locale);
+        messageBox.critical(0, QString::fromStdString(loc->getLocaleVar("fio.errorTitle")), QString::fromStdString(loc->getLocaleVar(this->database.dbError)));
+
+        // Закрытие окна
+        this->error = true;
+    }
+    // Автоматическое завершение программы при закрытии главного окна.
+    if (this->isHidden()) {
+        !this->error ? QCoreApplication::quit() : QCoreApplication::exit();
     }
 }
 
