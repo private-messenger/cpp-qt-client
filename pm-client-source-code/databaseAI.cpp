@@ -47,6 +47,7 @@ bool DatabaseAppInterface::getAuthed () {
     // return false;
     std::string sql("SELECT value FROM envs WHERE key='authedAccount';");
     sqlite3_stmt *stmt;
+    sqlite3_stmt *stmtRes;
     int rc = sqlite3_prepare(database, sql.c_str(), -1, &stmt, NULL);
     if (rc != SQLITE_OK) {
         this->raisedError = true;
@@ -66,8 +67,36 @@ bool DatabaseAppInterface::getAuthed () {
             for (int colIndex = 0; colIndex < colCount; colIndex++) {
                 int type = sqlite3_column_type(stmt, colIndex);
                 const char * columnName = sqlite3_column_name(stmt, colIndex);
-                return type == SQLITE_TEXT;
+                if (type == SQLITE_TEXT) {
+                    //return true;
+                    const unsigned char * idExported = sqlite3_column_text(stmt, colIndex);
+                    //return true;
+                    std::string stringId( reinterpret_cast< char const* >(idExported) ) ;
+                    sql = "SELECT id FROM users WHERE id=" + stringId;
+                    rc = sqlite3_prepare(database, sql.c_str(), -1, &stmtRes, NULL);
+                    if (rc != SQLITE_OK) {
+                        this->raisedError = true;
+                        this->dbError = "sql.errCreate";
+                        return false;
+                    }
+                    else {
+                        rc = sqlite3_step(stmtRes);
+                        int addictRowCount = 0;
+                        while (rc != SQLITE_DONE && rc != SQLITE_OK) {
+                            addictRowCount++;
+                            int addictColCount = sqlite3_column_count(stmtRes);
+                            return addictColCount != 0;
+                        }
+                        if (rc != SQLITE_DONE) {
+                            this->raisedError = true;
+                            this->dbError = "sql.errCreate";
+                            return false;
+                        }
+                    }
+                }
+                else return false;
             }
+            rc = sqlite3_step(stmt);
         }
         if (rc != SQLITE_DONE) {
             this->raisedError = true;

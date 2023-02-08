@@ -167,6 +167,8 @@ void MainWindow::dynamicAccess() {
 
         // Закрытие окна
         this->error = true;
+        this->hide();
+        QCoreApplication::exit();
     }
     // Автоматическое завершение программы при закрытии главного окна.
     if (this->isHidden()) {
