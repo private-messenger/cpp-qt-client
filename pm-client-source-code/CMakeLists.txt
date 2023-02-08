@@ -105,4 +105,12 @@ if (WINDOWS64)
     target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC
         sqlite3.a
     )
+elseif (LINUX)
+    target_include_directories(${CMAKE_PROJECT_NAME} PUBLIC
+        sqlite3/
+        sqlite3-lib/linux
+    )
+    target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC
+        sqlite3.a
+    )
 endif()

@@ -1,0 +1,37 @@
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/fullgream/projects/repositories/priv-messanger/build-pm-client-source-code-Desktop-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/fullgream/Qt/Tools/Ninja/ninja cmTC_209e8 && [1/2] Building CXX object CMakeFiles/cmTC_209e8.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_209e8
+FAILED: cmTC_209e8 
+: && /usr/bin/clang++-11 -DQT_QML_DEBUG  CMakeFiles/cmTC_209e8.dir/src.cxx.o -o cmTC_209e8   && :
+/usr/bin/ld: CMakeFiles/cmTC_209e8.dir/src.cxx.o: в функции «main»:
+src.cxx:(.text+0x25): неопределённая ссылка на «pthread_create»
+/usr/bin/ld: src.cxx:(.text+0x31): неопределённая ссылка на «pthread_detach»
+/usr/bin/ld: src.cxx:(.text+0x3d): неопределённая ссылка на «pthread_cancel»
+/usr/bin/ld: src.cxx:(.text+0x4f): неопределённая ссылка на «pthread_join»
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+

@@ -1,0 +1,9 @@
+/home/fullgream/projects/repositories/priv-messanger/build-pm-client-source-code-Desktop-Debug/CMakeFiles/pm-client-source-code.dir
+/home/fullgream/projects/repositories/priv-messanger/build-pm-client-source-code-Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/fullgream/projects/repositories/priv-messanger/build-pm-client-source-code-Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/home/fullgream/projects/repositories/priv-messanger/build-pm-client-source-code-Desktop-Debug/CMakeFiles/list_install_components.dir
+/home/fullgream/projects/repositories/priv-messanger/build-pm-client-source-code-Desktop-Debug/CMakeFiles/install.dir
+/home/fullgream/projects/repositories/priv-messanger/build-pm-client-source-code-Desktop-Debug/CMakeFiles/install/local.dir
+/home/fullgream/projects/repositories/priv-messanger/build-pm-client-source-code-Desktop-Debug/CMakeFiles/install/strip.dir
+/home/fullgream/projects/repositories/priv-messanger/build-pm-client-source-code-Desktop-Debug/CMakeFiles/pm-client-source-code_autogen_timestamp_deps.dir
+/home/fullgream/projects/repositories/priv-messanger/build-pm-client-source-code-Desktop-Debug/CMakeFiles/pm-client-source-code_autogen.dir

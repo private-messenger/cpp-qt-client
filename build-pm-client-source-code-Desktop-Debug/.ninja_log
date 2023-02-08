@@ -1,0 +1,9 @@
+# ninja log v5
+2	7986	1675875135367250478	/home/fullgream/projects/repositories/priv-messanger/build-pm-client-source-code-Desktop-Debug/pm-client-source-code_autogen/mocs_compilation.cpp	24c8bb741b9ee751
+2	7986	1675875135367250478	pm-client-source-code_autogen/mocs_compilation.cpp	24c8bb741b9ee751
+8472	58880	1675875186199131430	CMakeFiles/pm-client-source-code.dir/pm-client-source-code_autogen/mocs_compilation.cpp.o	22bdff2c24313ee9
+8473	57680	1675875184855134339	CMakeFiles/pm-client-source-code.dir/main.cpp.o	60dc5a3c557f0205
+2	7986	1675875135367250478	/home/fullgream/projects/repositories/priv-messanger/build-pm-client-source-code-Desktop-Debug/pm-client-source-code_autogen/timestamp	24c8bb741b9ee751
+2	7986	1675875135367250478	pm-client-source-code_autogen/timestamp	24c8bb741b9ee751
+7987	8472	1675875135855249243	/home/fullgream/projects/repositories/priv-messanger/build-pm-client-source-code-Desktop-Debug/pm-client-source-code_autogen/EWIEGA46WW/qrc_source.cpp	527dd9becb728f10
+7987	8472	1675875135855249243	pm-client-source-code_autogen/EWIEGA46WW/qrc_source.cpp	527dd9becb728f10
