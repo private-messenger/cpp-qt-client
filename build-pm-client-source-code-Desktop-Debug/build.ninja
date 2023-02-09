@@ -255,7 +255,7 @@ build pm-client-source-code_autogen/EWIEGA46WW/qrc_source.cpp | ${cmake_ninja_wo
 #############################################
 # Phony custom command for CMakeFiles/pm-client-source-code_autogen_timestamp_deps
 
-build CMakeFiles/pm-client-source-code_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/pm-client-source-code_autogen_timestamp_deps: phony /home/fullgream/Qt/6.4.2/gcc_64/lib/libQt6Widgets.so.6.4.2 /home/fullgream/Qt/6.4.2/gcc_64/lib/libQt6Core.so.6.4.2 /home/fullgream/Qt/6.4.2/gcc_64/./libexec/moc /home/fullgream/Qt/6.4.2/gcc_64/./libexec/uic
+build CMakeFiles/pm-client-source-code_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/pm-client-source-code_autogen_timestamp_deps: phony /home/fullgream/Qt/6.4.2/gcc_64/lib/libQt6Core.so.6.4.2 /home/fullgream/Qt/6.4.2/gcc_64/./libexec/moc /home/fullgream/Qt/6.4.2/gcc_64/./libexec/uic /home/fullgream/Qt/6.4.2/gcc_64/lib/libQt6Widgets.so.6.4.2
 
 
 #############################################

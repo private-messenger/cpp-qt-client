@@ -1,6 +1,7 @@
 #include "log_in_form.h"
 #include "ui_log_in_form.h"
 #include "mainwindow.h"
+#include "locales.h"
 #include <QTimer>
 
 /*
@@ -38,9 +39,26 @@ LogInForm::LogInForm(QWidget *parent) :
     timerScale->start(1);
 }
 
+void LogInForm::setupLocale (std::string locale) {
+    Locales* loc = new Locales(locale);
+    this->setWindowTitle(QString::fromStdString(loc->getLocaleVar("auth.title")));
+    // Общие переменные
+    QString login = QString::fromStdString(loc->getLocaleVar("auth.login"));
+    QString password = QString::fromStdString(loc->getLocaleVar("auth.password"));
+    // Табы
+    this->ui->tabWidget->setTabText(0, QString::fromStdString(loc->getLocaleVar("auth.tab.sign_in")));
+    this->ui->tabWidget->setTabText(1, QString::fromStdString(loc->getLocaleVar("auth.tab.sign_up")));
+    // Вход
+    this->ui->label_login->setText("<html><head/><body><p align=\"center\">" + login + "</p></body></html>");
+    this->ui->label_password->setText("<html><head/><body><p align=\"center\">" + password + "</p></body></html>");
+    this->ui->signInButton->setText(QString::fromStdString(loc->getLocaleVar("auth.sign_in.button")));
+    this->ui->signInFromFileButton->setText(QString::fromStdString(loc->getLocaleVar("auth.sign_in_file.button")));
+}
+
 void LogInForm::autoscale () {
     this->ui->tabWidget->setGeometry(0, 0, this->width(), this->height());
 
+    // Вход
     this->ui->label_login->setGeometry(0, 0, this->width(), 30);
     this->ui->loginField->setGeometry(0, 30, this->width(), 24);
 

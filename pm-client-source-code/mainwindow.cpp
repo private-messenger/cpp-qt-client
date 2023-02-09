@@ -109,7 +109,7 @@ void MainWindow::setupLocale (std::string locale) {
     this->ui->removeContact->setText(QString::fromStdString(loc->getLocaleVar("button.mainw.rmcontact")));
     this->ui->sendButton->setText(QString::fromStdString(loc->getLocaleVar("button.mainw.sendmsg")));
     // Установка локализации в дочерние окна
-    //logInForm.setupLocale(locale);  // (!) Перевести!!
+    logInForm.setupLocale(locale);
     credits.setupLocale(locale);
 }
 
@@ -183,7 +183,7 @@ void MainWindow::autoscale () {
     const int winXcnst = 800;
     const int winYcnst = 557;
 
-    // Таб бар
+    // Профиль
     this->ui->tabWidget->setGeometry(
         0, 0,
         getSize(791, winXcnst, winX), getSize(551, winYcnst, winY)

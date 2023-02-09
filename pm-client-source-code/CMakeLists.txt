@@ -32,6 +32,8 @@ set(PROJECT_SOURCES
         databaseAI.h databaseAI.cpp
         # Locales
         locales.h locales.cpp
+        # Auth class files
+        #authorize.h authorize.cpp
         # Src files
         source.qrc
 )

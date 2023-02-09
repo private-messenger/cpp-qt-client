@@ -158,5 +158,27 @@ std::string Locales::getLocaleVar (std::string key) {
     else if (key == "credits.mit_license") {
         wordvalue = "Лицензия MIT";
     }
+    // Авторизация
+    else if (key == "auth.login") {
+        wordvalue = "Логин";
+    }
+    else if (key == "auth.password") {
+        wordvalue = "Пароль";
+    }
+    else if (key == "auth.tab.sign_in") {
+        wordvalue = "Вход";
+    }
+    else if (key == "auth.tab.sign_up") {
+        wordvalue = "Регистрация";
+    }
+    else if (key == "auth.title") {
+        wordvalue = "Авторизация";
+    }
+    else if (key == "auth.sign_in.button") {
+        wordvalue = "Войти";
+    }
+    else if (key == "auth.sign_in_file.button") {
+        wordvalue = "Войти с файла";
+    }
     return wordvalue;
 }
