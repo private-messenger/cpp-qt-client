@@ -2,6 +2,7 @@
 #define DATABASEAPPINTERFACE_H
 
 #include "sqlite3.h"
+#include <string>
 
 /*
 Уважаемые (и не очень) любители комментариев "на английском языке",
@@ -34,8 +35,9 @@ public:
     ~DatabaseAppInterface ();
     bool raisedError = false;
     char *dbError = 0;
-    char* details = "";
+    char* details = "-";
     bool getAuthed ();
+    void reg (std::string login, std::string password);
 private:
     sqlite3 *database = 0;
 };

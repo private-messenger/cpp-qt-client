@@ -32,6 +32,13 @@ public:
     QPushButton *signInButton;
     QPushButton *signInFromFileButton;
     QWidget *signUp;
+    QLabel *label_login_up;
+    QLineEdit *loginField_up;
+    QLabel *label_password_up;
+    QLineEdit *passwordField_up;
+    QLabel *label_password_up_2;
+    QLineEdit *repeatPasswordField_up;
+    QPushButton *signUpButton;
 
     void setupUi(QWidget *LogInForm)
     {
@@ -68,6 +75,29 @@ public:
         tabWidget->addTab(signIn, QString());
         signUp = new QWidget();
         signUp->setObjectName("signUp");
+        label_login_up = new QLabel(signUp);
+        label_login_up->setObjectName("label_login_up");
+        label_login_up->setGeometry(QRect(0, 0, 400, 30));
+        loginField_up = new QLineEdit(signUp);
+        loginField_up->setObjectName("loginField_up");
+        loginField_up->setGeometry(QRect(0, 30, 400, 24));
+        label_password_up = new QLabel(signUp);
+        label_password_up->setObjectName("label_password_up");
+        label_password_up->setGeometry(QRect(0, 60, 400, 30));
+        passwordField_up = new QLineEdit(signUp);
+        passwordField_up->setObjectName("passwordField_up");
+        passwordField_up->setGeometry(QRect(0, 90, 400, 24));
+        passwordField_up->setEchoMode(QLineEdit::Password);
+        label_password_up_2 = new QLabel(signUp);
+        label_password_up_2->setObjectName("label_password_up_2");
+        label_password_up_2->setGeometry(QRect(0, 130, 400, 30));
+        repeatPasswordField_up = new QLineEdit(signUp);
+        repeatPasswordField_up->setObjectName("repeatPasswordField_up");
+        repeatPasswordField_up->setGeometry(QRect(0, 160, 400, 24));
+        repeatPasswordField_up->setEchoMode(QLineEdit::Password);
+        signUpButton = new QPushButton(signUp);
+        signUpButton->setObjectName("signUpButton");
+        signUpButton->setGeometry(QRect(130, 210, 161, 24));
         tabWidget->addTab(signUp, QString());
 
         retranslateUi(LogInForm);
@@ -86,6 +116,10 @@ public:
         signInButton->setText(QCoreApplication::translate("LogInForm", "\320\222\320\276\320\271\321\202\320\270", nullptr));
         signInFromFileButton->setText(QCoreApplication::translate("LogInForm", "\320\222\320\276\320\271\321\202\320\270 \321\201 \321\204\320\260\320\271\320\273\320\260", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(signIn), QCoreApplication::translate("LogInForm", "\320\222\321\205\320\276\320\264", nullptr));
+        label_login_up->setText(QCoreApplication::translate("LogInForm", "<html><head/><body><p align=\"center\">\320\233\320\276\320\263\320\270\320\275</p></body></html>", nullptr));
+        label_password_up->setText(QCoreApplication::translate("LogInForm", "<html><head/><body><p align=\"center\">\320\237\320\260\321\200\320\276\320\273\321\214</p></body></html>", nullptr));
+        label_password_up_2->setText(QCoreApplication::translate("LogInForm", "<html><head/><body><p align=\"center\">\320\237\320\276\320\262\321\202\320\276\321\200\320\270\321\202\320\265 \320\277\320\260\321\200\320\276\320\273\321\214, \321\207\321\202\320\276\320\261\321\213 \320\275\320\265 \320\267\320\260\320\261\321\213\321\202\321\214</p></body></html>", nullptr));
+        signUpButton->setText(QCoreApplication::translate("LogInForm", "\320\227\320\260\321\200\320\265\320\263\320\270\321\201\321\202\321\200\320\270\321\200\320\276\320\262\320\260\321\202\321\214\321\201\321\217", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(signUp), QCoreApplication::translate("LogInForm", "\320\227\320\260\321\200\320\265\320\263\320\270\321\201\321\202\321\200\320\270\321\200\320\276\320\262\320\260\321\202\321\214\321\201\321\217", nullptr));
     } // retranslateUi
 

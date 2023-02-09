@@ -180,5 +180,11 @@ std::string Locales::getLocaleVar (std::string key) {
     else if (key == "auth.sign_in_file.button") {
         wordvalue = "Войти с файла";
     }
+    else if (key == "auth.repeat_password") {
+        wordvalue = "Повторить пароль, чтобы не забыть";
+    }
+    else if (key == "auth.sign_up.button") {
+        wordvalue = "Зарегистрироваться";
+    }
     return wordvalue;
 }

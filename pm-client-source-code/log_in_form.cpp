@@ -45,6 +45,7 @@ void LogInForm::setupLocale (std::string locale) {
     // Общие переменные
     QString login = QString::fromStdString(loc->getLocaleVar("auth.login"));
     QString password = QString::fromStdString(loc->getLocaleVar("auth.password"));
+    QString repeatPassword = QString::fromStdString(loc->getLocaleVar("auth.repeat_password"));
     // Табы
     this->ui->tabWidget->setTabText(0, QString::fromStdString(loc->getLocaleVar("auth.tab.sign_in")));
     this->ui->tabWidget->setTabText(1, QString::fromStdString(loc->getLocaleVar("auth.tab.sign_up")));
@@ -53,11 +54,15 @@ void LogInForm::setupLocale (std::string locale) {
     this->ui->label_password->setText("<html><head/><body><p align=\"center\">" + password + "</p></body></html>");
     this->ui->signInButton->setText(QString::fromStdString(loc->getLocaleVar("auth.sign_in.button")));
     this->ui->signInFromFileButton->setText(QString::fromStdString(loc->getLocaleVar("auth.sign_in_file.button")));
+    // Регистрация
+    this->ui->label_login_up->setText("<html><head/><body><p align=\"center\">" + login + "</p></body></html>");
+    this->ui->label_password_up->setText("<html><head/><body><p align=\"center\">" + password + "</p></body></html>");
+    this->ui->label_password_up_2->setText("<html><head/><body><p align=\"center\">" + repeatPassword + "</p></body></html>");
+    this->ui->signUpButton->setText(QString::fromStdString(loc->getLocaleVar("auth.sign_up.button")));
 }
 
 void LogInForm::autoscale () {
     this->ui->tabWidget->setGeometry(0, 0, this->width(), this->height());
-
     // Вход
     this->ui->label_login->setGeometry(0, 0, this->width(), 30);
     this->ui->loginField->setGeometry(0, 30, this->width(), 24);
@@ -67,6 +72,17 @@ void LogInForm::autoscale () {
 
     this->ui->signInButton->setGeometry((this->width() / 2) - 40, 130, 80, 24);
     this->ui->signInFromFileButton->setGeometry((this->width() / 2) - 50, 170, 100, 24);
+    // Авторизация
+    this->ui->label_login_up->setGeometry(0, 0, this->width(), 30);
+    this->ui->loginField_up->setGeometry(0, 30, this->width(), 24);
+
+    this->ui->label_password_up->setGeometry(0, 60, this->width(), 30);
+    this->ui->passwordField_up->setGeometry(0, 90, this->width(), 24);
+
+    this->ui->label_password_up_2->setGeometry(0, 120, this->width(), 30);
+    this->ui->repeatPasswordField_up->setGeometry(0, 150, this->width(), 24);
+
+    this->ui->signUpButton->setGeometry((this->width() / 2) - 75, 190, 150, 24);
 }
 
 LogInForm::~LogInForm() {
