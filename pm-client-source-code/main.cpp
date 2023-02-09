@@ -25,6 +25,10 @@ or Google (or Bing) translator
 Prikhodko N.S. (FullGreaM) 2023
 */
 
+/*
+ * Для линукса необходимо: sudo apt-get install libsqlite3-dev
+*/
+
 int main (int argc, char *argv[]) {
     QApplication a(argc, argv);
     MainWindow w;

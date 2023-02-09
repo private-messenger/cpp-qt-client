@@ -100,7 +100,7 @@ endif()
 if (WINDOWS64)
     target_include_directories(${CMAKE_PROJECT_NAME} PUBLIC
         sqlite3/
-        sqlite3-lib/win64
+        sqlite3-lib/win64/
     )
     target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC
         sqlite3.a
@@ -108,9 +108,11 @@ if (WINDOWS64)
 elseif (LINUX)
     target_include_directories(${CMAKE_PROJECT_NAME} PUBLIC
         sqlite3/
-        sqlite3-lib/linux
+        sqlite3-lib/linux/
     )
     target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC
-        sqlite3.a
+        sqlite3.a ${CMAKE_DL_LIBS}
     )
+    #find_package(sqlite3 REQUIRED)
+
 endif()

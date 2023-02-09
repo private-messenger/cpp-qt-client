@@ -377,11 +377,11 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 0,
-			"id" : "pm-client-source-code_autogen::@6890427a1f51a3e7e1df"
+			"id" : "pm-client-source-code_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "pm-client-source-code_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+			"backtrace" : 0,
+			"id" : "pm-client-source-code_autogen::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "pm-client-source-code::@6890427a1f51a3e7e1df",
@@ -431,6 +431,11 @@
 			},
 			{
 				"fragment" : "-Wl,-Bdynamic",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 7,
+				"fragment" : "-ldl",
 				"role" : "libraries"
 			},
 			{

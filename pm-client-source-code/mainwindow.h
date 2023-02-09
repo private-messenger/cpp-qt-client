@@ -46,11 +46,15 @@ public:
     bool isAuthed ();
     bool error = false;
     void setupLocale (std::string locale);
+    DatabaseAppInterface database;
+
 protected slots:
     void autoscale ();
     void dynamicAccess ();
+
 private slots:
     void on_creditsAction_clicked();
+
 private:
     std::string locale = "ru_RU";
     Ui::MainWindow *ui;
@@ -58,6 +62,6 @@ private:
     QTimer *timerAccess;
     Credits credits;
     LogInForm logInForm;
-    DatabaseAppInterface database;
+
 };
 #endif // MAINWINDOW_H
