@@ -34,6 +34,7 @@ public:
     ~DatabaseAppInterface ();
     bool raisedError = false;
     char *dbError = 0;
+    char* details = "";
     bool getAuthed ();
 private:
     sqlite3 *database = 0;

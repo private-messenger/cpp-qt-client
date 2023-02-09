@@ -36,7 +36,7 @@ MainWindow::MainWindow (QWidget *parent) : QMainWindow(parent), ui(new Ui::MainW
     if (this->database.raisedError) {
         QMessageBox messageBox;
         Locales* loc = new Locales(this->locale);
-        messageBox.critical(0, QString::fromStdString(loc->getLocaleVar("fio.errorTitle")), QString::fromStdString(loc->getLocaleVar(this->database.dbError)));
+        messageBox.critical(0, QString::fromStdString(loc->getLocaleVar("fio.errorTitle")), QString::fromStdString(loc->getLocaleVar(this->database.dbError) + this->database.details));
 
         // Закрытие окна
         this->error = true;
@@ -163,7 +163,7 @@ void MainWindow::dynamicAccess() {
     if (this->database.raisedError) {
         QMessageBox messageBox;
         Locales* loc = new Locales(this->locale);
-        messageBox.critical(0, QString::fromStdString(loc->getLocaleVar("fio.errorTitle")), QString::fromStdString(loc->getLocaleVar(this->database.dbError)));
+        messageBox.critical(0, QString::fromStdString(loc->getLocaleVar("fio.errorTitle")), QString::fromStdString(loc->getLocaleVar(this->database.dbError) + this->database.details));
 
         // Закрытие окна
         this->error = true;

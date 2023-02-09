@@ -33,12 +33,14 @@ DatabaseAppInterface::DatabaseAppInterface() {
     if (!file.is_open()) {
         this->raisedError = true;
         this->dbError = "sql.errCreate";
+        this->details = "File 'appdata' not founded";
     }
     else {
         file.close();
         if (sqlite3_open("appdata", &database)) {
             this->raisedError = true;
             this->dbError = "sql.errCreate";
+            this->details = (char*)sqlite3_errmsg(database);
         }
     }
 }
@@ -47,11 +49,14 @@ bool DatabaseAppInterface::getAuthed () {
     // return false;
     std::string sql("SELECT value FROM envs WHERE key='authedAccount';");
     sqlite3_stmt *stmt;
-    sqlite3_stmt *stmtRes;
     int rc = sqlite3_prepare(database, sql.c_str(), -1, &stmt, NULL);
+    int rcAddict;
     if (rc != SQLITE_OK) {
         this->raisedError = true;
         this->dbError = "sql.errCreate";
+        this->details = (char*)sqlite3_errmsg(database);
+
+        return false;
     }
     else {
         rc = sqlite3_step(stmt);
@@ -62,30 +67,34 @@ bool DatabaseAppInterface::getAuthed () {
             if (colCount == 0) {
                 this->raisedError = true;
                 this->dbError = "sql.errCreate";
+                this->details = "no such table";
                 return false;
             }
             for (int colIndex = 0; colIndex < colCount; colIndex++) {
                 int type = sqlite3_column_type(stmt, colIndex);
+                sqlite3_stmt *stmtRes;
                 const char * columnName = sqlite3_column_name(stmt, colIndex);
                 if (type == SQLITE_TEXT) {
                     //return true;
                     const unsigned char * idExported = sqlite3_column_text(stmt, colIndex);
                     //return true;
                     std::string stringId( reinterpret_cast< char const* >(idExported) ) ;
-                    sql = "SELECT id FROM users WHERE id=" + stringId;
-                    rc = sqlite3_prepare(database, sql.c_str(), -1, &stmtRes, NULL);
-                    if (rc != SQLITE_OK) {
+                    sql = "SELECT id FROM users WHERE id='" + stringId + "'";
+                    int a = SQLITE_OK;
+                    rcAddict = sqlite3_prepare(database, sql.c_str(), -1, &stmtRes, NULL);
+                    if (rcAddict != SQLITE_OK) {
                         this->raisedError = true;
                         this->dbError = "sql.errCreate";
+                        this->details = (char*)sqlite3_errmsg(database);
                         return false;
                     }
                     else {
-                        rc = sqlite3_step(stmtRes);
+                        rcAddict = sqlite3_step(stmtRes);
                         int addictRowCount = 0;
                         while (rc != SQLITE_DONE && rc != SQLITE_OK) {
                             addictRowCount++;
-                            int addictColCount = sqlite3_column_count(stmtRes);
-                            return addictColCount != 0;
+                            //int addictColCount = sqlite3_column_count(stmtRes);
+                            return sqlite3_column_type(stmtRes, 0) != SQLITE_NULL;
                         }
                         if (rc != SQLITE_DONE) {
                             this->raisedError = true;
@@ -101,6 +110,9 @@ bool DatabaseAppInterface::getAuthed () {
         if (rc != SQLITE_DONE) {
             this->raisedError = true;
             this->dbError = "sql.errCreate";
+            this->details = (char*)sqlite3_errmsg(database);
+
+            return false;
         }
     }
     return false;
