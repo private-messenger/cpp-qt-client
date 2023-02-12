@@ -32,7 +32,6 @@ Prikhodko N.S. (FullGreaM) 2023
 
 MainWindow::MainWindow (QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
-    //this->database = new DatabaseAppInterface();
     if (this->database.raisedError) {
         QMessageBox messageBox;
         Locales* loc = new Locales(this->locale);
@@ -42,6 +41,8 @@ MainWindow::MainWindow (QWidget *parent) : QMainWindow(parent), ui(new Ui::MainW
         this->error = true;
     }
     else {
+        // Передача объектов дочерним окнам
+        this->logInForm.setupDatabase(&this->database);
         // Автомасштабирование элементов
         this->timerScale = new QTimer(this);
         connect(timerScale, SIGNAL(timeout()), this, SLOT(autoscale()));
@@ -127,6 +128,7 @@ void MainWindow::on_creditsAction_clicked () {
 }
 
 bool MainWindow::isAuthed () {
+    //return true;
     return database.getAuthed();
 }
 

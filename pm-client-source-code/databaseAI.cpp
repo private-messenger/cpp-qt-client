@@ -120,5 +120,5 @@ bool DatabaseAppInterface::getAuthed () {
 
 DatabaseAppInterface::~DatabaseAppInterface () {
     sqlite3_close(database);
-    delete database;
+    //delete database;
 }

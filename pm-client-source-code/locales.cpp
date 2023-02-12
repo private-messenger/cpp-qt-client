@@ -186,5 +186,11 @@ std::string Locales::getLocaleVar (std::string key) {
     else if (key == "auth.sign_up.button") {
         wordvalue = "Зарегистрироваться";
     }
+    else if (key == "auth.error") {
+        wordvalue = "Ошибка авторизации";
+    }
+    else if (key == "auth.nomatch_passwords") {
+        wordvalue = "Пароли не совпадают между собой";
+    }
     return wordvalue;
 }

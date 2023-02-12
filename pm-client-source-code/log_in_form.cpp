@@ -3,6 +3,8 @@
 #include "mainwindow.h"
 #include "locales.h"
 #include <QTimer>
+#include <QMessageBox>
+#include "databaseAI.h"
 
 /*
 Уважаемые (и не очень) любители комментариев "на английском языке",
@@ -39,8 +41,21 @@ LogInForm::LogInForm(QWidget *parent) :
     timerScale->start(1);
 }
 
+void LogInForm::setupDatabase (DatabaseAppInterface* database) {
+    this->database = database;
+}
+
+void LogInForm::on_signUpButton_clicked () {
+    Locales* loc = new Locales(locale);
+    if (this->ui->passwordField_up->text() != this->ui->repeatPasswordField_up->text()) {
+        QMessageBox messageBox;
+        messageBox.critical(0, QString::fromStdString(loc->getLocaleVar("auth.error")), QString::fromStdString(loc->getLocaleVar("auth.nomatch_passwords")));
+    }
+}
+
 void LogInForm::setupLocale (std::string locale) {
     Locales* loc = new Locales(locale);
+    this->locale = locale;
     this->setWindowTitle(QString::fromStdString(loc->getLocaleVar("auth.title")));
     // Общие переменные
     QString login = QString::fromStdString(loc->getLocaleVar("auth.login"));

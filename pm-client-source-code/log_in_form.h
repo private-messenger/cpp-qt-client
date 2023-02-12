@@ -2,6 +2,7 @@
 #define LOG_IN_FORM_H
 
 #include <QWidget>
+#include "databaseAI.h"
 
 /*
 Уважаемые (и не очень) любители комментариев "на английском языке",
@@ -39,8 +40,12 @@ public:
     explicit LogInForm(QWidget *parent = nullptr);
     ~LogInForm();
     void setupLocale (std::string locale);
+    void setupDatabase (DatabaseAppInterface* database);
+    DatabaseAppInterface* database;
+    std::string locale;
 protected slots:
     void autoscale ();
+    void on_signUpButton_clicked ();
 private:
     Ui::LogInForm *ui;
     QTimer *timerScale;
