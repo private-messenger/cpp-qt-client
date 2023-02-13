@@ -129,6 +129,14 @@ build CMakeFiles/pm-client-source-code.dir/locales.cpp.obj: CXX_COMPILER__pm-cli
   OBJECT_DIR = CMakeFiles\pm-client-source-code.dir
   OBJECT_FILE_DIR = CMakeFiles\pm-client-source-code.dir
 
+build CMakeFiles/pm-client-source-code.dir/cryptography.cpp.obj: CXX_COMPILER__pm-client-source-code_Debug W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/cryptography.cpp || cmake_object_order_depends_target_pm-client-source-code
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\pm-client-source-code.dir\cryptography.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17
+  INCLUDES = -IW:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/pm-client-source-code_autogen/include -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3 -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3-lib/win64 -isystem C:/Qt/6.4.1/mingw_64/include/QtCore -isystem C:/Qt/6.4.1/mingw_64/include -isystem C:/Qt/6.4.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.4.1/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\pm-client-source-code.dir
+  OBJECT_FILE_DIR = CMakeFiles\pm-client-source-code.dir
+
 build CMakeFiles/pm-client-source-code.dir/pm-client-source-code_autogen/EWIEGA46WW/qrc_source.cpp.obj: CXX_COMPILER__pm-client-source-code_Debug W$:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/pm-client-source-code_autogen/EWIEGA46WW/qrc_source.cpp || cmake_object_order_depends_target_pm-client-source-code
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\pm-client-source-code.dir\pm-client-source-code_autogen\EWIEGA46WW\qrc_source.cpp.obj.d
@@ -145,7 +153,7 @@ build CMakeFiles/pm-client-source-code.dir/pm-client-source-code_autogen/EWIEGA4
 #############################################
 # Link the executable pm-client-source-code.exe
 
-build pm-client-source-code.exe: CXX_EXECUTABLE_LINKER__pm-client-source-code_Debug CMakeFiles/pm-client-source-code.dir/pm-client-source-code_autogen/mocs_compilation.cpp.obj CMakeFiles/pm-client-source-code.dir/main.cpp.obj CMakeFiles/pm-client-source-code.dir/mainwindow.cpp.obj CMakeFiles/pm-client-source-code.dir/log_in_form.cpp.obj CMakeFiles/pm-client-source-code.dir/credits.cpp.obj CMakeFiles/pm-client-source-code.dir/general_settings.cpp.obj CMakeFiles/pm-client-source-code.dir/i2p_settings.cpp.obj CMakeFiles/pm-client-source-code.dir/freenet_settings.cpp.obj CMakeFiles/pm-client-source-code.dir/databaseAI.cpp.obj CMakeFiles/pm-client-source-code.dir/locales.cpp.obj CMakeFiles/pm-client-source-code.dir/pm-client-source-code_autogen/EWIEGA46WW/qrc_source.cpp.obj | C$:/Qt/6.4.1/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.4.1/mingw_64/lib/libQt6Gui.a C$:/Qt/6.4.1/mingw_64/lib/libQt6Core.a C$:/Qt/6.4.1/mingw_64/lib/libQt6EntryPoint.a || pm-client-source-code_autogen pm-client-source-code_autogen_timestamp_deps
+build pm-client-source-code.exe: CXX_EXECUTABLE_LINKER__pm-client-source-code_Debug CMakeFiles/pm-client-source-code.dir/pm-client-source-code_autogen/mocs_compilation.cpp.obj CMakeFiles/pm-client-source-code.dir/main.cpp.obj CMakeFiles/pm-client-source-code.dir/mainwindow.cpp.obj CMakeFiles/pm-client-source-code.dir/log_in_form.cpp.obj CMakeFiles/pm-client-source-code.dir/credits.cpp.obj CMakeFiles/pm-client-source-code.dir/general_settings.cpp.obj CMakeFiles/pm-client-source-code.dir/i2p_settings.cpp.obj CMakeFiles/pm-client-source-code.dir/freenet_settings.cpp.obj CMakeFiles/pm-client-source-code.dir/databaseAI.cpp.obj CMakeFiles/pm-client-source-code.dir/locales.cpp.obj CMakeFiles/pm-client-source-code.dir/cryptography.cpp.obj CMakeFiles/pm-client-source-code.dir/pm-client-source-code_autogen/EWIEGA46WW/qrc_source.cpp.obj | C$:/Qt/6.4.1/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.4.1/mingw_64/lib/libQt6Gui.a C$:/Qt/6.4.1/mingw_64/lib/libQt6Core.a C$:/Qt/6.4.1/mingw_64/lib/libQt6EntryPoint.a || pm-client-source-code_autogen pm-client-source-code_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG -g
   LINK_FLAGS = -mwindows
   LINK_LIBRARIES = C:/Qt/6.4.1/mingw_64/lib/libQt6Widgets.a  -Wl,-Bstatic  -lsqlite3  -Wl,-Bdynamic  C:/Qt/6.4.1/mingw_64/lib/libQt6Gui.a  C:/Qt/6.4.1/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lmingw32  C:/Qt/6.4.1/mingw_64/lib/libQt6EntryPoint.a  -lshell32  -ld3d11  -ldxgi  -ldxguid  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32

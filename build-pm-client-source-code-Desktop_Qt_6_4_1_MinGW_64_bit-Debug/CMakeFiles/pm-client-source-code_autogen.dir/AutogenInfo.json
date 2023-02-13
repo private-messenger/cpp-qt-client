@@ -260,6 +260,12 @@
 			null
 		],
 		[
+			"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/cryptography.h",
+			"MU",
+			"EWIEGA46WW/moc_cryptography.cpp",
+			null
+		],
+		[
 			"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/databaseAI.h",
 			"MU",
 			"EWIEGA46WW/moc_databaseAI.cpp",
@@ -375,6 +381,11 @@
 	[
 		[
 			"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/credits.cpp",
+			"MU",
+			null
+		],
+		[
+			"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/cryptography.cpp",
 			"MU",
 			null
 		],

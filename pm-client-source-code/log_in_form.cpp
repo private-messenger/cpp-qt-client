@@ -35,7 +35,7 @@ LogInForm::LogInForm(QWidget *parent) :
     ui(new Ui::LogInForm)
 {
     ui->setupUi(this);
-    // Автомасштабирование элементов
+    // Автомасштабирование и блокировка элементов
     this->timerScale = new QTimer(this);
     connect(timerScale, SIGNAL(timeout()), this, SLOT(autoscale()));
     timerScale->start(1);
@@ -50,6 +50,12 @@ void LogInForm::on_signUpButton_clicked () {
     if (this->ui->passwordField_up->text() != this->ui->repeatPasswordField_up->text()) {
         QMessageBox messageBox;
         messageBox.critical(0, QString::fromStdString(loc->getLocaleVar("auth.error")), QString::fromStdString(loc->getLocaleVar("auth.nomatch_passwords")));
+    }
+    else {  // Всё ок
+        this->database->reg(
+            this->ui->loginField_up->text().toStdString(),
+            this->ui->passwordField_up->text().toStdString()
+        );
     }
 }
 
@@ -74,6 +80,20 @@ void LogInForm::setupLocale (std::string locale) {
     this->ui->label_password_up->setText("<html><head/><body><p align=\"center\">" + password + "</p></body></html>");
     this->ui->label_password_up_2->setText("<html><head/><body><p align=\"center\">" + repeatPassword + "</p></body></html>");
     this->ui->signUpButton->setText(QString::fromStdString(loc->getLocaleVar("auth.sign_up.button")));
+
+    // Блокировка
+    if (
+        (this->ui->loginField_up->text() == "" || this->ui->passwordField_up->text() == "" || (this->ui->passwordField_up->text() != this->ui->repeatPasswordField_up->text())) &&
+        this->ui->signUpButton->isEnabled()
+    ) {
+        this->ui->signUpButton->setEnabled(false);
+    }
+    else if (
+        (this->ui->loginField_up->text() != "" || this->ui->passwordField_up->text() != "" || (this->ui->passwordField_up->text() == this->ui->repeatPasswordField_up->text())) &&
+        !this->ui->signUpButton->isEnabled()
+    ) {
+        this->ui->signUpButton->setEnabled(true);
+    }
 }
 
 void LogInForm::autoscale () {

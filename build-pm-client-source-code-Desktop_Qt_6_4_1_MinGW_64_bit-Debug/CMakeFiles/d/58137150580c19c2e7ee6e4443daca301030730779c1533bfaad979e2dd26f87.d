@@ -502,6 +502,8 @@ pm-client-source-code_autogen/timestamp: \
   W:/projects/repositories/pm-cli-cpp/pm-client-source-code/CMakeLists.txt \
   W:/projects/repositories/pm-cli-cpp/pm-client-source-code/credits.cpp \
   W:/projects/repositories/pm-cli-cpp/pm-client-source-code/credits.h \
+  W:/projects/repositories/pm-cli-cpp/pm-client-source-code/cryptography.cpp \
+  W:/projects/repositories/pm-cli-cpp/pm-client-source-code/cryptography.h \
   W:/projects/repositories/pm-cli-cpp/pm-client-source-code/databaseAI.cpp \
   W:/projects/repositories/pm-cli-cpp/pm-client-source-code/databaseAI.h \
   W:/projects/repositories/pm-cli-cpp/pm-client-source-code/freenet_settings.cpp \
