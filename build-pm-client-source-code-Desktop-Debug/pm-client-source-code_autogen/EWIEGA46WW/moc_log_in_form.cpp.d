@@ -111,6 +111,8 @@
   /home/fullgream/Qt/6.4.2/gcc_64/include/QtWidgets/qtwidgetsexports.h \
   /home/fullgream/Qt/6.4.2/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
   /home/fullgream/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h \
+  /home/fullgream/projects/repositories/priv-messanger/pm-client-source-code/databaseAI.h \
+  /home/fullgream/projects/repositories/priv-messanger/pm-client-source-code/sqlite3/sqlite3.h \
   /usr/include/alloca.h \
   /usr/include/assert.h \
   /usr/include/c++/10/algorithm \

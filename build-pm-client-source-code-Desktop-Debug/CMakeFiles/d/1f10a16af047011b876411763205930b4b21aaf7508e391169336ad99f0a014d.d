@@ -362,6 +362,8 @@ pm-client-source-code_autogen/timestamp: \
   /home/fullgream/projects/repositories/priv-messanger/pm-client-source-code/CMakeLists.txt \
   /home/fullgream/projects/repositories/priv-messanger/pm-client-source-code/credits.cpp \
   /home/fullgream/projects/repositories/priv-messanger/pm-client-source-code/credits.h \
+  /home/fullgream/projects/repositories/priv-messanger/pm-client-source-code/cryptography.cpp \
+  /home/fullgream/projects/repositories/priv-messanger/pm-client-source-code/cryptography.h \
   /home/fullgream/projects/repositories/priv-messanger/pm-client-source-code/databaseAI.cpp \
   /home/fullgream/projects/repositories/priv-messanger/pm-client-source-code/databaseAI.h \
   /home/fullgream/projects/repositories/priv-messanger/pm-client-source-code/freenet_settings.cpp \
