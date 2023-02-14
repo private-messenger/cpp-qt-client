@@ -45,6 +45,8 @@ DatabaseAppInterface::DatabaseAppInterface() {
     }
 }
 
+void DatabaseAppInterface::reg (std::string login, std::string password) {}
+
 bool DatabaseAppInterface::getAuthed () {
     // return false;
     std::string sql("SELECT value FROM envs WHERE key='authedAccount';");

@@ -52,6 +52,7 @@ void LogInForm::on_signUpButton_clicked () {
         messageBox.critical(0, QString::fromStdString(loc->getLocaleVar("auth.error")), QString::fromStdString(loc->getLocaleVar("auth.nomatch_passwords")));
     }
     else {  // Всё ок
+        //this->database->reg();
         this->database->reg(
             this->ui->loginField_up->text().toStdString(),
             this->ui->passwordField_up->text().toStdString()

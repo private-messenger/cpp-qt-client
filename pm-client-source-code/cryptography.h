@@ -38,8 +38,8 @@ public:
 class AES256 : public Cryptography {
 public:
     AES256 (unsigned char* key);
-    unsigned char* publickey = 0;
-    unsigned char* privatekey = 0;
-}
+    /*unsigned char* publickey = 0;
+    unsigned char* privatekey = 0;*/
+};
 
 #endif // CRYPTOGRAPHY_H
