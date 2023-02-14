@@ -28,7 +28,6 @@ Prikhodko N.S. (FullGreaM) 2023
 */
 
 #include <iostream>
-using namespace CryptographyI;
 
 DatabaseAppInterface::DatabaseAppInterface() {
     std::ifstream file ("appdata");

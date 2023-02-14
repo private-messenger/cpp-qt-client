@@ -24,7 +24,7 @@ or Google (or Bing) translator
 Prikhodko N.S. (FullGreaM) 2023
 */
 
-using namespace CryptographyI;
+//using namespace CryptographyI;
 
 AES256::AES256 (unsigned char* data) {
     this->privatekey = data;
@@ -36,11 +36,7 @@ unsigned char* AES256::encode (unsigned char *data) {
     return data;
 }
 
-RSA::RSA (unsigned char* publickey, unsigned char* privkey) {
+RSA::RSA (const unsigned char* publickey, const unsigned char* privkey) {
     this->publickey = publickey;
     this->privatekey = privkey;
-}
-
-RSA generateRSA_key () {
-    return new RSA("public", "private");
 }

@@ -25,25 +25,27 @@ or Google (or Bing) translator
 Prikhodko N.S. (FullGreaM) 2023
 */
 
-namespace CryptographyI {
-    class Cryptography {
-    public:
-        // Cryptography();
-        unsigned char* publickey = 0;
-        unsigned char* privatekey = 0;
-        unsigned char* encode (unsigned char* data) = 0;
-        unsigned char* decode (unsigned char* data) = 0;
-    };
+class Cryptography {
+public:
+    // Cryptography();
+    unsigned char* publickey = 0;
+    unsigned char* privatekey = 0;
+    virtual unsigned char* encode (unsigned char* data) = 0;
+    virtual unsigned char* decode (unsigned char* data) = 0;
+};
 
-    class AES256 : Cryptography {
-    public:
-        AES256 (unsigned char* key);
-    };
+class AES256 : public Cryptography {
+public:
+    AES256 (unsigned char* key);
+    unsigned char* encode (unsigned char* data);
+    unsigned char* decode (unsigned char* data);
+};
 
-    class RSA : Cryptography {
-    public:
-        RSA (unsigned char* publickey, unsigned char* privkey);
-    };
-}
+class RSA : public Cryptography {
+public:
+    RSA (unsigned char* publickey, unsigned char* privkey);
+    unsigned char* encode (unsigned char* data);
+    unsigned char* decode (unsigned char* data);
+};
 
 #endif // CRYPTOGRAPHY_H
