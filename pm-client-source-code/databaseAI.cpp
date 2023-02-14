@@ -1,6 +1,7 @@
 #include "databaseAI.h"
 #include "sqlite3.h"
 #include <fstream>
+#include "cryptography.h"
 
 /*
 Уважаемые (и не очень) любители комментариев "на английском языке",
@@ -27,6 +28,7 @@ Prikhodko N.S. (FullGreaM) 2023
 */
 
 #include <iostream>
+using namespace CryptographyI;
 
 DatabaseAppInterface::DatabaseAppInterface() {
     std::ifstream file ("appdata");
@@ -45,12 +47,69 @@ DatabaseAppInterface::DatabaseAppInterface() {
     }
 }
 
-void DatabaseAppInterface::reg (std::string login, std::string password) {}
+char* generateId () {
+    return "tempID";
+}
+
+bool DatabaseAppInterface::reg (std::string login, std::string password) {
+    char* id = generateId();
+    char* i2pKey = "";  // (!) Сделать нормальную генерацию i2p ключа
+    std::string sql("INSERT INTO users(id, login, password, public_key, privkey_encoded, i2pkey_encoded, storagekey_encoded)"
+                    " VALUES (?, ?, ?, ?, ?, ?, ?);");
+    sqlite3_stmt *stmt = NULL;
+    int rc = sqlite3_prepare(database, sql.c_str(), -1, &stmt, NULL);
+    if (rc != SQLITE_OK) {
+        this->raisedError = true;
+        this->dbError = "sql.errCreate";
+        this->details = (char*)sqlite3_errmsg(database);
+    }
+    else {
+        // Биндим id пользователя
+        rc = sqlite3_bind_blob(database, 1, id, sizeof(id), SQLITE_STATIC);
+        // Биндим логин пользователя
+        rc = rc == SQLITE_OK ? sqlite3_bind_blob(database, 1, login.c_str(), sizeof(login.c_str()), SQLITE_STATIC) : rc;
+        // Инициализация шифрования по AES256 и RSA
+        AES256 encoding = new AES256((unsigned char*)(login + ":" + password));
+        AES256 storage = new AES256((unsigned char*)(generateId() + generateId()));
+        RSA rsaKeys = generateRSA_key();
+        // Шифруем ключи, пароль
+        char* passwordEncoded = (char*)encoding.encode((unsigned char*)(login + ":" + password));
+        char* publicKey = (char*)rsaKeys.publickey;
+        char* privkeyEncoded = (char*)encoding.encode((unsigned char*)(rsaKeys.privatekey));
+        char* i2pKeyEncoded = (char*)encoding.encode((unsigned char*)(i2pKey));
+        char* storageKeyEncoded = (char*)encoding.encode((unsigned char*)(storage.privatekey));
+        // Биндим пароль и ключи в зашифрованном виде
+        rc = rc == SQLITE_OK ? sqlite3_bind_blob(database, 1, passwordEncoded, sizeof(passwordEncoded), SQLITE_STATIC) : rc;
+        rc = rc == SQLITE_OK ? sqlite3_bind_blob(database, 1, publicKey, sizeof(publicKey), SQLITE_STATIC) : rc;
+        rc = rc == SQLITE_OK ? sqlite3_bind_blob(database, 1, privkeyEncoded, sizeof(privkeyEncoded), SQLITE_STATIC) : rc;
+        rc = rc == SQLITE_OK ? sqlite3_bind_blob(database, 1, i2pKeyEncoded, sizeof(i2pKeyEncoded), SQLITE_STATIC) : rc;
+        rc = rc == SQLITE_OK ? sqlite3_bind_blob(database, 1, storageKeyEncoded, sizeof(storageKeyEncoded), SQLITE_STATIC) : rc;
+
+        if (rc != SQLITE_OK) {
+            this->raisedError = true;
+            this->dbError = "sql.errCreate";
+            this->details = (char*)sqlite3_errmsg(database);
+
+            return false;
+        }
+        else {
+            rc = sqlite3_step(stmt);
+            if (rc != SQLITE3_OK) {
+                this->raisedError = true;
+                this->dbError = "sql.errCreate";
+                this->details = (char*)sqlite3_errmsg(database);
+
+                return false;
+            }
+            else return true;
+        }
+    }
+}
 
 bool DatabaseAppInterface::getAuthed () {
     // return false;
     std::string sql("SELECT value FROM envs WHERE key='authedAccount';");
-    sqlite3_stmt *stmt;
+    sqlite3_stmt *stmt = NULL;
     int rc = sqlite3_prepare(database, sql.c_str(), -1, &stmt, NULL);
     int rcAddict;
     if (rc != SQLITE_OK) {
@@ -74,7 +133,7 @@ bool DatabaseAppInterface::getAuthed () {
             }
             for (int colIndex = 0; colIndex < colCount; colIndex++) {
                 int type = sqlite3_column_type(stmt, colIndex);
-                sqlite3_stmt *stmtRes;
+                sqlite3_stmt *stmtRes = NULL;
                 const char * columnName = sqlite3_column_name(stmt, colIndex);
                 if (type == SQLITE_TEXT) {
                     //return true;
