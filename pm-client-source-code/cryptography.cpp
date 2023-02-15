@@ -36,7 +36,7 @@ unsigned char* AES256::encode (unsigned char *data) {
     return data;
 }
 
-RSA::RSA (const unsigned char* publickey, const unsigned char* privkey) {
+RSA::RSA (unsigned char* publickey, unsigned char* privkey) {
     this->publickey = publickey;
     this->privatekey = privkey;
 }
