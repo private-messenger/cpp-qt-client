@@ -46,6 +46,8 @@ public:
     RSA (unsigned char* publickey, unsigned char* privkey);
     unsigned char* encode (unsigned char* data);
     unsigned char* decode (unsigned char* data);
+private:
+    void generateKeys ();
 };
 
 #endif // CRYPTOGRAPHY_H

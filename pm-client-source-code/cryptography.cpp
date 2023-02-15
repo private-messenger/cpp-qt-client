@@ -24,8 +24,6 @@ or Google (or Bing) translator
 Prikhodko N.S. (FullGreaM) 2023
 */
 
-//using namespace CryptographyI;
-
 AES256::AES256 (unsigned char* data) {
     this->privatekey = data;
     this->publickey = data;
@@ -42,8 +40,19 @@ unsigned char* AES256::decode (unsigned char *data) {
 }
 
 RSA::RSA (unsigned char* publickey, unsigned char* privkey) {
-    this->publickey = publickey;
-    this->privatekey = privkey;
+    if (!publickey || !privatekey) {
+        this->generateKeys();
+    }
+    else {
+        this->publickey = publickey;
+        this->privatekey = privkey;
+    }
+}
+
+void RSA::generateKeys () {
+    // (!) Добавить НОРМАЛЬНУЮ генерацию ключей
+    this->publickey = (unsigned char*)"PUBLIC RSA KEY";
+    this->privatekey = (unsigned char*)"PRIVATE RSA KEY";
 }
 
 unsigned char* RSA::encode (unsigned char *data) {
