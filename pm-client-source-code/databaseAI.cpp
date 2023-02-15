@@ -43,6 +43,10 @@ DatabaseAppInterface::DatabaseAppInterface() {
             this->dbError = "sql.errCreate";
             this->details = (char*)sqlite3_errmsg(database);
         }
+        else {
+            SQLite3_interface sqlConn(database);
+            this->sql = sqlConn;
+        }
     }
 }
 
@@ -50,8 +54,16 @@ char* generateId () {
     return "tmpIdUsr_1238906";
 }
 
+void DatabaseAppInterface::setValue (char* key, char* value) {
+    if (!this->sql.signleSet("envs", SQLITE_TEXT, "value", value, SQLITE_TEXT, "key", key)) {
+        this->raisedError = true;
+        this->dbError = "sql.errCreate";
+        this->details = (char*)sqlite3_errmsg(database);
+    }
+}
+
 bool DatabaseAppInterface::hasAccount (char* id) {
-    std::string sql("SELECT id FROM users WHERE id='"+id+"';");
+    std::string sql("SELECT id FROM users WHERE id='" + std::string(id) + "';");
     sqlite3_stmt *stmt = NULL;
     int rc = sqlite3_prepare_v2(database, sql.c_str(), -1, &stmt, NULL);
     if (rc != SQLITE_OK) {
@@ -65,6 +77,7 @@ bool DatabaseAppInterface::hasAccount (char* id) {
     int rowCount = 0;
     while (rc != SQLITE_DONE && rc != SQLITE_OK) {
         rowCount++;
+        return sqlite3_column_type(stmt, 0) != SQLITE_NULL;
     }
 }
 
@@ -85,12 +98,9 @@ bool DatabaseAppInterface::reg (std::string login, std::string password) {
     else {
         sqlite3_reset(stmt);
         // Биндим id пользователя
-        //rc = sqlite3_bind_text(stmt, 1, id, sizeof(id), SQLITE_STATIC);
         sqlite3_bind_text(stmt, 1, id, -1, SQLITE_STATIC);
-        //sqlite3_bind_text(stmt, 1, id, sizeof(id), SQLITE_STATIC);
         // Биндим логин пользователя
         sqlite3_bind_text(stmt, 2, login.c_str(), -1, SQLITE_STATIC);
-        //sqlite3_bind_text(stmt, 2, login.c_str(), sizeof(login.c_str()), SQLITE_STATIC);
         // Инициализация шифрования по AES256 и RSA
         unsigned char* logPasKey = (unsigned char*)(login + ":" + password).c_str();
         AES256* encoding = new AES256((unsigned char*)(logPasKey));
@@ -109,11 +119,6 @@ bool DatabaseAppInterface::reg (std::string login, std::string password) {
         sqlite3_bind_blob(stmt, 6, i2pKeyEncoded, -1, SQLITE_STATIC);
         sqlite3_bind_blob(stmt, 7, storageKeyEncoded, -1, SQLITE_STATIC);
         rc = sqlite3_step(stmt);
-        //sqlite3_bind_blob(stmt, 3, passwordEncoded, sizeof(passwordEncoded), SQLITE_STATIC);
-        //sqlite3_bind_blob(stmt, 4, publicKey, sizeof(publicKey), SQLITE_STATIC);
-        //sqlite3_bind_blob(stmt, 5, privkeyEncoded, sizeof(privkeyEncoded), SQLITE_STATIC);
-        //sqlite3_bind_blob(stmt, 6, i2pKeyEncoded, sizeof(i2pKeyEncoded), SQLITE_STATIC);
-        //rc = sqlite3_bind_blob(stmt, 7, storageKeyEncoded, sizeof(storageKeyEncoded), SQLITE_STATIC);
 
         if (!this->hasAccount(id)) {
             this->raisedError = true;
@@ -125,32 +130,9 @@ bool DatabaseAppInterface::reg (std::string login, std::string password) {
         }
         else {
             sqlite3_clear_bindings(stmt);
+            setValue("authedAccount", id);
             return true;
         }
-
-        /*if (rc != SQLITE_OK && (char*)sqlite3_errmsg(database) != (char*)"no more rows available") {
-            this->raisedError = true;
-            this->dbError = "sql.errCreate";
-            this->details = (char*)sqlite3_errmsg(database);
-            sqlite3_clear_bindings(stmt);
-
-            return false;
-        }
-        else {
-            //rc = sqlite3_step(stmt);
-            if (rc != SQLITE_OK) {
-                this->raisedError = true;
-                this->dbError = "sql.errCreate";
-                this->details = (char*)sqlite3_errmsg(database);
-                sqlite3_clear_bindings(stmt);
-
-                return false;
-            }
-            else {
-                sqlite3_clear_bindings(stmt);
-                return true;
-            }
-        }*/
     }
 }
 

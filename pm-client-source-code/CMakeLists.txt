@@ -29,7 +29,6 @@ set(PROJECT_SOURCES
         # freenet settings
         freenet_settings.h freenet_settings.cpp freenet_settings.ui
         # Database application interface
-        sqlite3-dbInterface.h sqlite3-dbInterface.cpp
         databaseAI.h databaseAI.cpp
         # Locales
         locales.h locales.cpp

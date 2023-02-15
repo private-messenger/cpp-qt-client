@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>562</width>
+    <height>348</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,6 +17,22 @@
    <iconset resource="source.qrc">
     <normaloff>:/mainapp/sources/appico.ico</normaloff>:/mainapp/sources/appico.ico</iconset>
   </property>
+  <widget class="QCheckBox" name="checkBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>320</y>
+     <width>551</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Режим отладки (Включает системные выводы и прочую скучную хрень, лучше отключить)</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
  </widget>
  <resources>
   <include location="source.qrc"/>

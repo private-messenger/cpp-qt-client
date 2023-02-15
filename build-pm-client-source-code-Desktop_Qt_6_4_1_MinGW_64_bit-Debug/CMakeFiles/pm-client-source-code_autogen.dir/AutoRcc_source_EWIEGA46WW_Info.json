@@ -1,0 +1,35 @@
+{
+	"BUILD_DIR" : "W:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/pm-client-source-code_autogen",
+	"CMAKE_BINARY_DIR" : "W:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "W:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "W:/projects/repositories/pm-cli-cpp/pm-client-source-code",
+	"CMAKE_SOURCE_DIR" : "W:/projects/repositories/pm-cli-cpp/pm-client-source-code",
+	"INCLUDE_DIR" : "W:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/pm-client-source-code_autogen/include",
+	"INPUTS" : 
+	[
+		"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/langs/rus.png",
+		"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/langs/ua.jpg",
+		"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/langs/eng.jpg",
+		"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/sources/messages.ico",
+		"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/sources/freenet.png",
+		"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/sources/contacts.ico",
+		"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/sources/i2p.png",
+		"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/sources/keys.ico",
+		"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/sources/dialog.ico",
+		"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/sources/appico.ico",
+		"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/sources/FullGreaM_avatar.png",
+		"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/sources/profile.ico",
+		"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/sources/chat.ico",
+		"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/sources/storage.ico"
+	],
+	"LOCK_FILE" : "W:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/CMakeFiles/pm-client-source-code_autogen.dir/AutoRcc_source_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "source" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_source.cpp",
+	"RCC_EXECUTABLE" : "C:/Qt/6.4.1/mingw_64/./bin/rcc.exe",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "W:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/CMakeFiles/pm-client-source-code_autogen.dir/AutoRcc_source_EWIEGA46WW_Used.txt",
+	"SOURCE" : "W:/projects/repositories/pm-cli-cpp/pm-client-source-code/source.qrc",
+	"VERBOSITY" : 0
+}
