@@ -128,7 +128,7 @@ void MainWindow::on_creditsAction_clicked () {
 }
 
 bool MainWindow::isAuthed () {
-    //return true;
+    return true;
     return database.getAuthed();
 }
 
