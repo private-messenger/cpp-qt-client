@@ -37,6 +37,7 @@ public:
     char *dbError = 0;
     char* details = "-";
     bool getAuthed ();
+    bool hasAccount (char* accountId);
     bool reg (std::string login, std::string password);
 private:
     sqlite3 *database = 0;
