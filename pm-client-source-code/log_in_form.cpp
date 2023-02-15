@@ -83,20 +83,6 @@ void LogInForm::setupLocale (std::string locale) {
     this->ui->label_password_up->setText("<html><head/><body><p align=\"center\">" + password + "</p></body></html>");
     this->ui->label_password_up_2->setText("<html><head/><body><p align=\"center\">" + repeatPassword + "</p></body></html>");
     this->ui->signUpButton->setText(QString::fromStdString(loc->getLocaleVar("auth.sign_up.button")));
-
-    // Блокировка
-    if (
-        (this->ui->loginField_up->text() == "" || this->ui->passwordField_up->text() == "" || (this->ui->passwordField_up->text() != this->ui->repeatPasswordField_up->text())) &&
-        this->ui->signUpButton->isEnabled()
-    ) {
-        this->ui->signUpButton->setEnabled(false);
-    }
-    else if (
-        (this->ui->loginField_up->text() != "" || this->ui->passwordField_up->text() != "" || (this->ui->passwordField_up->text() == this->ui->repeatPasswordField_up->text())) &&
-        !this->ui->signUpButton->isEnabled()
-    ) {
-        this->ui->signUpButton->setEnabled(true);
-    }
 }
 
 void LogInForm::autoscale () {
@@ -121,6 +107,20 @@ void LogInForm::autoscale () {
     this->ui->repeatPasswordField_up->setGeometry(0, 150, this->width(), 24);
 
     this->ui->signUpButton->setGeometry((this->width() / 2) - 75, 190, 150, 24);
+
+    // Блокировка
+    if (
+        (this->ui->loginField_up->text() == "" || this->ui->passwordField_up->text() == "" || (this->ui->passwordField_up->text() != this->ui->repeatPasswordField_up->text())) &&
+        this->ui->signUpButton->isEnabled()
+    ) {
+        this->ui->signUpButton->setEnabled(false);
+    }
+    else if (
+        !(this->ui->loginField_up->text() == "" || this->ui->passwordField_up->text() == "" || (this->ui->passwordField_up->text() != this->ui->repeatPasswordField_up->text())) &&
+        !this->ui->signUpButton->isEnabled()
+    ) {
+        this->ui->signUpButton->setEnabled(true);
+    }
 }
 
 LogInForm::~LogInForm() {

@@ -53,20 +53,24 @@ char* generateId () {
 bool DatabaseAppInterface::reg (std::string login, std::string password) {
     char* id = generateId();
     char* i2pKey = "";  // (!) Сделать нормальную генерацию i2p ключа
-    std::string sql("INSERT INTO users(id, login, password, public_key, privkey_encoded, i2pkey_encoded, storagekey_encoded)"
+    std::string sql("INSERT INTO users(id, login, password, publickey, privkey_encoded, i2pkey_encoded, storagekey_encoded)"
                     " VALUES (?, ?, ?, ?, ?, ?, ?);");
     sqlite3_stmt *stmt = NULL;
-    int rc = sqlite3_prepare(database, sql.c_str(), -1, &stmt, NULL);
+    int rc = sqlite3_prepare_v2(database, sql.c_str(), -1, &stmt, NULL);
     if (rc != SQLITE_OK) {
         this->raisedError = true;
         this->dbError = "sql.errCreate";
         this->details = (char*)sqlite3_errmsg(database);
+
+        return false;
     }
     else {
         // Биндим id пользователя
-        rc = sqlite3_bind_blob(stmt, 1, id, sizeof(id), SQLITE_STATIC);
+        //rc = sqlite3_bind_text(stmt, 1, id, sizeof(id), SQLITE_STATIC);
+        sqlite3_bind_text(stmt, 1, id, sizeof(id), SQLITE_STATIC);
         // Биндим логин пользователя
-        rc = rc == SQLITE_OK ? sqlite3_bind_blob(stmt, 1, login.c_str(), sizeof(login.c_str()), SQLITE_STATIC) : rc;
+        //rc = rc == SQLITE_OK ? sqlite3_bind_text(stmt, 1, login.c_str(), sizeof(login.c_str()), SQLITE_STATIC) : rc;
+        sqlite3_bind_text(stmt, 2, login.c_str(), sizeof(login.c_str()), SQLITE_STATIC);
         // Инициализация шифрования по AES256 и RSA
         unsigned char* logPasKey = (unsigned char*)(login + ":" + password).c_str();
         AES256* encoding = new AES256((unsigned char*)(logPasKey));
@@ -79,11 +83,16 @@ bool DatabaseAppInterface::reg (std::string login, std::string password) {
         char* i2pKeyEncoded = (char*)encoding->encode((unsigned char*)(i2pKey));
         char* storageKeyEncoded = (char*)encoding->encode((unsigned char*)(storage->privatekey));
         // Биндим пароль и ключи в зашифрованном виде
-        rc = rc == SQLITE_OK ? sqlite3_bind_blob(stmt, 1, passwordEncoded, sizeof(passwordEncoded), SQLITE_STATIC) : rc;
-        rc = rc == SQLITE_OK ? sqlite3_bind_blob(stmt, 1, publicKey, sizeof(publicKey), SQLITE_STATIC) : rc;
-        rc = rc == SQLITE_OK ? sqlite3_bind_blob(stmt, 1, privkeyEncoded, sizeof(privkeyEncoded), SQLITE_STATIC) : rc;
-        rc = rc == SQLITE_OK ? sqlite3_bind_blob(stmt, 1, i2pKeyEncoded, sizeof(i2pKeyEncoded), SQLITE_STATIC) : rc;
-        rc = rc == SQLITE_OK ? sqlite3_bind_blob(stmt, 1, storageKeyEncoded, sizeof(storageKeyEncoded), SQLITE_STATIC) : rc;
+        //rc = rc == SQLITE_OK ? sqlite3_bind_blob(stmt, 1, passwordEncoded, sizeof(passwordEncoded), SQLITE_STATIC) : rc;
+        //rc = rc == SQLITE_OK ? sqlite3_bind_blob(stmt, 1, publicKey, sizeof(publicKey), SQLITE_STATIC) : rc;
+        //rc = rc == SQLITE_OK ? sqlite3_bind_blob(stmt, 1, privkeyEncoded, sizeof(privkeyEncoded), SQLITE_STATIC) : rc;
+        //rc = rc == SQLITE_OK ? sqlite3_bind_blob(stmt, 1, i2pKeyEncoded, sizeof(i2pKeyEncoded), SQLITE_STATIC) : rc;
+        //rc = rc == SQLITE_OK ? sqlite3_bind_blob(stmt, 1, storageKeyEncoded, sizeof(storageKeyEncoded), SQLITE_STATIC) : rc;
+        sqlite3_bind_blob(stmt, 3, passwordEncoded, sizeof(passwordEncoded), SQLITE_STATIC);
+        sqlite3_bind_blob(stmt, 4, publicKey, sizeof(publicKey), SQLITE_STATIC);
+        sqlite3_bind_blob(stmt, 5, privkeyEncoded, sizeof(privkeyEncoded), SQLITE_STATIC);
+        sqlite3_bind_blob(stmt, 6, i2pKeyEncoded, sizeof(i2pKeyEncoded), SQLITE_STATIC);
+        rc = sqlite3_bind_blob(stmt, 7, storageKeyEncoded, sizeof(storageKeyEncoded), SQLITE_STATIC);
 
         if (rc != SQLITE_OK) {
             this->raisedError = true;
