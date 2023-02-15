@@ -68,16 +68,16 @@ bool DatabaseAppInterface::reg (std::string login, std::string password) {
         // Биндим логин пользователя
         rc = rc == SQLITE_OK ? sqlite3_bind_blob(stmt, 1, login.c_str(), sizeof(login.c_str()), SQLITE_STATIC) : rc;
         // Инициализация шифрования по AES256 и RSA
-        AES256 encoding = new AES256((unsigned char*)(login.c_str() (":") password.c_str()));
-        AES256 storage = new AES256((unsigned char*)(generateId() + generateId()));
-        RSA rsaKeys = generateRSA_key();
-        // Шифруем ключи, пароль
         unsigned char* logPasKey = (unsigned char*)(login + ":" + password).c_str();
-        char* passwordEncoded = (char*)encoding.encode(logPasKey);
-        char* publicKey = (char*)rsaKeys.publickey;
-        char* privkeyEncoded = (char*)encoding.encode((unsigned char*)(rsaKeys.privatekey));
-        char* i2pKeyEncoded = (char*)encoding.encode((unsigned char*)(i2pKey));
-        char* storageKeyEncoded = (char*)encoding.encode((unsigned char*)(storage.privatekey));
+        AES256* encoding = new AES256((unsigned char*)(logPasKey));
+        AES256* storage = new AES256((unsigned char*)(generateId()));
+        RSA* rsaKeys = new RSA(NULL, NULL);
+        // Шифруем ключи, пароль
+        char* passwordEncoded = (char*)encoding->encode(logPasKey);
+        char* publicKey = (char*)rsaKeys->publickey;
+        char* privkeyEncoded = (char*)encoding->encode((unsigned char*)(rsaKeys->privatekey));
+        char* i2pKeyEncoded = (char*)encoding->encode((unsigned char*)(i2pKey));
+        char* storageKeyEncoded = (char*)encoding->encode((unsigned char*)(storage->privatekey));
         // Биндим пароль и ключи в зашифрованном виде
         rc = rc == SQLITE_OK ? sqlite3_bind_blob(stmt, 1, passwordEncoded, sizeof(passwordEncoded), SQLITE_STATIC) : rc;
         rc = rc == SQLITE_OK ? sqlite3_bind_blob(stmt, 1, publicKey, sizeof(publicKey), SQLITE_STATIC) : rc;
@@ -94,7 +94,7 @@ bool DatabaseAppInterface::reg (std::string login, std::string password) {
         }
         else {
             rc = sqlite3_step(stmt);
-            if (rc != SQLITE3_OK) {
+            if (rc != SQLITE_OK) {
                 this->raisedError = true;
                 this->dbError = "sql.errCreate";
                 this->details = (char*)sqlite3_errmsg(database);

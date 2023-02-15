@@ -332,6 +332,7 @@ W:/projects/repositories/pm-cli-cpp/pm-client-source-code/credits.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/vadefs.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wctype.h
+W:/projects/repositories/pm-cli-cpp/pm-client-source-code/databaseAI.h
 W:/projects/repositories/pm-cli-cpp/pm-client-source-code/freenet_settings.h
  mmc:Q_OBJECT
  mdp:W:/projects/repositories/pm-cli-cpp/pm-client-source-code/freenet_settings.h
@@ -998,7 +999,6 @@ W:/projects/repositories/pm-cli-cpp/pm-client-source-code/i2p_settings.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/vadefs.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wctype.h
-W:/projects/repositories/pm-cli-cpp/pm-client-source-code/databaseAI.h
 W:/projects/repositories/pm-cli-cpp/pm-client-source-code/general_settings.h
  mmc:Q_OBJECT
  mdp:W:/projects/repositories/pm-cli-cpp/pm-client-source-code/general_settings.h
@@ -1332,6 +1332,7 @@ W:/projects/repositories/pm-cli-cpp/pm-client-source-code/general_settings.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/vadefs.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wctype.h
+W:/projects/repositories/pm-cli-cpp/pm-client-source-code/locales.h
 W:/projects/repositories/pm-cli-cpp/pm-client-source-code/log_in_form.h
  mmc:Q_OBJECT
  mdp:W:/projects/repositories/pm-cli-cpp/pm-client-source-code/log_in_form.h
@@ -1667,9 +1668,6 @@ W:/projects/repositories/pm-cli-cpp/pm-client-source-code/log_in_form.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wctype.h
  mdp:W:/projects/repositories/pm-cli-cpp/pm-client-source-code/databaseAI.h
  mdp:W:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3/sqlite3.h
-W:/projects/repositories/pm-cli-cpp/pm-client-source-code/locales.h
-W:/projects/repositories/pm-cli-cpp/pm-client-source-code/general_settings.cpp
- uic:ui_general_settings.h
 W:/projects/repositories/pm-cli-cpp/pm-client-source-code/mainwindow.h
  mmc:Q_OBJECT
  mdp:W:/projects/repositories/pm-cli-cpp/pm-client-source-code/mainwindow.h
@@ -2010,14 +2008,16 @@ W:/projects/repositories/pm-cli-cpp/pm-client-source-code/mainwindow.h
  mdp:W:/projects/repositories/pm-cli-cpp/pm-client-source-code/databaseAI.h
  mdp:W:/projects/repositories/pm-cli-cpp/pm-client-source-code/log_in_form.h
  mdp:W:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3/sqlite3.h
+W:/projects/repositories/pm-cli-cpp/pm-client-source-code/general_settings.cpp
+ uic:ui_general_settings.h
 W:/projects/repositories/pm-cli-cpp/pm-client-source-code/credits.cpp
  uic:ui_credits.h
-W:/projects/repositories/pm-cli-cpp/pm-client-source-code/cryptography.h
 W:/projects/repositories/pm-cli-cpp/pm-client-source-code/databaseAI.cpp
-W:/projects/repositories/pm-cli-cpp/pm-client-source-code/i2p_settings.cpp
- uic:ui_i2p_settings.h
+W:/projects/repositories/pm-cli-cpp/pm-client-source-code/cryptography.h
 W:/projects/repositories/pm-cli-cpp/pm-client-source-code/freenet_settings.cpp
  uic:ui_freenet_settings.h
+W:/projects/repositories/pm-cli-cpp/pm-client-source-code/i2p_settings.cpp
+ uic:ui_i2p_settings.h
 W:/projects/repositories/pm-cli-cpp/pm-client-source-code/locales.cpp
 W:/projects/repositories/pm-cli-cpp/pm-client-source-code/log_in_form.cpp
  uic:ui_log_in_form.h

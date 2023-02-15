@@ -36,7 +36,22 @@ unsigned char* AES256::encode (unsigned char *data) {
     return data;
 }
 
+unsigned char* AES256::decode (unsigned char *data) {
+    // (!) Добавить НОРМАЛЬНОЕ шифрование по алгоритму AES256
+    return data;
+}
+
 RSA::RSA (unsigned char* publickey, unsigned char* privkey) {
     this->publickey = publickey;
     this->privatekey = privkey;
+}
+
+unsigned char* RSA::encode (unsigned char *data) {
+    // (!) Добавить НОРМАЛЬНОЕ шифрование по алгоритму RSA
+    return data;
+}
+
+unsigned char* RSA::decode (unsigned char *data) {
+    // (!) Добавить НОРМАЛЬНОЕ шифрование по алгоритму RSA
+    return data;
 }
