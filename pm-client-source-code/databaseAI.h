@@ -47,7 +47,7 @@ public:
         sqlite3_reset(stmt);
         switch (type) {
             case SQLITE_TEXT :
-                sqlite3_bind_text(stmt, 1, value, -1, SQLITE_TRANSIENT);
+                sqlite3_bind_text(stmt, 1, value, -1, SQLITE_STATIC);
                 break;
             case SQLITE_FLOAT :
                 sqlite3_bind_double(stmt, 1, (double)atof(value));
@@ -59,24 +59,24 @@ public:
                 sqlite3_bind_null(stmt, 1);
                 break;
             default :
-                sqlite3_bind_blob(stmt, 1, value, -1, SQLITE_TRANSIENT);
+                sqlite3_bind_blob(stmt, 1, value, -1, SQLITE_STATIC);
                 break;
         }
         switch (whereType) {
             case SQLITE_TEXT :
-                sqlite3_bind_text(stmt, 2, whereKey, -1, SQLITE_TRANSIENT);
+                sqlite3_bind_text(stmt, 2, whereValue, -1, SQLITE_STATIC);
                 break;
             case SQLITE_FLOAT :
-                sqlite3_bind_double(stmt, 2, (double)atof(whereKey));
+                sqlite3_bind_double(stmt, 2, (double)atof(whereValue));
                 break;
             case SQLITE_INTEGER :
-                sqlite3_bind_int(stmt, 2, (int)atof(whereKey));
+                sqlite3_bind_int(stmt, 2, (int)atof(whereValue));
                 break;
             case SQLITE_NULL :
                 sqlite3_bind_null(stmt, 2);
                 break;
             default :
-                sqlite3_bind_blob(stmt, 2, whereKey, -1, SQLITE_TRANSIENT);
+                sqlite3_bind_blob(stmt, 2, whereValue, -1, SQLITE_STATIC);
                 break;
         }
         rc = sqlite3_step(stmt);

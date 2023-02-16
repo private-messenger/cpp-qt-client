@@ -99,10 +99,14 @@ if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(pm-client-source-code)
 endif()
 
+#include_directories(aes256/)
+
 if (WINDOWS64)
     target_include_directories(${CMAKE_PROJECT_NAME} PUBLIC
         sqlite3/
         sqlite3-lib/win64/
+        #aes256/
+        #aes256/src/
     )
     target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC
         sqlite3.a
@@ -111,6 +115,8 @@ elseif (LINUX)
     target_include_directories(${CMAKE_PROJECT_NAME} PUBLIC
         sqlite3/
         sqlite3-lib/linux/
+        #aes256/
+        #aes256/src/
     )
     target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC
         sqlite3.a ${CMAKE_DL_LIBS}

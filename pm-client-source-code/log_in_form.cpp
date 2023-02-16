@@ -57,9 +57,16 @@ void LogInForm::on_signUpButton_clicked () {
             this->ui->passwordField_up->text().toStdString()
         )) {
             QMessageBox messageBox;
-            messageBox.information(0, QString::fromStdString(loc->getLocaleVar("auth.successful.title")), QString::fromStdString(loc->getLocaleVar("auth.successful")));
+            this->isSuccess = true;
+            messageBox.information(0,
+                QString::fromStdString(loc->getLocaleVar("auth.successful.title")),
+                QString::fromStdString(loc->getLocaleVar("auth.successful.label"))
+            );
+            this->hide();
         }
     }
+
+    delete loc;
 }
 
 void LogInForm::setupLocale (std::string locale) {
@@ -83,6 +90,8 @@ void LogInForm::setupLocale (std::string locale) {
     this->ui->label_password_up->setText("<html><head/><body><p align=\"center\">" + password + "</p></body></html>");
     this->ui->label_password_up_2->setText("<html><head/><body><p align=\"center\">" + repeatPassword + "</p></body></html>");
     this->ui->signUpButton->setText(QString::fromStdString(loc->getLocaleVar("auth.sign_up.button")));
+
+    delete loc;
 }
 
 void LogInForm::autoscale () {

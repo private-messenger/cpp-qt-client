@@ -192,5 +192,11 @@ std::string Locales::getLocaleVar (std::string key) {
     else if (key == "auth.nomatch_passwords") {
         wordvalue = "Пароли не совпадают между собой";
     }
+    else if (key == "auth.successful.label") {
+        wordvalue = "Вы успешно авторизовались!";
+    }
+    else if (key == "auth.successful.title") {
+        wordvalue = "Успех";
+    }
     return wordvalue;
 }

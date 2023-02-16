@@ -41,8 +41,9 @@ public:
     ~LogInForm();
     void setupLocale (std::string locale);
     void setupDatabase (DatabaseAppInterface* database);
-    DatabaseAppInterface* database;
+    DatabaseAppInterface* database = 0;
     std::string locale;
+    bool isSuccess = false;
 protected slots:
     void autoscale ();
     void on_signUpButton_clicked ();

@@ -152,6 +152,10 @@ void MainWindow::dynamicAccess() {
         this->setEnabled(false);
     }
     // Автовыход при закрытии окна авторизации и закртие дочерних окон при выходе из основного
+    if (logInForm.isSuccess) {  // Тут парсим состояние окна авторизации
+        this->needAuth = false;
+    }
+
     if (this->needAuth && logInForm.isHidden()) {
         this->hide();
     }

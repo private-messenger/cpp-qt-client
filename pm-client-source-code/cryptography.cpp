@@ -1,4 +1,6 @@
 #include "cryptography.h"
+#include "aes256.hpp"
+#include <cstring>
 
 /*
 Уважаемые (и не очень) любители комментариев "на английском языке",
@@ -30,13 +32,33 @@ AES256::AES256 (unsigned char* data) {
 }
 
 unsigned char* AES256::encode (unsigned char *data) {
+    ByteArray encryptData;
     // (!) Добавить НОРМАЛЬНОЕ шифрование по алгоритму AES256
     return data;
+    Aes256 aes((ByteArray)*this->privatekey);
+    encryptData.clear();
+    aes.encrypt_start(strlen((const char*)data), encryptData);
+    encryptData.clear();
+    aes.encrypt_continue(data, strlen((const char*)data), encryptData);
+    aes.encrypt_end(encryptData);
+
+    unsigned char* aesEncrypted = encryptData.data();
+    return aesEncrypted;
 }
 
 unsigned char* AES256::decode (unsigned char *data) {
+    ByteArray decryptData;
     // (!) Добавить НОРМАЛЬНОЕ шифрование по алгоритму AES256
-    return data;
+    //return data;
+    Aes256 aes((ByteArray)*this->privatekey);
+    decryptData.clear();
+    aes.decrypt_start(strlen((const char*)data));
+    decryptData.clear();
+    aes.decrypt_continue(data, strlen((const char*)data), decryptData);
+    aes.decrypt_end(decryptData);
+
+    unsigned char* aesDecrypted = decryptData.data();
+    return aesDecrypted;
 }
 
 RSA::RSA (unsigned char* publickey, unsigned char* privkey) {

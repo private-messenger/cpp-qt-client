@@ -2012,7 +2012,6 @@ W:/projects/repositories/pm-cli-cpp/pm-client-source-code/mainwindow.h
  mdp:W:/projects/repositories/pm-cli-cpp/pm-client-source-code/databaseAI.h
  mdp:W:/projects/repositories/pm-cli-cpp/pm-client-source-code/log_in_form.h
  mdp:W:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3/sqlite3.h
-W:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3-dbInterface.h
 W:/projects/repositories/pm-cli-cpp/pm-client-source-code/credits.cpp
  uic:ui_credits.h
 W:/projects/repositories/pm-cli-cpp/pm-client-source-code/cryptography.cpp
@@ -2026,4 +2025,3 @@ W:/projects/repositories/pm-cli-cpp/pm-client-source-code/log_in_form.cpp
 W:/projects/repositories/pm-cli-cpp/pm-client-source-code/main.cpp
 W:/projects/repositories/pm-cli-cpp/pm-client-source-code/mainwindow.cpp
  uic:./ui_mainwindow.h
-W:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3-dbInterface.cpp
