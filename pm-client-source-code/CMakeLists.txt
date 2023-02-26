@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(pm-client-source-code VERSION 0.1 LANGUAGES CXX)
+project(spik-source VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
@@ -29,6 +29,7 @@ set(PROJECT_SOURCES
         # freenet settings
         freenet_settings.h freenet_settings.cpp freenet_settings.ui
         # Database application interface
+        #databaseAI_legacy.h databaseAI_legacy.cpp
         databaseAI.h databaseAI.cpp
         # Locales
         locales.h locales.cpp
@@ -53,37 +54,46 @@ elseif(CMAKE_HOST_UNIX)
     set(LINUX 1)
 endif()
 
+if (WINDOWS64)
+    set(PROJECT_SOURCES ${PROJECT_SOURCES}
+        win-functions/create-process.cpp
+        win-functions/create-process.h
+        win-functions/nodejs-run.cpp
+        win-functions/nodejs-run.h
+    )
+endif()
+
 # Load platform version file
 #if (WINDOWS64)
 #    set(PROJECT_SOURCES ${PROJECT_SOURCES} databaseAI_win64.h databaseAI_win64.cpp)
 #endif()
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
-    qt_add_executable(pm-client-source-code
+    qt_add_executable(spik-source
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
     )
 # Define target properties for Android with Qt 6 as:
-#    set_property(TARGET pm-client-source-code APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
+#    set_property(TARGET spik-source APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
 #                 ${CMAKE_CURRENT_SOURCE_DIR}/android)
 # For more information, see https://doc.qt.io/qt-6/qt-add-executable.html#target-creation
 else()
     if(ANDROID)
-        add_library(pm-client-source-code SHARED
+        add_library(spik-source SHARED
             ${PROJECT_SOURCES}
         )
 # Define properties for Android with Qt 5 after find_package() calls as:
 #    set(ANDROID_PACKAGE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/android")
     else()
-        add_executable(pm-client-source-code
+        add_executable(spik-source
             ${PROJECT_SOURCES}
         )
     endif()
 endif()
 
-target_link_libraries(pm-client-source-code PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+target_link_libraries(spik-source PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 
-set_target_properties(pm-client-source-code PROPERTIES
+set_target_properties(spik-source PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com
     MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
     MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
@@ -91,12 +101,12 @@ set_target_properties(pm-client-source-code PROPERTIES
     WIN32_EXECUTABLE TRUE
 )
 
-install(TARGETS pm-client-source-code
+install(TARGETS spik-source
     BUNDLE DESTINATION .
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
 
 if(QT_VERSION_MAJOR EQUAL 6)
-    qt_finalize_executable(pm-client-source-code)
+    qt_finalize_executable(spik-source)
 endif()
 
 #include_directories(aes256/)
@@ -105,6 +115,7 @@ if (WINDOWS64)
     target_include_directories(${CMAKE_PROJECT_NAME} PUBLIC
         sqlite3/
         sqlite3-lib/win64/
+        win-functions/
         #aes256/
         #aes256/src/
     )

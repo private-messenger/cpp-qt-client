@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: pm-client-source-code
+# Project: spik-source
 # Configurations: Debug
 # =============================================================================
 
@@ -41,128 +41,144 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = W$:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target pm-client-source-code
+# Object build statements for EXECUTABLE target spik-source
 
 
 #############################################
-# Order-only phony target for pm-client-source-code
+# Order-only phony target for spik-source
 
-build cmake_object_order_depends_target_pm-client-source-code: phony || pm-client-source-code_autogen pm-client-source-code_autogen/EWIEGA46WW/qrc_source.cpp pm-client-source-code_autogen/mocs_compilation.cpp pm-client-source-code_autogen/timestamp pm-client-source-code_autogen_timestamp_deps
+build cmake_object_order_depends_target_spik-source: phony || spik-source_autogen spik-source_autogen/EWIEGA46WW/qrc_source.cpp spik-source_autogen/mocs_compilation.cpp spik-source_autogen/timestamp spik-source_autogen_timestamp_deps
 
-build CMakeFiles/pm-client-source-code.dir/pm-client-source-code_autogen/mocs_compilation.cpp.obj: CXX_COMPILER__pm-client-source-code_Debug W$:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/pm-client-source-code_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_pm-client-source-code
+build CMakeFiles/spik-source.dir/spik-source_autogen/mocs_compilation.cpp.obj: CXX_COMPILER__spik-source_Debug W$:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/spik-source_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_spik-source
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\pm-client-source-code.dir\pm-client-source-code_autogen\mocs_compilation.cpp.obj.d
+  DEP_FILE = CMakeFiles\spik-source.dir\spik-source_autogen\mocs_compilation.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17
-  INCLUDES = -IW:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/pm-client-source-code_autogen/include -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3 -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3-lib/win64 -isystem C:/Qt/6.4.1/mingw_64/include/QtCore -isystem C:/Qt/6.4.1/mingw_64/include -isystem C:/Qt/6.4.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.4.1/mingw_64/include/QtGui
-  OBJECT_DIR = CMakeFiles\pm-client-source-code.dir
-  OBJECT_FILE_DIR = CMakeFiles\pm-client-source-code.dir\pm-client-source-code_autogen
+  INCLUDES = -IW:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/spik-source_autogen/include -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3 -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3-lib/win64 -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/win-functions -isystem C:/Qt/6.4.1/mingw_64/include/QtCore -isystem C:/Qt/6.4.1/mingw_64/include -isystem C:/Qt/6.4.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.4.1/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\spik-source.dir
+  OBJECT_FILE_DIR = CMakeFiles\spik-source.dir\spik-source_autogen
 
-build CMakeFiles/pm-client-source-code.dir/main.cpp.obj: CXX_COMPILER__pm-client-source-code_Debug W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/main.cpp || cmake_object_order_depends_target_pm-client-source-code
+build CMakeFiles/spik-source.dir/main.cpp.obj: CXX_COMPILER__spik-source_Debug W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/main.cpp || cmake_object_order_depends_target_spik-source
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\pm-client-source-code.dir\main.cpp.obj.d
+  DEP_FILE = CMakeFiles\spik-source.dir\main.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17
-  INCLUDES = -IW:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/pm-client-source-code_autogen/include -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3 -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3-lib/win64 -isystem C:/Qt/6.4.1/mingw_64/include/QtCore -isystem C:/Qt/6.4.1/mingw_64/include -isystem C:/Qt/6.4.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.4.1/mingw_64/include/QtGui
-  OBJECT_DIR = CMakeFiles\pm-client-source-code.dir
-  OBJECT_FILE_DIR = CMakeFiles\pm-client-source-code.dir
+  INCLUDES = -IW:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/spik-source_autogen/include -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3 -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3-lib/win64 -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/win-functions -isystem C:/Qt/6.4.1/mingw_64/include/QtCore -isystem C:/Qt/6.4.1/mingw_64/include -isystem C:/Qt/6.4.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.4.1/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\spik-source.dir
+  OBJECT_FILE_DIR = CMakeFiles\spik-source.dir
 
-build CMakeFiles/pm-client-source-code.dir/mainwindow.cpp.obj: CXX_COMPILER__pm-client-source-code_Debug W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/mainwindow.cpp || cmake_object_order_depends_target_pm-client-source-code
+build CMakeFiles/spik-source.dir/mainwindow.cpp.obj: CXX_COMPILER__spik-source_Debug W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/mainwindow.cpp || cmake_object_order_depends_target_spik-source
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\pm-client-source-code.dir\mainwindow.cpp.obj.d
+  DEP_FILE = CMakeFiles\spik-source.dir\mainwindow.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17
-  INCLUDES = -IW:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/pm-client-source-code_autogen/include -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3 -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3-lib/win64 -isystem C:/Qt/6.4.1/mingw_64/include/QtCore -isystem C:/Qt/6.4.1/mingw_64/include -isystem C:/Qt/6.4.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.4.1/mingw_64/include/QtGui
-  OBJECT_DIR = CMakeFiles\pm-client-source-code.dir
-  OBJECT_FILE_DIR = CMakeFiles\pm-client-source-code.dir
+  INCLUDES = -IW:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/spik-source_autogen/include -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3 -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3-lib/win64 -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/win-functions -isystem C:/Qt/6.4.1/mingw_64/include/QtCore -isystem C:/Qt/6.4.1/mingw_64/include -isystem C:/Qt/6.4.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.4.1/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\spik-source.dir
+  OBJECT_FILE_DIR = CMakeFiles\spik-source.dir
 
-build CMakeFiles/pm-client-source-code.dir/log_in_form.cpp.obj: CXX_COMPILER__pm-client-source-code_Debug W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/log_in_form.cpp || cmake_object_order_depends_target_pm-client-source-code
+build CMakeFiles/spik-source.dir/log_in_form.cpp.obj: CXX_COMPILER__spik-source_Debug W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/log_in_form.cpp || cmake_object_order_depends_target_spik-source
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\pm-client-source-code.dir\log_in_form.cpp.obj.d
+  DEP_FILE = CMakeFiles\spik-source.dir\log_in_form.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17
-  INCLUDES = -IW:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/pm-client-source-code_autogen/include -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3 -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3-lib/win64 -isystem C:/Qt/6.4.1/mingw_64/include/QtCore -isystem C:/Qt/6.4.1/mingw_64/include -isystem C:/Qt/6.4.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.4.1/mingw_64/include/QtGui
-  OBJECT_DIR = CMakeFiles\pm-client-source-code.dir
-  OBJECT_FILE_DIR = CMakeFiles\pm-client-source-code.dir
+  INCLUDES = -IW:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/spik-source_autogen/include -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3 -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3-lib/win64 -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/win-functions -isystem C:/Qt/6.4.1/mingw_64/include/QtCore -isystem C:/Qt/6.4.1/mingw_64/include -isystem C:/Qt/6.4.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.4.1/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\spik-source.dir
+  OBJECT_FILE_DIR = CMakeFiles\spik-source.dir
 
-build CMakeFiles/pm-client-source-code.dir/credits.cpp.obj: CXX_COMPILER__pm-client-source-code_Debug W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/credits.cpp || cmake_object_order_depends_target_pm-client-source-code
+build CMakeFiles/spik-source.dir/credits.cpp.obj: CXX_COMPILER__spik-source_Debug W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/credits.cpp || cmake_object_order_depends_target_spik-source
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\pm-client-source-code.dir\credits.cpp.obj.d
+  DEP_FILE = CMakeFiles\spik-source.dir\credits.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17
-  INCLUDES = -IW:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/pm-client-source-code_autogen/include -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3 -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3-lib/win64 -isystem C:/Qt/6.4.1/mingw_64/include/QtCore -isystem C:/Qt/6.4.1/mingw_64/include -isystem C:/Qt/6.4.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.4.1/mingw_64/include/QtGui
-  OBJECT_DIR = CMakeFiles\pm-client-source-code.dir
-  OBJECT_FILE_DIR = CMakeFiles\pm-client-source-code.dir
+  INCLUDES = -IW:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/spik-source_autogen/include -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3 -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3-lib/win64 -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/win-functions -isystem C:/Qt/6.4.1/mingw_64/include/QtCore -isystem C:/Qt/6.4.1/mingw_64/include -isystem C:/Qt/6.4.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.4.1/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\spik-source.dir
+  OBJECT_FILE_DIR = CMakeFiles\spik-source.dir
 
-build CMakeFiles/pm-client-source-code.dir/general_settings.cpp.obj: CXX_COMPILER__pm-client-source-code_Debug W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/general_settings.cpp || cmake_object_order_depends_target_pm-client-source-code
+build CMakeFiles/spik-source.dir/general_settings.cpp.obj: CXX_COMPILER__spik-source_Debug W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/general_settings.cpp || cmake_object_order_depends_target_spik-source
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\pm-client-source-code.dir\general_settings.cpp.obj.d
+  DEP_FILE = CMakeFiles\spik-source.dir\general_settings.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17
-  INCLUDES = -IW:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/pm-client-source-code_autogen/include -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3 -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3-lib/win64 -isystem C:/Qt/6.4.1/mingw_64/include/QtCore -isystem C:/Qt/6.4.1/mingw_64/include -isystem C:/Qt/6.4.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.4.1/mingw_64/include/QtGui
-  OBJECT_DIR = CMakeFiles\pm-client-source-code.dir
-  OBJECT_FILE_DIR = CMakeFiles\pm-client-source-code.dir
+  INCLUDES = -IW:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/spik-source_autogen/include -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3 -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3-lib/win64 -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/win-functions -isystem C:/Qt/6.4.1/mingw_64/include/QtCore -isystem C:/Qt/6.4.1/mingw_64/include -isystem C:/Qt/6.4.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.4.1/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\spik-source.dir
+  OBJECT_FILE_DIR = CMakeFiles\spik-source.dir
 
-build CMakeFiles/pm-client-source-code.dir/i2p_settings.cpp.obj: CXX_COMPILER__pm-client-source-code_Debug W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/i2p_settings.cpp || cmake_object_order_depends_target_pm-client-source-code
+build CMakeFiles/spik-source.dir/i2p_settings.cpp.obj: CXX_COMPILER__spik-source_Debug W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/i2p_settings.cpp || cmake_object_order_depends_target_spik-source
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\pm-client-source-code.dir\i2p_settings.cpp.obj.d
+  DEP_FILE = CMakeFiles\spik-source.dir\i2p_settings.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17
-  INCLUDES = -IW:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/pm-client-source-code_autogen/include -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3 -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3-lib/win64 -isystem C:/Qt/6.4.1/mingw_64/include/QtCore -isystem C:/Qt/6.4.1/mingw_64/include -isystem C:/Qt/6.4.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.4.1/mingw_64/include/QtGui
-  OBJECT_DIR = CMakeFiles\pm-client-source-code.dir
-  OBJECT_FILE_DIR = CMakeFiles\pm-client-source-code.dir
+  INCLUDES = -IW:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/spik-source_autogen/include -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3 -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3-lib/win64 -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/win-functions -isystem C:/Qt/6.4.1/mingw_64/include/QtCore -isystem C:/Qt/6.4.1/mingw_64/include -isystem C:/Qt/6.4.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.4.1/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\spik-source.dir
+  OBJECT_FILE_DIR = CMakeFiles\spik-source.dir
 
-build CMakeFiles/pm-client-source-code.dir/freenet_settings.cpp.obj: CXX_COMPILER__pm-client-source-code_Debug W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/freenet_settings.cpp || cmake_object_order_depends_target_pm-client-source-code
+build CMakeFiles/spik-source.dir/freenet_settings.cpp.obj: CXX_COMPILER__spik-source_Debug W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/freenet_settings.cpp || cmake_object_order_depends_target_spik-source
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\pm-client-source-code.dir\freenet_settings.cpp.obj.d
+  DEP_FILE = CMakeFiles\spik-source.dir\freenet_settings.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17
-  INCLUDES = -IW:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/pm-client-source-code_autogen/include -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3 -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3-lib/win64 -isystem C:/Qt/6.4.1/mingw_64/include/QtCore -isystem C:/Qt/6.4.1/mingw_64/include -isystem C:/Qt/6.4.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.4.1/mingw_64/include/QtGui
-  OBJECT_DIR = CMakeFiles\pm-client-source-code.dir
-  OBJECT_FILE_DIR = CMakeFiles\pm-client-source-code.dir
+  INCLUDES = -IW:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/spik-source_autogen/include -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3 -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3-lib/win64 -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/win-functions -isystem C:/Qt/6.4.1/mingw_64/include/QtCore -isystem C:/Qt/6.4.1/mingw_64/include -isystem C:/Qt/6.4.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.4.1/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\spik-source.dir
+  OBJECT_FILE_DIR = CMakeFiles\spik-source.dir
 
-build CMakeFiles/pm-client-source-code.dir/databaseAI.cpp.obj: CXX_COMPILER__pm-client-source-code_Debug W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/databaseAI.cpp || cmake_object_order_depends_target_pm-client-source-code
+build CMakeFiles/spik-source.dir/databaseAI.cpp.obj: CXX_COMPILER__spik-source_Debug W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/databaseAI.cpp || cmake_object_order_depends_target_spik-source
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\pm-client-source-code.dir\databaseAI.cpp.obj.d
+  DEP_FILE = CMakeFiles\spik-source.dir\databaseAI.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17
-  INCLUDES = -IW:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/pm-client-source-code_autogen/include -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3 -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3-lib/win64 -isystem C:/Qt/6.4.1/mingw_64/include/QtCore -isystem C:/Qt/6.4.1/mingw_64/include -isystem C:/Qt/6.4.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.4.1/mingw_64/include/QtGui
-  OBJECT_DIR = CMakeFiles\pm-client-source-code.dir
-  OBJECT_FILE_DIR = CMakeFiles\pm-client-source-code.dir
+  INCLUDES = -IW:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/spik-source_autogen/include -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3 -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3-lib/win64 -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/win-functions -isystem C:/Qt/6.4.1/mingw_64/include/QtCore -isystem C:/Qt/6.4.1/mingw_64/include -isystem C:/Qt/6.4.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.4.1/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\spik-source.dir
+  OBJECT_FILE_DIR = CMakeFiles\spik-source.dir
 
-build CMakeFiles/pm-client-source-code.dir/locales.cpp.obj: CXX_COMPILER__pm-client-source-code_Debug W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/locales.cpp || cmake_object_order_depends_target_pm-client-source-code
+build CMakeFiles/spik-source.dir/locales.cpp.obj: CXX_COMPILER__spik-source_Debug W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/locales.cpp || cmake_object_order_depends_target_spik-source
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\pm-client-source-code.dir\locales.cpp.obj.d
+  DEP_FILE = CMakeFiles\spik-source.dir\locales.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17
-  INCLUDES = -IW:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/pm-client-source-code_autogen/include -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3 -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3-lib/win64 -isystem C:/Qt/6.4.1/mingw_64/include/QtCore -isystem C:/Qt/6.4.1/mingw_64/include -isystem C:/Qt/6.4.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.4.1/mingw_64/include/QtGui
-  OBJECT_DIR = CMakeFiles\pm-client-source-code.dir
-  OBJECT_FILE_DIR = CMakeFiles\pm-client-source-code.dir
+  INCLUDES = -IW:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/spik-source_autogen/include -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3 -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3-lib/win64 -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/win-functions -isystem C:/Qt/6.4.1/mingw_64/include/QtCore -isystem C:/Qt/6.4.1/mingw_64/include -isystem C:/Qt/6.4.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.4.1/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\spik-source.dir
+  OBJECT_FILE_DIR = CMakeFiles\spik-source.dir
 
-build CMakeFiles/pm-client-source-code.dir/cryptography.cpp.obj: CXX_COMPILER__pm-client-source-code_Debug W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/cryptography.cpp || cmake_object_order_depends_target_pm-client-source-code
+build CMakeFiles/spik-source.dir/cryptography.cpp.obj: CXX_COMPILER__spik-source_Debug W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/cryptography.cpp || cmake_object_order_depends_target_spik-source
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\pm-client-source-code.dir\cryptography.cpp.obj.d
+  DEP_FILE = CMakeFiles\spik-source.dir\cryptography.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17
-  INCLUDES = -IW:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/pm-client-source-code_autogen/include -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3 -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3-lib/win64 -isystem C:/Qt/6.4.1/mingw_64/include/QtCore -isystem C:/Qt/6.4.1/mingw_64/include -isystem C:/Qt/6.4.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.4.1/mingw_64/include/QtGui
-  OBJECT_DIR = CMakeFiles\pm-client-source-code.dir
-  OBJECT_FILE_DIR = CMakeFiles\pm-client-source-code.dir
+  INCLUDES = -IW:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/spik-source_autogen/include -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3 -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3-lib/win64 -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/win-functions -isystem C:/Qt/6.4.1/mingw_64/include/QtCore -isystem C:/Qt/6.4.1/mingw_64/include -isystem C:/Qt/6.4.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.4.1/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\spik-source.dir
+  OBJECT_FILE_DIR = CMakeFiles\spik-source.dir
 
-build CMakeFiles/pm-client-source-code.dir/pm-client-source-code_autogen/EWIEGA46WW/qrc_source.cpp.obj: CXX_COMPILER__pm-client-source-code_Debug W$:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/pm-client-source-code_autogen/EWIEGA46WW/qrc_source.cpp || cmake_object_order_depends_target_pm-client-source-code
+build CMakeFiles/spik-source.dir/win-functions/create-process.cpp.obj: CXX_COMPILER__spik-source_Debug W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/win-functions/create-process.cpp || cmake_object_order_depends_target_spik-source
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\pm-client-source-code.dir\pm-client-source-code_autogen\EWIEGA46WW\qrc_source.cpp.obj.d
+  DEP_FILE = CMakeFiles\spik-source.dir\win-functions\create-process.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17
-  INCLUDES = -IW:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/pm-client-source-code_autogen/include -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3 -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3-lib/win64 -isystem C:/Qt/6.4.1/mingw_64/include/QtCore -isystem C:/Qt/6.4.1/mingw_64/include -isystem C:/Qt/6.4.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.4.1/mingw_64/include/QtGui
-  OBJECT_DIR = CMakeFiles\pm-client-source-code.dir
-  OBJECT_FILE_DIR = CMakeFiles\pm-client-source-code.dir\pm-client-source-code_autogen\EWIEGA46WW
+  INCLUDES = -IW:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/spik-source_autogen/include -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3 -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3-lib/win64 -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/win-functions -isystem C:/Qt/6.4.1/mingw_64/include/QtCore -isystem C:/Qt/6.4.1/mingw_64/include -isystem C:/Qt/6.4.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.4.1/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\spik-source.dir
+  OBJECT_FILE_DIR = CMakeFiles\spik-source.dir\win-functions
+
+build CMakeFiles/spik-source.dir/win-functions/nodejs-run.cpp.obj: CXX_COMPILER__spik-source_Debug W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/win-functions/nodejs-run.cpp || cmake_object_order_depends_target_spik-source
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\spik-source.dir\win-functions\nodejs-run.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17
+  INCLUDES = -IW:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/spik-source_autogen/include -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3 -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3-lib/win64 -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/win-functions -isystem C:/Qt/6.4.1/mingw_64/include/QtCore -isystem C:/Qt/6.4.1/mingw_64/include -isystem C:/Qt/6.4.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.4.1/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\spik-source.dir
+  OBJECT_FILE_DIR = CMakeFiles\spik-source.dir\win-functions
+
+build CMakeFiles/spik-source.dir/spik-source_autogen/EWIEGA46WW/qrc_source.cpp.obj: CXX_COMPILER__spik-source_Debug W$:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/spik-source_autogen/EWIEGA46WW/qrc_source.cpp || cmake_object_order_depends_target_spik-source
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\spik-source.dir\spik-source_autogen\EWIEGA46WW\qrc_source.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17
+  INCLUDES = -IW:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/spik-source_autogen/include -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3 -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/sqlite3-lib/win64 -IW:/projects/repositories/pm-cli-cpp/pm-client-source-code/win-functions -isystem C:/Qt/6.4.1/mingw_64/include/QtCore -isystem C:/Qt/6.4.1/mingw_64/include -isystem C:/Qt/6.4.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.4.1/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\spik-source.dir
+  OBJECT_FILE_DIR = CMakeFiles\spik-source.dir\spik-source_autogen\EWIEGA46WW
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target pm-client-source-code
+# Link build statements for EXECUTABLE target spik-source
 
 
 #############################################
-# Link the executable pm-client-source-code.exe
+# Link the executable spik-source.exe
 
-build pm-client-source-code.exe: CXX_EXECUTABLE_LINKER__pm-client-source-code_Debug CMakeFiles/pm-client-source-code.dir/pm-client-source-code_autogen/mocs_compilation.cpp.obj CMakeFiles/pm-client-source-code.dir/main.cpp.obj CMakeFiles/pm-client-source-code.dir/mainwindow.cpp.obj CMakeFiles/pm-client-source-code.dir/log_in_form.cpp.obj CMakeFiles/pm-client-source-code.dir/credits.cpp.obj CMakeFiles/pm-client-source-code.dir/general_settings.cpp.obj CMakeFiles/pm-client-source-code.dir/i2p_settings.cpp.obj CMakeFiles/pm-client-source-code.dir/freenet_settings.cpp.obj CMakeFiles/pm-client-source-code.dir/databaseAI.cpp.obj CMakeFiles/pm-client-source-code.dir/locales.cpp.obj CMakeFiles/pm-client-source-code.dir/cryptography.cpp.obj CMakeFiles/pm-client-source-code.dir/pm-client-source-code_autogen/EWIEGA46WW/qrc_source.cpp.obj | C$:/Qt/6.4.1/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.4.1/mingw_64/lib/libQt6Gui.a C$:/Qt/6.4.1/mingw_64/lib/libQt6Core.a C$:/Qt/6.4.1/mingw_64/lib/libQt6EntryPoint.a || pm-client-source-code_autogen pm-client-source-code_autogen_timestamp_deps
+build spik-source.exe: CXX_EXECUTABLE_LINKER__spik-source_Debug CMakeFiles/spik-source.dir/spik-source_autogen/mocs_compilation.cpp.obj CMakeFiles/spik-source.dir/main.cpp.obj CMakeFiles/spik-source.dir/mainwindow.cpp.obj CMakeFiles/spik-source.dir/log_in_form.cpp.obj CMakeFiles/spik-source.dir/credits.cpp.obj CMakeFiles/spik-source.dir/general_settings.cpp.obj CMakeFiles/spik-source.dir/i2p_settings.cpp.obj CMakeFiles/spik-source.dir/freenet_settings.cpp.obj CMakeFiles/spik-source.dir/databaseAI.cpp.obj CMakeFiles/spik-source.dir/locales.cpp.obj CMakeFiles/spik-source.dir/cryptography.cpp.obj CMakeFiles/spik-source.dir/win-functions/create-process.cpp.obj CMakeFiles/spik-source.dir/win-functions/nodejs-run.cpp.obj CMakeFiles/spik-source.dir/spik-source_autogen/EWIEGA46WW/qrc_source.cpp.obj | C$:/Qt/6.4.1/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.4.1/mingw_64/lib/libQt6Gui.a C$:/Qt/6.4.1/mingw_64/lib/libQt6Core.a C$:/Qt/6.4.1/mingw_64/lib/libQt6EntryPoint.a || spik-source_autogen spik-source_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG -g
   LINK_FLAGS = -mwindows
   LINK_LIBRARIES = C:/Qt/6.4.1/mingw_64/lib/libQt6Widgets.a  -Wl,-Bstatic  -lsqlite3  -Wl,-Bdynamic  C:/Qt/6.4.1/mingw_64/lib/libQt6Gui.a  C:/Qt/6.4.1/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lmingw32  C:/Qt/6.4.1/mingw_64/lib/libQt6EntryPoint.a  -lshell32  -ld3d11  -ldxgi  -ldxguid  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\pm-client-source-code.dir
+  OBJECT_DIR = CMakeFiles\spik-source.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = pm-client-source-code.exe
-  TARGET_IMPLIB = libpm-client-source-code.dll.a
-  TARGET_PDB = pm-client-source-code.exe.dbg
+  TARGET_FILE = spik-source.exe
+  TARGET_IMPLIB = libspik-source.dll.a
+  TARGET_PDB = spik-source.exe.dbg
 
 
 #############################################
@@ -232,51 +248,51 @@ build install/strip: phony CMakeFiles/install/strip.util
 
 
 #############################################
-# Utility command for pm-client-source-code_autogen_timestamp_deps
+# Utility command for spik-source_autogen_timestamp_deps
 
-build pm-client-source-code_autogen_timestamp_deps: phony CMakeFiles/pm-client-source-code_autogen_timestamp_deps
-
-
-#############################################
-# Utility command for pm-client-source-code_autogen
-
-build pm-client-source-code_autogen: phony CMakeFiles/pm-client-source-code_autogen pm-client-source-code_autogen/include/ui_mainwindow.h pm-client-source-code_autogen/include/ui_log_in_form.h pm-client-source-code_autogen/include/ui_credits.h pm-client-source-code_autogen/include/ui_general_settings.h pm-client-source-code_autogen/include/ui_i2p_settings.h pm-client-source-code_autogen/include/ui_freenet_settings.h pm-client-source-code_autogen/timestamp pm-client-source-code_autogen/mocs_compilation.cpp pm-client-source-code_autogen_timestamp_deps
+build spik-source_autogen_timestamp_deps: phony CMakeFiles/spik-source_autogen_timestamp_deps
 
 
 #############################################
-# Custom command for pm-client-source-code_autogen\timestamp
+# Utility command for spik-source_autogen
 
-build pm-client-source-code_autogen/timestamp pm-client-source-code_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}pm-client-source-code_autogen/timestamp ${cmake_ninja_workdir}pm-client-source-code_autogen/mocs_compilation.cpp: CUSTOM_COMMAND C$:/Qt/6.4.1/mingw_64/./bin/moc.exe C$:/Qt/6.4.1/mingw_64/./bin/uic.exe || pm-client-source-code_autogen_timestamp_deps
-  COMMAND = cmd.exe /C "cd /D W:\projects\repositories\pm-cli-cpp\build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug && C:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autogen W:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/CMakeFiles/pm-client-source-code_autogen.dir/AutogenInfo.json Debug && C:\Qt\Tools\CMake_64\bin\cmake.exe -E touch W:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/pm-client-source-code_autogen/timestamp && C:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_transform_depfile Ninja gccdepfile W:/projects/repositories/pm-cli-cpp/pm-client-source-code W:/projects/repositories/pm-cli-cpp/pm-client-source-code W:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug W:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug W:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/pm-client-source-code_autogen/deps W:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/CMakeFiles/d/58137150580c19c2e7ee6e4443daca301030730779c1533bfaad979e2dd26f87.d"
-  DESC = Automatic MOC and UIC for target pm-client-source-code
-  depfile = W:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/CMakeFiles/d/58137150580c19c2e7ee6e4443daca301030730779c1533bfaad979e2dd26f87.d
+build spik-source_autogen: phony CMakeFiles/spik-source_autogen spik-source_autogen/include/ui_mainwindow.h spik-source_autogen/include/ui_log_in_form.h spik-source_autogen/include/ui_credits.h spik-source_autogen/include/ui_general_settings.h spik-source_autogen/include/ui_i2p_settings.h spik-source_autogen/include/ui_freenet_settings.h spik-source_autogen/timestamp spik-source_autogen/mocs_compilation.cpp spik-source_autogen_timestamp_deps
+
+
+#############################################
+# Custom command for spik-source_autogen\timestamp
+
+build spik-source_autogen/timestamp spik-source_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}spik-source_autogen/timestamp ${cmake_ninja_workdir}spik-source_autogen/mocs_compilation.cpp: CUSTOM_COMMAND C$:/Qt/6.4.1/mingw_64/./bin/moc.exe C$:/Qt/6.4.1/mingw_64/./bin/uic.exe || spik-source_autogen_timestamp_deps
+  COMMAND = cmd.exe /C "cd /D W:\projects\repositories\pm-cli-cpp\build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug && C:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autogen W:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/CMakeFiles/spik-source_autogen.dir/AutogenInfo.json Debug && C:\Qt\Tools\CMake_64\bin\cmake.exe -E touch W:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/spik-source_autogen/timestamp && C:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_transform_depfile Ninja gccdepfile W:/projects/repositories/pm-cli-cpp/pm-client-source-code W:/projects/repositories/pm-cli-cpp/pm-client-source-code W:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug W:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug W:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/spik-source_autogen/deps W:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/CMakeFiles/d/7b68860fa52ad06e5f9c8531b0719a232116e595dbc99b6a66e4fd8d1b3cf410.d"
+  DESC = Automatic MOC and UIC for target spik-source
+  depfile = W:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/CMakeFiles/d/7b68860fa52ad06e5f9c8531b0719a232116e595dbc99b6a66e4fd8d1b3cf410.d
   restat = 1
 
 
 #############################################
-# Custom command for pm-client-source-code_autogen\EWIEGA46WW\qrc_source.cpp
+# Custom command for spik-source_autogen\EWIEGA46WW\qrc_source.cpp
 
-build pm-client-source-code_autogen/EWIEGA46WW/qrc_source.cpp | ${cmake_ninja_workdir}pm-client-source-code_autogen/EWIEGA46WW/qrc_source.cpp: CUSTOM_COMMAND W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/source.qrc CMakeFiles/pm-client-source-code_autogen.dir/AutoRcc_source_EWIEGA46WW_Info.json W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/langs/rus.png W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/langs/ua.jpg W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/langs/eng.jpg W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/sources/messages.ico W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/sources/freenet.png W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/sources/contacts.ico W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/sources/i2p.png W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/sources/keys.ico W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/sources/dialog.ico W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/sources/appico.ico W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/sources/FullGreaM_avatar.png W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/sources/profile.ico W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/sources/chat.ico W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/sources/storage.ico C$:/Qt/6.4.1/mingw_64/./bin/rcc.exe || pm-client-source-code_autogen pm-client-source-code_autogen_timestamp_deps
-  COMMAND = cmd.exe /C "cd /D W:\projects\repositories\pm-cli-cpp\build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug && C:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autorcc W:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/CMakeFiles/pm-client-source-code_autogen.dir/AutoRcc_source_EWIEGA46WW_Info.json Debug"
+build spik-source_autogen/EWIEGA46WW/qrc_source.cpp | ${cmake_ninja_workdir}spik-source_autogen/EWIEGA46WW/qrc_source.cpp: CUSTOM_COMMAND W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/source.qrc CMakeFiles/spik-source_autogen.dir/AutoRcc_source_EWIEGA46WW_Info.json W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/langs/rus.png W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/langs/ua.jpg W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/langs/eng.jpg W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/sources/messages.ico W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/sources/freenet.png W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/sources/contacts.ico W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/sources/i2p.png W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/sources/keys.ico W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/sources/dialog.ico W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/sources/appico.ico W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/sources/FullGreaM_avatar.png W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/sources/profile.ico W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/sources/chat.ico W$:/projects/repositories/pm-cli-cpp/pm-client-source-code/sources/storage.ico C$:/Qt/6.4.1/mingw_64/./bin/rcc.exe || spik-source_autogen spik-source_autogen_timestamp_deps
+  COMMAND = cmd.exe /C "cd /D W:\projects\repositories\pm-cli-cpp\build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug && C:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autorcc W:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/CMakeFiles/spik-source_autogen.dir/AutoRcc_source_EWIEGA46WW_Info.json Debug"
   DESC = Automatic RCC for source.qrc
   restat = 1
 
 
 #############################################
-# Phony custom command for CMakeFiles\pm-client-source-code_autogen_timestamp_deps
+# Phony custom command for CMakeFiles\spik-source_autogen_timestamp_deps
 
-build CMakeFiles/pm-client-source-code_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/pm-client-source-code_autogen_timestamp_deps: phony C$:/Qt/6.4.1/mingw_64/lib/libQt6Core.a C$:/Qt/6.4.1/mingw_64/./bin/moc.exe C$:/Qt/6.4.1/mingw_64/./bin/uic.exe C$:/Qt/6.4.1/mingw_64/lib/libQt6Widgets.a
+build CMakeFiles/spik-source_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/spik-source_autogen_timestamp_deps: phony C$:/Qt/6.4.1/mingw_64/lib/libQt6Core.a C$:/Qt/6.4.1/mingw_64/./bin/uic.exe C$:/Qt/6.4.1/mingw_64/./bin/moc.exe C$:/Qt/6.4.1/mingw_64/lib/libQt6Widgets.a
 
 
 #############################################
-# Phony custom command for CMakeFiles\pm-client-source-code_autogen
+# Phony custom command for CMakeFiles\spik-source_autogen
 
-build CMakeFiles/pm-client-source-code_autogen pm-client-source-code_autogen/include/ui_mainwindow.h pm-client-source-code_autogen/include/ui_log_in_form.h pm-client-source-code_autogen/include/ui_credits.h pm-client-source-code_autogen/include/ui_general_settings.h pm-client-source-code_autogen/include/ui_i2p_settings.h pm-client-source-code_autogen/include/ui_freenet_settings.h | ${cmake_ninja_workdir}CMakeFiles/pm-client-source-code_autogen ${cmake_ninja_workdir}pm-client-source-code_autogen/include/ui_mainwindow.h ${cmake_ninja_workdir}pm-client-source-code_autogen/include/ui_log_in_form.h ${cmake_ninja_workdir}pm-client-source-code_autogen/include/ui_credits.h ${cmake_ninja_workdir}pm-client-source-code_autogen/include/ui_general_settings.h ${cmake_ninja_workdir}pm-client-source-code_autogen/include/ui_i2p_settings.h ${cmake_ninja_workdir}pm-client-source-code_autogen/include/ui_freenet_settings.h: phony pm-client-source-code_autogen/timestamp || pm-client-source-code_autogen_timestamp_deps
+build CMakeFiles/spik-source_autogen spik-source_autogen/include/ui_mainwindow.h spik-source_autogen/include/ui_log_in_form.h spik-source_autogen/include/ui_credits.h spik-source_autogen/include/ui_general_settings.h spik-source_autogen/include/ui_i2p_settings.h spik-source_autogen/include/ui_freenet_settings.h | ${cmake_ninja_workdir}CMakeFiles/spik-source_autogen ${cmake_ninja_workdir}spik-source_autogen/include/ui_mainwindow.h ${cmake_ninja_workdir}spik-source_autogen/include/ui_log_in_form.h ${cmake_ninja_workdir}spik-source_autogen/include/ui_credits.h ${cmake_ninja_workdir}spik-source_autogen/include/ui_general_settings.h ${cmake_ninja_workdir}spik-source_autogen/include/ui_i2p_settings.h ${cmake_ninja_workdir}spik-source_autogen/include/ui_freenet_settings.h: phony spik-source_autogen/timestamp || spik-source_autogen_timestamp_deps
 
 # =============================================================================
 # Target aliases.
 
-build pm-client-source-code: phony pm-client-source-code.exe
+build spik-source: phony spik-source.exe
 
 # =============================================================================
 # Folder targets.
@@ -286,7 +302,7 @@ build pm-client-source-code: phony pm-client-source-code.exe
 #############################################
 # Folder: W:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug
 
-build all: phony pm-client-source-code.exe
+build all: phony spik-source.exe
 
 # =============================================================================
 # Built-in targets

@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include <QApplication>
 
+#include "nodejs-run.h"
+
 /*
 Уважаемые (и не очень) любители комментариев "на английском языке",
 а также уважаемые (и, опять же, не очень) любители #ихборьбы с ненависьтью
@@ -26,10 +28,15 @@ Prikhodko N.S. (FullGreaM) 2023
 */
 
 /*
- * Для линукса необходимо: sudo apt-get install libsqlite3-dev
+ * Для линукса необходимо: sudo apt-get install libsqlite3-dev nodejs
 */
 
+//#include <iostream>
+
 int main (int argc, char *argv[]) {
+    /*char* ok = (char*)nodejsRun("nodejs_tools/cryptography/md5-gen.js");
+    qDebug(ok);*/
+
     QApplication a(argc, argv);
     MainWindow w;
     if (!w.error) {
@@ -40,7 +47,6 @@ int main (int argc, char *argv[]) {
         if (!isAuthed) {
             w.setDisabled(true);
             w.showLogIn();
-            // logInForm.show();
         }
         return a.exec();
     }

@@ -245,69 +245,12 @@
 		"C:/Qt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeFindDependencyMacro.cmake",
 		"C:/Qt/6.4.1/mingw_64/lib/cmake/Qt6Widgets/Qt6QWindowsVistaStylePluginTargets.cmake",
 		"C:/Qt/6.4.1/mingw_64/lib/cmake/Qt6Widgets/Qt6QWindowsVistaStylePluginTargets-relwithdebinfo.cmake",
-		"C:/Qt/6.4.1/mingw_64/lib/cmake/Qt6Widgets/Qt6QWindowsVistaStylePluginAdditionalTargetInfo.cmake",
-		"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/source.qrc"
+		"C:/Qt/6.4.1/mingw_64/lib/cmake/Qt6Widgets/Qt6QWindowsVistaStylePluginAdditionalTargetInfo.cmake"
 	],
 	"CMAKE_SOURCE_DIR" : "W:/projects/repositories/pm-cli-cpp/pm-client-source-code",
 	"DEP_FILE" : "W:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/pm-client-source-code_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "pm-client-source-code_autogen/timestamp",
-	"HEADERS" : 
-	[
-		[
-			"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/credits.h",
-			"MU",
-			"EWIEGA46WW/moc_credits.cpp",
-			null
-		],
-		[
-			"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/cryptography.h",
-			"MU",
-			"EWIEGA46WW/moc_cryptography.cpp",
-			null
-		],
-		[
-			"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/databaseAI.h",
-			"MU",
-			"EWIEGA46WW/moc_databaseAI.cpp",
-			null
-		],
-		[
-			"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/freenet_settings.h",
-			"MU",
-			"EWIEGA46WW/moc_freenet_settings.cpp",
-			null
-		],
-		[
-			"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/general_settings.h",
-			"MU",
-			"EWIEGA46WW/moc_general_settings.cpp",
-			null
-		],
-		[
-			"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/i2p_settings.h",
-			"MU",
-			"EWIEGA46WW/moc_i2p_settings.cpp",
-			null
-		],
-		[
-			"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/locales.h",
-			"MU",
-			"EWIEGA46WW/moc_locales.cpp",
-			null
-		],
-		[
-			"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/log_in_form.h",
-			"MU",
-			"EWIEGA46WW/moc_log_in_form.cpp",
-			null
-		],
-		[
-			"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/mainwindow.h",
-			"MU",
-			"EWIEGA46WW/moc_mainwindow.cpp",
-			null
-		]
-	],
+	"HEADERS" : [],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
 	"INCLUDE_DIR" : "W:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/pm-client-source-code_autogen/include",
 	"MOC_COMPILATION_FILE" : "W:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/pm-client-source-code_autogen/mocs_compilation.cpp",
@@ -377,59 +320,7 @@
 	"QT_VERSION_MAJOR" : 6,
 	"QT_VERSION_MINOR" : 4,
 	"SETTINGS_FILE" : "W:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/CMakeFiles/pm-client-source-code_autogen.dir/AutogenUsed.txt",
-	"SOURCES" : 
-	[
-		[
-			"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/credits.cpp",
-			"MU",
-			null
-		],
-		[
-			"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/cryptography.cpp",
-			"MU",
-			null
-		],
-		[
-			"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/databaseAI.cpp",
-			"MU",
-			null
-		],
-		[
-			"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/freenet_settings.cpp",
-			"MU",
-			null
-		],
-		[
-			"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/general_settings.cpp",
-			"MU",
-			null
-		],
-		[
-			"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/i2p_settings.cpp",
-			"MU",
-			null
-		],
-		[
-			"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/locales.cpp",
-			"MU",
-			null
-		],
-		[
-			"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/log_in_form.cpp",
-			"MU",
-			null
-		],
-		[
-			"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/main.cpp",
-			"MU",
-			null
-		],
-		[
-			"W:/projects/repositories/pm-cli-cpp/pm-client-source-code/mainwindow.cpp",
-			"MU",
-			null
-		]
-	],
+	"SOURCES" : [],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],
 	"UIC_SKIP" : [],

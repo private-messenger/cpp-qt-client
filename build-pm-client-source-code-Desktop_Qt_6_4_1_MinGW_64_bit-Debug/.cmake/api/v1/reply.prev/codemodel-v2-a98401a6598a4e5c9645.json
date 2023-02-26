@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-74a3755551d4d9a4af16.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "spik-source",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "spik-source::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-spik-source-Debug-1f887de7765b5bc33164.json",
+					"name" : "spik-source",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "spik-source_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-spik-source_autogen-Debug-551116759269354d1255.json",
+					"name" : "spik-source_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "spik-source_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-spik-source_autogen_timestamp_deps-Debug-7a53f3d956e5bf607660.json",
+					"name" : "spik-source_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "W:/projects/repositories/pm-cli-cpp/build-pm-client-source-code-Desktop_Qt_6_4_1_MinGW_64_bit-Debug",
+		"source" : "W:/projects/repositories/pm-cli-cpp/pm-client-source-code"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

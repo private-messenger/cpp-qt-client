@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "sql-easy-lib": "^1.0.3"
+  }
+}

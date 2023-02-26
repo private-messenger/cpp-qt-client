@@ -1,7 +1,7 @@
 #ifndef DATABASEAPPINTERFACE_H
 #define DATABASEAPPINTERFACE_H
 
-#include "sqlite3.h"
+//#include "sqlite3.h"
 #include <string>
 
 /*
@@ -13,7 +13,6 @@
 половину украинцем. Если вам не нравится этот факт, или факт того, что тут
 пишут комментарии на русском языке - ищите другие проекты. Если вам нужны
 мои комментарии пользуйтесь либо словарём, либо гугл (или яндекс) переводчиком
-
 Приходько Н.С. (FullGreaM) 2023 год
 -------------------------------------------------------------------------------
 Dear (and not so) fans of comments "in English",
@@ -24,11 +23,10 @@ citizenship). This code is written by a citizen of the Russian Federation: Russi
 half Ukrainian. If you don't like this fact, or the fact that comments are written here
 in Russian - look for other projects. If you need my comments either use a dictionary
 or Google (or Bing) translator
-
 Prikhodko N.S. (FullGreaM) 2023
 */
 
-class SQLite3_interface {
+/*class SQLite3_interface {
 public:
     SQLite3_interface (sqlite3* database) {
         this->database = database;
@@ -90,7 +88,7 @@ public:
     }
 private:
     sqlite3* database = 0;
-};
+};*/
 
 class DatabaseAppInterface
 {
@@ -105,8 +103,8 @@ public:
     bool reg (std::string login, std::string password);
     void setValue (char* key, char* value);
 private:
-    sqlite3* database = 0;
-    SQLite3_interface sql = 0;
+    //sqlite3* database = 0;
+    //SQLite3_interface sql = 0;
 };
 
 #endif // DATABASEAPPINTERFACE_H
