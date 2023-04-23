@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CreateChat</class>
+ <widget class="QWidget" name="CreateChat">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>296</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>create_chat.title</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="source.qrc">
+    <normaloff>:/mainapp/sources/appico.ico</normaloff>:/mainapp/sources/appico.ico</iconset>
+  </property>
+  <widget class="QLabel" name="creatingChatInfo">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>401</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;create_chat.send_to&lt;/span&gt;: Username &lt;br/&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;create_chat.message&lt;/span&gt;:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="messageArea">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>40</y>
+     <width>401</width>
+     <height>231</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="createChatButton">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>270</y>
+     <width>401</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>create_chat.send</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="source.qrc"/>
+ </resources>
+ <connections/>
+</ui>

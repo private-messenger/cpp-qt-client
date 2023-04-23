@@ -1,0 +1,22 @@
+<RCC>
+    <qresource prefix="/mainapp">
+        <file>sources/storage.ico</file>
+        <file>sources/messages.ico</file>
+        <file>sources/profile.ico</file>
+        <file>sources/appico.ico</file>
+        <file>sources/contacts.ico</file>
+        <file>sources/keys.ico</file>
+        <file>sources/i2p.png</file>
+        <file>sources/freenet.png</file>
+        <file>sources/FullGreaM_avatar.png</file>
+        <file>sources/chat.ico</file>
+        <file>sources/dialog.ico</file>
+        <file>sources/settings.ico</file>
+    </qresource>
+    <qresource prefix="/locales">
+        <file>langs/rus.png</file>
+        <file>langs/eng.jpg</file>
+        <file>langs/ua.jpg</file>
+        <file>langs/pl.jpg</file>
+    </qresource>
+</RCC>

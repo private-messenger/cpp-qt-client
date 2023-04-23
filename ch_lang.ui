@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ChooseLanguageForm</class>
+ <widget class="QWidget" name="ChooseLanguageForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>137</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>cl.title</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="source.qrc">
+    <normaloff>:/mainapp/sources/appico.ico</normaloff>:/mainapp/sources/appico.ico</iconset>
+  </property>
+  <widget class="QLabel" name="title">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>401</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:700;&quot;&gt;cl.title&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="langChooseBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>50</y>
+     <width>381</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Русский (Russian)</string>
+    </property>
+    <property name="icon">
+     <iconset resource="source.qrc">
+      <normaloff>:/locales/langs/rus.png</normaloff>:/locales/langs/rus.png</iconset>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>English (English)</string>
+    </property>
+    <property name="icon">
+     <iconset resource="source.qrc">
+      <normaloff>:/locales/langs/eng.jpg</normaloff>:/locales/langs/eng.jpg</iconset>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>(β) Український (Ukrainian)</string>
+    </property>
+    <property name="icon">
+     <iconset resource="source.qrc">
+      <normaloff>:/locales/langs/ua.jpg</normaloff>:/locales/langs/ua.jpg</iconset>
+    </property>
+   </item>
+  </widget>
+  <widget class="QPushButton" name="continueButton">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>90</y>
+     <width>111</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>cl.continue</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="source.qrc"/>
+ </resources>
+ <connections/>
+</ui>
