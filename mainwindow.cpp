@@ -402,6 +402,19 @@ void MainWindow::dynamicAccess() {
         this->lastTimeUpdated = QDateTime::currentDateTimeUtc().toSecsSinceEpoch();
         //this->messageUpdaterThread->messageEdited = false;
     }
+    // Автоблокировка кнопки
+    if (this->ui->sendButton->isEnabled() && (
+        this->ui->messageArea->text() == "" ||
+        this->ui->messagesField->currentRow() == -1
+    )) {
+        this->ui->sendButton->setEnabled(false);
+    }
+    else if (!this->ui->sendButton->isEnabled() && (
+        this->ui->messageArea->text() != "" &&
+        this->ui->messagesField->currentRow() != -1
+    )) {
+        this->ui->sendButton->setEnabled(true);
+    }
 }
 
 void MainWindow::autoscale () {
