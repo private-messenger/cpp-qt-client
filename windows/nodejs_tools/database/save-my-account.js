@@ -27,7 +27,7 @@ function save (path) {
 	fs.writeFileSync(path, JSON.stringify({
 		id                   : userObject.id,
 		login                : userObject.login,
-		key                  : userKey,
+		key                  : userKey.toString('base64'),
 		i2pkey               : Buffer.from(cryptor.decrypt(userObject.i2pkey_encoded)).toString('base64'),
 		password_key_encoded : userObject.password_key_encoded.toString('base64'),
 		publickey            : userObject.publickey.toString('base64'),
